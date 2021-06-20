@@ -46,7 +46,7 @@ OpenCore 0.7
 - [x] (unsure) iMessage and Facetime 
 - [x] miniDP and HDMI with digital audio passthrough(If you experience cursor lags, try turning on and off one of the displays.)
 - [x] Keyboard and Trackpad(two finger vertical swipes)
-- [x] Airdrop and Handoff
+- [x] Airdrop , Handoff and Sidecar
 - [x] SD Card Reader using [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx)
 
 </details>

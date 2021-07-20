@@ -27,7 +27,7 @@ OpenCore 0.7
 | Trackpad           | ALPS Touchpad                              |
 
 Tips: 
-* For macOS 12 Monterey, DW1820 do not work well (can not use Airdrop, Handoff and Sidercar). Therefore I change it to BCM94360Z4 and it work well in it.
+* For macOS 12 Monterey, DW1820 do not work well (can not use Airdrop, Handoff and Sidercar). Therefore I change it to BCM94360Z4 and it works well!
 * Strongly recommand you to re-create USBMap.kext for your own laptop with this [tool](https://github.com/corpnewt/USBMap) 
 * If you change your hardware (like wireless), re-create the USBMap.kext as well.
 

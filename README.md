@@ -1,4 +1,4 @@
-# Dell Latitude E7480 macOS Big Sur 11.4 (OpenCore)
+# Dell Latitude E7480 macOS Big Sur 11.4 / Monterey 12.0 (OpenCore)
 
 ## Infomation
 

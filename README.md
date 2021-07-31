@@ -1,6 +1,6 @@
 # Dell Latitude E7480 macOS Big Sur 11.4 / Monterey 12.0 (OpenCore)
 
-![Uploading Snapshot_21-07-31_10-17-57.png…]()
+![Snapshot_21-07-31_10-17-57](https://user-images.githubusercontent.com/66028151/127725797-d5288a2a-b684-49ba-abe4-500dad500f83.png)
 
 ## Infomation
 

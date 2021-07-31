@@ -15,7 +15,7 @@ OpenCore 0.7.0 / 0.7.1
 | Model              | Dell Latitude E7480                        |
 |:-------------------|:-------------------------------------------|
 | Processor          | Intel Core i7-7700U                        |
-| Graphics           | Integrated Intel HD Graphics 630           |
+| Graphics           | Integrated Intel HD Graphics 620           |
 | Memory             | 8GB 2133MHz DDR4 * 2                       |
 | Display            | 13" 2K (2560x1440) with ELAN Touchscreen   |
 | Storage            | Sandisk 1T M.2 NVMe SSD                    |
@@ -40,7 +40,7 @@ Tips:
 </br>
 
 - [x] Intel HD 630 Graphics `incuding graphics acceleration`
-- [x] All USB ports
+- [x] All USB ports (Warn: Type-C does not support hot plug, plug it in your computer if you want to use it and turn it on again)
 - [x] Internal camera
 - [x] WiFi using [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
 - [x] Bluetooth using [BrcmFirmareData and BrcmPatchRAM3](https://github.com/acidanthera/BrcmPatchRAM)

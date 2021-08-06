@@ -27,6 +27,7 @@ OpenCore 0.7.0 / 0.7.1
 | Soundcard          | Realtek ALC256                             |
 | Keyboard           | Backlit Keyboard                           |
 | Trackpad           | ALPS Touchpad                              |
+| microSD Card Reader| Realtek RTS525A microSD card reader        |
 
 Tips: 
 * For macOS 12 Monterey, DW1820 do not work well (can not use Airdrop, Handoff and Sidercar). Therefore I change it to BCM94360Z4 and it works well!

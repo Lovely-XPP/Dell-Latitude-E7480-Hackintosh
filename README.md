@@ -101,7 +101,7 @@ You can either operate in Windows or firstly install macOS (the Wifi and Bluetoo
 <summary><strong>Install </strong></summary>
 </br>
 
-- In thd dir `\EFI\OC\Kexts\`, remove the files 
+- In the dir `\EFI\OC\Kexts\`, remove the files 
 
   * `BrcmBluetoothInjector.kext`
   * `BrcmFirmwareData.kext`

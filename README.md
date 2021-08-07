@@ -42,7 +42,7 @@ Tips:
 <summary><strong>What's working</strong></summary>
 </br>
 
-- [x] Intel HD 630 Graphics `incuding graphics acceleration`
+- [x] Intel HD 620 Graphics `incuding graphics acceleration`
 - [x] All USB ports (Warn: Type-C does not support hot plug, plug it in your computer if you want to use it and turn it on again)
 - [x] Internal camera
 - [x] WiFi using [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)

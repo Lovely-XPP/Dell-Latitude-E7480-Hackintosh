@@ -55,7 +55,7 @@ Tips:
 - [x] miniDP and HDMI with digital audio passthrough(If you experience cursor lags, try turning on and off one of the displays.)
 - [x] Keyboard and Trackpad(two finger vertical swipes)
 - [x] Airdrop , Handoff and Sidecar
-- [x] SD Card Reader using [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx)
+- [x] SD Card Reader using [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) and [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend)
 
 </details>
 

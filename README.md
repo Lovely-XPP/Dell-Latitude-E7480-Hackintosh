@@ -7,7 +7,7 @@
 <details>  
 <summary><strong>Booter</strong></summary>
 </br>
-OpenCore 0.7.0 / 0.7.1
+OpenCore 0.7.0 / 0.7.1 / 0.7.2
 </details>
 
 <details>  

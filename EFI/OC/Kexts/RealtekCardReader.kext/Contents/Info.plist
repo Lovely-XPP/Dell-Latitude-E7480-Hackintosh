@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>20F71</string>
+	<string>21A5304g</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,13 +17,13 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.9.5</string>
+	<string>0.9.6</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>0.9.5</string>
+	<string>0.9.6</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -73,14 +73,17 @@
 			<string>science.firewolf.rtsx</string>
 			<key>IOClass</key>
 			<string>RealtekUSBCardReaderController</string>
+			<key>IOProbeScore</key>
+			<integer>1000</integer>
 			<key>IOProviderClass</key>
-			<string>IOUSBHostInterface</string>
+			<string>IOUSBHostDevice</string>
 			<key>Physical Interconnect Location</key>
 			<string>Internal</string>
-			<key>bConfigurationValue</key>
-			<integer>1</integer>
-			<key>bInterfaceNumber</key>
-			<integer>0</integer>
+			<key>Protocol Characteristics</key>
+			<dict>
+				<key>Physical Interconnect</key>
+				<string>USB</string>
+			</dict>
 			<key>idProduct</key>
 			<integer>297</integer>
 			<key>idVendor</key>
@@ -92,14 +95,17 @@
 			<string>science.firewolf.rtsx</string>
 			<key>IOClass</key>
 			<string>RealtekUSBCardReaderController</string>
+			<key>IOProbeScore</key>
+			<integer>1000</integer>
 			<key>IOProviderClass</key>
-			<string>IOUSBHostInterface</string>
+			<string>IOUSBHostDevice</string>
 			<key>Physical Interconnect Location</key>
 			<string>Internal</string>
-			<key>bConfigurationValue</key>
-			<integer>1</integer>
-			<key>bInterfaceNumber</key>
-			<integer>0</integer>
+			<key>Protocol Characteristics</key>
+			<dict>
+				<key>Physical Interconnect</key>
+				<string>USB</string>
+			</dict>
 			<key>idProduct</key>
 			<integer>313</integer>
 			<key>idVendor</key>
@@ -111,14 +117,17 @@
 			<string>science.firewolf.rtsx</string>
 			<key>IOClass</key>
 			<string>RealtekUSBCardReaderController</string>
+			<key>IOProbeScore</key>
+			<integer>1000</integer>
 			<key>IOProviderClass</key>
-			<string>IOUSBHostInterface</string>
+			<string>IOUSBHostDevice</string>
 			<key>Physical Interconnect Location</key>
 			<string>Internal</string>
-			<key>bConfigurationValue</key>
-			<integer>1</integer>
-			<key>bInterfaceNumber</key>
-			<integer>0</integer>
+			<key>Protocol Characteristics</key>
+			<dict>
+				<key>Physical Interconnect</key>
+				<string>USB</string>
+			</dict>
 			<key>idProduct</key>
 			<integer>320</integer>
 			<key>idVendor</key>
@@ -252,6 +261,26 @@
 			<string>RealtekRTS525AController</string>
 			<key>IOPCIMatch</key>
 			<string>0x525A10EC</string>
+			<key>IOProbeScore</key>
+			<integer>1000</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>Protocol Characteristics</key>
+			<dict>
+				<key>Physical Interconnect</key>
+				<string>Secure Digital</string>
+				<key>Physical Interconnect Location</key>
+				<string>Internal</string>
+			</dict>
+		</dict>
+		<key>RealtekRTS5260Controller</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>science.firewolf.rtsx</string>
+			<key>IOClass</key>
+			<string>RealtekRTS5260Controller</string>
+			<key>IOPCIMatch</key>
+			<string>0x526010EC</string>
 			<key>IOProbeScore</key>
 			<integer>1000</integer>
 			<key>IOProviderClass</key>

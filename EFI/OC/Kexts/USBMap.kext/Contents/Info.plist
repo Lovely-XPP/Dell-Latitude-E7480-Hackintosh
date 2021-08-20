@@ -57,11 +57,29 @@
 						AQAAAA==
 						</data>
 					</dict>
+					<key>HS02</key>
+					<dict>
+						<key>#port</key>
+						<data>
+						AgAAAA==
+						</data>
+						<key>UsbConnector</key>
+						<integer>3</integer>
+					</dict>
 					<key>SS01</key>
 					<dict>
 						<key>#port</key>
 						<data>
 						AwAAAA==
+						</data>
+						<key>UsbConnector</key>
+						<integer>3</integer>
+					</dict>
+					<key>SS02</key>
+					<dict>
+						<key>#port</key>
+						<data>
+						BAAAAA==
 						</data>
 						<key>UsbConnector</key>
 						<integer>3</integer>

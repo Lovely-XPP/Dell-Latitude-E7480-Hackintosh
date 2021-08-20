@@ -47,7 +47,7 @@ Tips:
 - [x] Internal camera
 - [x] WiFi using [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
 - [x] Bluetooth using [BrcmFirmareData and BrcmPatchRAM3](https://github.com/acidanthera/BrcmPatchRAM)
-- [x] Shutdown/ Reboot/ Sleep/ Wake
+- [x] Shutdown/ Reboot/ Sleep/ Wake (include Fn + insert to sleep)
 - [x] Speakers and headphones jack
 - [x] Intel Gigabit Ethernet
 - [x] App Store
@@ -119,5 +119,10 @@ You can either operate in Windows or firstly install macOS (the Wifi and Bluetoo
 - Reboot(in macOS) or install and enjoy!
 
 </details>
+
+## Credits
+* [Acidanthera](https://github.com/Acidanthera) for oc package and main kexts.
+* [daliansky](https://github.com/daliansky) for awsome SSDTs in [OC-little](https://github.com/daliansky/OC-little).
+* [Dortania](https://dortania.github.io/) for installation and other guides.
 
 

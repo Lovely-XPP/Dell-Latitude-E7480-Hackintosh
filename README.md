@@ -1,7 +1,14 @@
-# Dell Latitude E7480 macOS Big Sur 11.4 / Monterey 12.0 (OpenCore)
+# Dell Latitude E7480 macOS Big Sur 11 / Monterey 12.0 (OpenCore)
 
-![Snapshot_21-07-31_10-17-57](https://user-images.githubusercontent.com/66028151/127725797-d5288a2a-b684-49ba-abe4-500dad500f83.png)
+<div style="align: center">
+<img src="https://user-images.githubusercontent.com/66028151/130625664-655722d1-5936-4fd5-bc4c-4fb8c9720aab.png">
+</div>
+ 
+## 语言 / Lanuage
+简体中文(https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/README-cn.md)
 
+English (Current)
+ 
 ## Infomation
 
 <details>  
@@ -33,6 +40,8 @@ Tips:
 * For macOS 12 Monterey, DW1820 do not work well (can not use Airdrop, Handoff and Sidercar). Therefore I change it to BCM94360Z4 and it works well!
 * Strongly recommand you to re-create USBMap.kext for your own laptop with this [tool](https://github.com/corpnewt/USBMap) 
 * If you change your hardware (like wireless), re-create the USBMap.kext as well.
+* It is strong recommanded that re-generate a serial number for your own laptop(needed to be check invaluable in apple.com)!
+* Do not turn on `Find my mac`!
 
 </details>
 
@@ -47,14 +56,14 @@ Tips:
 - [x] Internal camera
 - [x] WiFi using [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
 - [x] Bluetooth using [BrcmFirmareData and BrcmPatchRAM3](https://github.com/acidanthera/BrcmPatchRAM)
-- [x] Shutdown/ Reboot/ Sleep/ Wake (include Fn + insert to sleep)
+- [x] Shutdown/ Reboot/ Sleep/ Wake (include Fn + insert and LID device to sleep)
 - [x] Speakers and headphones jack
 - [x] Intel Gigabit Ethernet
 - [x] App Store
-- [x] (unsure) iMessage and Facetime 
+- [x] (unsure, associated with your apple account) iMessage and Facetime 
 - [x] miniDP and HDMI with digital audio passthrough(If you experience cursor lags, try turning on and off one of the displays.)
 - [x] Keyboard and Trackpad(two finger vertical swipes)
-- [x] Airdrop , Handoff and Sidecar
+- [x] Airdrop , Handoff , Sidecar and Airplay(Airplay is only support for macOS12)
 - [x] SD Card Reader using [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) and [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend)
 
 </details>
@@ -106,14 +115,17 @@ You can either operate in Windows or firstly install macOS (the Wifi and Bluetoo
   * `BrcmBluetoothInjector.kext`
   * `BrcmFirmwareData.kext`
   * `BrcmPatchRAM3.kext`
+  * `BlueToolfixup.kext`(except in macOS 12)
 
 - Zip and Copy the listing files to `\EFI\OC\Kexts\`
 
   * `AirportItlwm.kext`
   * `IntelBluetoothFirmware.kext`
-  * `IntelBluetoothInjector.kext` 
+  * `IntelBluetoothInjector.kext`
+  * macOS 12 may need other kexts, follow the instuction in website of the kexts.  
 
 - Run ProperTree
+- Mount EFI partition
 - In the menu bar, choose `Files` -> `OC snapshot` -> choose the folder `\EFI\OC`
 - Save files
 - Reboot(in macOS) or install and enjoy!

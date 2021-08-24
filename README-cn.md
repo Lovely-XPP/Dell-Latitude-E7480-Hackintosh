@@ -133,8 +133,9 @@ OpenCore 0.7.0 / 0.7.1 / 0.7.2
 
 </details>
 
-## 引用
+## 致谢
 * [Acidanthera](https://github.com/Acidanthera) 的 OC包和主要的驱动
 * [daliansky](https://github.com/daliansky) 的很棒的SSDTs在 [OC-little](https://github.com/daliansky/OC-little)
 * [Dortania](https://dortania.github.io/)的OC安装教程
+* 所有为这个EFI和黑苹果做出贡献的人
 

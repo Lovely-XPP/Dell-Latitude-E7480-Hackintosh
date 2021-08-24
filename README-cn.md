@@ -78,9 +78,9 @@ OpenCore 0.7.0 / 0.7.1 / 0.7.2
 
 </details>
 
-## 对于Intle无线网卡
+## 对于 Intel 无线网卡
 
-你既可以在windows下操作，也可以在macOS下操作。
+你既可以在Windows下操作，也可以在macOS下操作。
 
 ### 准备工作
 <details>  

@@ -81,59 +81,11 @@ Tips:
 
 ## For Intel Wireless and Bluetooth
 
-You can either operate in Windows or firstly install macOS (the Wifi and Bluetooth do not influence the entry to the Big Sur).
+Now, I add a config for Intel wireless card kexts. The method to use it is as below
 
-### Pre-pare
-<details>  
-<summary><strong>Editing Config.plist tool: ProperTree</strong></summary>
-</br>
+* Delete the existing `config.plist`
+* Change `config-intel-wireless-card.plist` into `config.plist`
 
-* Download: [ProperTree](https://github.com/corpnewt/ProperTree)
-* Zip: Zip the downloaded files to the Desktop 
-* Run ProperTree
-
-  * For Windows user: run ProperTree.bat
-  * For macOS user: run ProperTree.command
-
-</details>
-
-
-### Download & Install kexts
-
-<details>  
-<summary><strong>Download links</strong></summary>
-</br>
-
-- WiFi using [AirportItlwm](https://github.com/OpenIntelWireless/itlwm)
-- Bluetooth using [IntelBluetoothFirmware and IntelBluetoothInjector](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
-
-</details>
-
-<details>  
-<summary><strong>Install </strong></summary>
-</br>
-
-- In the dir `\EFI\OC\Kexts\`, remove the files 
-
-  * `BrcmBluetoothInjector.kext`
-  * `BrcmFirmwareData.kext`
-  * `BrcmPatchRAM3.kext`
-  * `BlueToolfixup.kext`(except in macOS 12)
-
-- Zip and Copy the listing files to `\EFI\OC\Kexts\`
-
-  * `AirportItlwm.kext`
-  * `IntelBluetoothFirmware.kext`
-  * `IntelBluetoothInjector.kext`
-  * macOS 12 may need other kexts, follow the instuction in website of the kexts.  
-
-- Run ProperTree
-- Mount EFI partition
-- In the menu bar, choose `Files` -> `OC snapshot` -> choose the folder `\EFI\OC`
-- Save files
-- Reboot(in macOS) or install and enjoy!
-
-</details>
 
 ## Credits
 * [Acidanthera](https://github.com/Acidanthera) for oc package and main kexts.

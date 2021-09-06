@@ -80,56 +80,9 @@ OpenCore 0.7.0 / 0.7.1 / 0.7.2
 
 ## 对于 Intel 无线网卡
 
-你既可以在Windows下操作，也可以在macOS下操作。
-
-### 准备工作
-<details>  
-<summary><strong>编辑Config.plist的工具: ProperTree</strong></summary>
-</br>
-
-* 下载工具: [ProperTree](https://github.com/corpnewt/ProperTree)
-* 解压: 将下载的文件解压到桌面
-* 运行 ProperTree
-
-  * Windows下: 运行 ProperTree.bat
-  * macOS下: 运行 ProperTree.command
-
-</details>
-
-
-### 下载和安装驱动
-<details>  
-<summary><strong>下载链接</strong></summary>
-</br>
-
-- WiFi 使用 [AirportItlwm](https://github.com/OpenIntelWireless/itlwm)驱动，注意对应系统版本。
-- Bluetooth 使用 [IntelBluetoothFirmware and IntelBluetoothInjector](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)驱动，同样注意对应系统版本。
-
-</details>
-
-<details>  
-<summary><strong>安装 </strong></summary>
-</br>
-
-- 在目录 `\EFI\OC\Kexts\`下, 移除以下文件
-
-  * `BrcmBluetoothInjector.kext`
-  * `BrcmFirmwareData.kext`
-  * `BrcmPatchRAM3.kext`
-  * `BlueToolfixup.kext`(macOS12 不需要移除)
-
-- 解压并复制下载的驱动到目录`\EFI\OC\Kexts\`
-
-  * `AirportItlwm.kext`
-  * `IntelBluetoothFirmware.kext`
-  * `IntelBluetoothInjector.kext` 
-  * 对于12系统可能会有其他的驱动，按照驱动网址的说明来
-
-- 运行 ProperTree
-- 挂载EFI盘
-- 在软件的菜单栏, 选择 `Files` -> `OC snapshot` -> 选择文件夹 `\EFI\OC`
-- 保存文件
-- 重启或者安装系统然后享受吧!
+为了简化操作，已经添加了相应的config-intel-wireless-card.plist，在使用前
+* 把原来的`config.plist`删掉
+* 把`config-intel-wireless-card.plist`改成`config.plist`
 
 </details>
 

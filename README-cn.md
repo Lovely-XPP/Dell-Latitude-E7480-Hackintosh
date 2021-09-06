@@ -54,7 +54,7 @@ OpenCore 0.7.0 / 0.7.1 / 0.7.2
 </br>
 
 - [x] 显卡Intel HD 620 Graphics的正常驱动（包含双硬解码、GPU加速）
-- [x] 所有的USB端口都正常工作 (注意：Type-C接口不适用热插拔！要使用Type-C接口请关机接上后再启动！)
+- [x] 所有的USB端口都正常工作 (注意：Type-C接口已经部分支持热插拔！但是要使用Type-C接口仍然需要关机后接上再启动！)
 - [x] 内置摄像头
 - [x] Wifi 使用[AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)成功稳定驱动（2.4GHz/5G）
 - [x] 蓝牙 使用[BrcmFirmareData and BrcmPatchRAM3](https://github.com/acidanthera/BrcmPatchRAM)驱动（macOS仅需使用其中的BlueToolfixup，配置文件都已经设置好）
@@ -90,5 +90,6 @@ OpenCore 0.7.0 / 0.7.1 / 0.7.2
 * [Acidanthera](https://github.com/Acidanthera) 的 OC包和主要的驱动
 * [daliansky](https://github.com/daliansky) 的很棒的SSDTs在 [OC-little](https://github.com/daliansky/OC-little)
 * [Dortania](https://dortania.github.io/)的OC安装教程
+* [the-darkvoid](https://github.com/the-darkvoid)解决了部分Type-C设备的热插拔问题在[IOElectrify](https://github.com/the-darkvoid/macOS-IOElectrify)
 * 所有为这个EFI和黑苹果做出贡献的人
 

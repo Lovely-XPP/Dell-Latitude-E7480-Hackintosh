@@ -55,7 +55,7 @@ Tips:
 </br>
 
 - [x] Intel HD 620 Graphics `incuding graphics acceleration`
-- [x] All USB ports (Warn: Type-C does not support hot plug, plug it in your computer if you want to use it and turn it on again)
+- [x] All USB ports (Warn: Type-C partly support hot plug, plug it in your computer if you want to use it and turn it on again)
 - [x] Internal camera
 - [x] WiFi using [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
 - [x] Bluetooth using [BrcmFirmareData and BrcmPatchRAM3](https://github.com/acidanthera/BrcmPatchRAM)
@@ -91,5 +91,6 @@ Now, I add a config for Intel wireless card kexts. The method to use it is as be
 * [Acidanthera](https://github.com/Acidanthera) for oc package and main kexts.
 * [daliansky](https://github.com/daliansky) for awsome SSDTs in [OC-little](https://github.com/daliansky/OC-little).
 * [Dortania](https://dortania.github.io/) for installation and other guides.
+* [the-darkvoid](https://github.com/the-darkvoid) for partly solve thunderbolt(type-C) hot-plug issue in [IOElectrify](https://github.com/the-darkvoid/macOS-IOElectrify)
 
 

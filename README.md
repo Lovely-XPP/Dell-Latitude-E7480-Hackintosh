@@ -60,6 +60,7 @@ Tips:
 - [x] WiFi using [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
 - [x] Bluetooth using [BrcmFirmareData and BrcmPatchRAM3](https://github.com/acidanthera/BrcmPatchRAM)
 - [x] Shutdown/ Reboot/ Sleep/ Wake (include Fn + insert and LID device to sleep)
+- [x] All fn key work (You need to setting on bios first. Go to POST Behavior -> Fn Lock Options. Check Fn Lock and Lock mode disable/standard)  
 - [x] Speakers and headphones jack
 - [x] Intel Gigabit Ethernet
 - [x] App Store

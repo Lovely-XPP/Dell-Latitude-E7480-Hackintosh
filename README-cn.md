@@ -59,6 +59,7 @@ OpenCore 0.7.0 / 0.7.1 / 0.7.2
 - [x] Wifi 使用[AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)成功稳定驱动（2.4GHz/5G）
 - [x] 蓝牙 使用[BrcmFirmareData and BrcmPatchRAM3](https://github.com/acidanthera/BrcmPatchRAM)驱动（macOS仅需使用其中的BlueToolfixup，配置文件都已经设置好）
 - [x] 关机/ 重启/ 睡眠/ 唤醒 (包含 Fn + insert 键睡眠和合盖睡眠)
+- [x] 所有Fn键的功能 (需要关闭bios关于Fn键锁：bios -> POST Behavior -> Fn Lock Options)
 - [x] 扬声器和耳机插孔
 - [x] Intel 有线网络
 - [x] 苹果商店和iCloud账户服务，不要开启查找我的Mac功能！

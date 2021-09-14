@@ -98,6 +98,13 @@ Now, I add a config for Intel wireless card kexts. The method to use it is as be
 * Delete the existing `config.plist`
 * Change `config-intel-wireless-card.plist` into `config.plist`
 
+## ComboJack Installation
+
+Hackintosh combojack support for alc256/alc255 from https://github.com/hackintosh-stuff/ComboJack
+Step by step to use this,
+* Clone combojack repository
+* Run ComboJack_Installer/install.sh in terminal and reboot
+* Done. When you attach a headphone there will be a popup asking about headphone type.
 
 ## Credits
 * [Acidanthera](https://github.com/Acidanthera) for oc package and main kexts.

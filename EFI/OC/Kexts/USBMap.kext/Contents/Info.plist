@@ -33,7 +33,7 @@
 				<key>IOPropertyMatch</key>
 				<dict>
 					<key>pcidebug</key>
-					<string>5:0:0</string>
+					<string>59:0:0</string>
 				</dict>
 			</dict>
 			<key>IOProviderClass</key>
@@ -56,6 +56,33 @@
 						<data>
 						AQAAAA==
 						</data>
+					</dict>
+					<key>HS02</key>
+					<dict>
+						<key>#port</key>
+						<data>
+						AgAAAA==
+						</data>
+						<key>UsbConnector</key>
+						<integer>3</integer>
+					</dict>
+					<key>SS01</key>
+					<dict>
+						<key>#port</key>
+						<data>
+						AwAAAA==
+						</data>
+						<key>UsbConnector</key>
+						<integer>3</integer>
+					</dict>
+					<key>SS02</key>
+					<dict>
+						<key>#port</key>
+						<data>
+						BAAAAA==
+						</data>
+						<key>UsbConnector</key>
+						<integer>3</integer>
 					</dict>
 				</dict>
 			</dict>
@@ -117,12 +144,12 @@
 					</dict>
 					<key>HS04</key>
 					<dict>
+						<key>#port</key>
+						<data>
+						BAAAAA==
+						</data>
 						<key>UsbConnector</key>
 						<integer>3</integer>
-						<key>port</key>
-						<data>
-						BQAAAA==
-						</data>
 					</dict>
 					<key>HS05</key>
 					<dict>
@@ -130,7 +157,7 @@
 						<integer>3</integer>
 						<key>port</key>
 						<data>
-						BwAAAA==
+						BQAAAA==
 						</data>
 					</dict>
 					<key>HS06</key>
@@ -139,10 +166,19 @@
 						<integer>3</integer>
 						<key>port</key>
 						<data>
-						CAAAAA==
+						BwAAAA==
 						</data>
 					</dict>
 					<key>HS07</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>3</integer>
+						<key>port</key>
+						<data>
+						CAAAAA==
+						</data>
+					</dict>
+					<key>HS08</key>
 					<dict>
 						<key>UsbConnector</key>
 						<integer>3</integer>
@@ -162,12 +198,30 @@
 					</dict>
 					<key>SS02</key>
 					<dict>
+						<key>#port</key>
+						<data>
+						DgAAAA==
+						</data>
+						<key>UsbConnector</key>
+						<integer>3</integer>
+					</dict>
+					<key>SS03</key>
+					<dict>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>
 						<data>
 						DwAAAA==
 						</data>
+					</dict>
+					<key>SS04</key>
+					<dict>
+						<key>#port</key>
+						<data>
+						EAAAAA==
+						</data>
+						<key>UsbConnector</key>
+						<integer>3</integer>
 					</dict>
 				</dict>
 			</dict>

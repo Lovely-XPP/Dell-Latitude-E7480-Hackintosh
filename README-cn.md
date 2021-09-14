@@ -21,6 +21,14 @@ OpenCore 0.7.2 / 0.7.3
 </details>
 
 <details>  
+<summary><strong>测试过/支持的系统版本</strong></summary>
+</br>
+- Big Sur 11.5.0 - 11.5.2</br>
+- Big Sur 11.6</br>
+- Monterey 12.0 </br>
+</details>
+
+<details>  
 <summary><strong>硬件信息</strong></summary>
 </br>
 
@@ -61,6 +69,7 @@ OpenCore 0.7.2 / 0.7.3
 - [x] 关机/ 重启/ 睡眠/ 唤醒 (包含 Fn + insert 键睡眠和合盖睡眠)
 - [x] 所有Fn键的功能 (需要关闭bios关于Fn键锁：bios -> POST Behavior -> Fn Lock Options)
 - [x] 扬声器和耳机插孔
+- [x] 外置麦克风和耳麦(仅在Big Sur 11.6 上测试成功，使用的是[combojack](https://github.com/hackintosh-stuff/ComboJack)) 
 - [x] Intel 有线网络
 - [x] 苹果商店和iCloud账户服务，不要开启查找我的Mac功能！
 - [x] (不一定可用，和你的账户也有关系) iMessage 和 Facetime 
@@ -76,6 +85,7 @@ OpenCore 0.7.2 / 0.7.3
 </br>
 
 - [ ] 触摸板不支持多手势。
+- [ ] 通过Type-C接口不支持音频传输至另一个显示器
 
 </details>
 
@@ -85,12 +95,21 @@ OpenCore 0.7.2 / 0.7.3
 * 把原来的`config.plist`删掉
 * 把`config-intel-wireless-card.plist`改成`config.plist`
 
-</details>
+
+## ComboJack 安装说明
+
+关于声卡ALC256/255的黑苹果混合耳机插孔（输入输出混合插孔）在 https://github.com/hackintosh-stuff/ComboJack
+
+安装请采用这些步骤:
+* 克隆ComboJack仓库
+* 在终端运行 ComboJack_Installer/install.sh
+* 完成。请注意在插入插孔后，会有弹窗提示你选择相应的接口。（建议选耳麦）
 
 ## 致谢
 * [Acidanthera](https://github.com/Acidanthera) 的 OC包和主要的驱动
 * [daliansky](https://github.com/daliansky) 的很棒的SSDTs在 [OC-little](https://github.com/daliansky/OC-little)
 * [Dortania](https://dortania.github.io/)的OC安装教程
 * [the-darkvoid](https://github.com/the-darkvoid)解决了部分Type-C设备的热插拔问题在[IOElectrify](https://github.com/the-darkvoid/macOS-IOElectrify)
+* 给出了相应声卡（ALC256）对应外置麦克风的解决方案：[combojack](https://github.com/hackintosh-stuff/ComboJack)
 * 所有为这个EFI和黑苹果做出贡献的人
 

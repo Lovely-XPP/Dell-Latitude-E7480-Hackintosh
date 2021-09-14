@@ -17,7 +17,7 @@ English (Current)
 <details>  
 <summary><strong>Booter</strong></summary>
 </br>
-OpenCore 0.7.0 / 0.7.1 / 0.7.2
+OpenCore 0.7.2 / 0.7.3 
 </details>
 
 <details>  

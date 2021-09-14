@@ -21,6 +21,14 @@ OpenCore 0.7.2 / 0.7.3
 </details>
 
 <details>  
+<summary><strong>MacOS Supported/Tested</strong></summary>
+</br>
+- Big Sur 11.5.0 - 11.5.2</br>
+- Big Sur 11.6</br>
+- Monterey 12.0 </br>
+</details>
+
+<details>  
 <summary><strong>My Hardware</strong></summary>
 </br>
 
@@ -63,6 +71,7 @@ Tips:
 - [x] Shutdown/ Reboot/ Sleep/ Wake (include Fn + insert and LID device to sleep)
 - [x] All fn key work (You need to setting on bios first. Go to POST Behavior -> Fn Lock Options. Check Fn Lock and Lock mode disable/standard)  
 - [x] Speakers and headphones jack
+- [x] External mic/Headphone mic jack(Working only with Big Sur 11.6 and [combojack](https://github.com/hackintosh-stuff/ComboJack)) 
 - [x] Intel Gigabit Ethernet
 - [x] App Store
 - [x] (unsure, associated with your apple account) iMessage and Facetime 
@@ -78,7 +87,6 @@ Tips:
 </br>
 
 - [ ] Multitouch gestures for ALPS touchpad.
-- [ ] Microphone jack
 - [ ] Audio through type-c monitor
 
 </details>
@@ -90,6 +98,14 @@ Now, I add a config for Intel wireless card kexts. The method to use it is as be
 * Delete the existing `config.plist`
 * Change `config-intel-wireless-card.plist` into `config.plist`
 
+## ComboJack Installation
+
+Hackintosh combojack support for alc256/alc255 from https://github.com/hackintosh-stuff/ComboJack
+
+Follow this step:
+* Clone combojack repository
+* Run ComboJack_Installer/install.sh in terminal and reboot
+* Done. When you attach a headphone there will be a popup asking about headphone type.
 
 ## Credits
 * [Acidanthera](https://github.com/Acidanthera) for oc package and main kexts.

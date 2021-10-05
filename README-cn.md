@@ -10,14 +10,14 @@
 [English](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/README.md)
 
 ## 下载
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.3.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.4.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases)
 
 ## 引导 & 硬件信息
 
 <details>  
 <summary><strong>OC引导版本</strong></summary>
 </br>
-OpenCore 0.7.2 / 0.7.3
+OpenCore 0.7.2 / 0.7.3 / 0.7.4
 </details>
 
 <details>  

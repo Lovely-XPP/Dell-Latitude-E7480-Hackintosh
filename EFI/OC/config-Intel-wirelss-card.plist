@@ -1644,9 +1644,9 @@
 			<false/>
 			<key>AppleXcpmForceBoost</key>
 			<false/>
-			<key>CustomSMBIOSGuid</key>
-			<true/>
 			<key>DisableIoMapper</key>
+			<true/>
+			<key>CustomSMBIOSGuid</key>
 			<true/>
 			<key>DisableLinkeditJettison</key>
 			<true/>
@@ -1724,10 +1724,10 @@
 		</dict>
 		<key>Debug</key>
 		<dict>
-			<key>AppleDebug</key>
-			<true/>
 			<key>ApplePanic</key>
-			<true/>
+			<false/>
+			<key>AppleDebug</key>
+			<false/>
 			<key>DisableWatchDog</key>
 			<false/>
 			<key>DisplayDelay</key>
@@ -1764,9 +1764,9 @@
 		</array>
 		<key>Security</key>
 		<dict>
-			<key>AllowNvramReset</key>
-			<true/>
 			<key>AllowSetDefault</key>
+			<true/>
+			<key>AllowNvramReset</key>
 			<true/>
 			<key>AllowToggleSip</key>
 			<true/>
@@ -1775,7 +1775,7 @@
 			<key>AuthRestart</key>
 			<false/>
 			<key>BlacklistAppleUpdate</key>
-			<true/>
+			<false/>
 			<key>DmgLoading</key>
 			<string>Signed</string>
 			<key>EnablePassword</key>
@@ -2173,14 +2173,6 @@
 				<true/>
 				<key>Path</key>
 				<string>CrScreenshotDxe.efi</string>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>ext4_x64.efi</string>
 			</dict>
 			<dict>
 				<key>Arguments</key>

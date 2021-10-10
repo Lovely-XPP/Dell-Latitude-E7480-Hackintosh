@@ -76,7 +76,7 @@ Tips:
 - [x] App Store
 - [x] (unsure, associated with your apple account) iMessage and Facetime 
 - [x] miniDP and HDMI with digital audio passthrough(If you experience cursor lags, try turning on and off one of the displays.)
-- [x] Keyboard and Trackpad(two finger vertical swipes)
+- [x] Keyboard and Trackpad (support Multitouch gestures)
 - [x] Airdrop , Handoff , Sidecar and Airplay(Airplay is only support for macOS12)
 - [x] SD Card Reader using [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) and [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend)
 
@@ -86,7 +86,6 @@ Tips:
 <summary><strong>What's not working</strong></summary>
 </br>
 
-- [ ] Multitouch gestures for ALPS touchpad.
 - [ ] Audio through type-c monitor
 
 </details>
@@ -112,5 +111,4 @@ Follow this step:
 * [daliansky](https://github.com/daliansky) for awsome SSDTs in [OC-little](https://github.com/daliansky/OC-little).
 * [Dortania](https://dortania.github.io/) for installation and other guides.
 * [the-darkvoid](https://github.com/the-darkvoid) for partly solve thunderbolt(type-C) hot-plug issue in [IOElectrify](https://github.com/the-darkvoid/macOS-IOElectrify)
-
-
+* [blankmac](https://github.com/blankmac) for trackpad with multitouch gestures in [AlpsT4USB](https://github.com/blankmac/AlpsT4USB)

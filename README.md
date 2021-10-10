@@ -10,7 +10,7 @@
 English (Current)
 
 ## Download
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.4-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.4.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases)
 
 ## Infomation
 
@@ -111,5 +111,6 @@ Follow this step:
 * [daliansky](https://github.com/daliansky) for awsome SSDTs in [OC-little](https://github.com/daliansky/OC-little).
 * [Dortania](https://dortania.github.io/) for installation and other guides.
 * [the-darkvoid](https://github.com/the-darkvoid) for partly solve thunderbolt(type-C) hot-plug issue in [IOElectrify](https://github.com/the-darkvoid/macOS-IOElectrify)
+* [hackintosh-stuff](https://github.com/hackintosh-stuff)for support externel mic/headphone with ALC256 ：[combojack](https://github.com/hackintosh-stuff/ComboJack)
 * [blankmac](https://github.com/blankmac) for trackpad with multitouch gestures in [AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
 * All contributors for this EFI.

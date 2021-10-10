@@ -63,6 +63,7 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 
 - [x] 显卡Intel HD 620 Graphics的正常驱动（包含双硬解码、GPU加速）
 - [x] 所有的USB端口都正常工作 (注意：Type-C接口已经部分支持热插拔！但是要使用Type-C接口仍然需要关机后接上再启动！)
+- [x] HDMI/Type-C 接口支持音频输出并支持热插拔 
 - [x] 内置摄像头
 - [x] Wifi 使用[AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)成功稳定驱动（2.4GHz/5G）
 - [x] 蓝牙 使用[BrcmFirmareData and BrcmPatchRAM3](https://github.com/acidanthera/BrcmPatchRAM)驱动（macOS仅需使用其中的BlueToolfixup，配置文件都已经设置好）
@@ -84,7 +85,7 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 <summary><strong>不可用功能</strong></summary>
 </br>
 
-- [ ] 通过Type-C接口不支持音频传输至另一个显示器
+暂时没有不可用功能
 
 </details>
 

@@ -64,7 +64,7 @@ Tips:
 
 - [x] Intel HD 620 Graphics `incuding graphics acceleration`
 - [x] All USB ports (Warn: Type-C fully support hot plug)
-- [x] HDMI/Type-C display monitor Hot-Plug fully supported(Sleep/dim after lock)
+- [x] HDMI/Type-C display monitor Hot-Plug fully supported(Sleep/dim after lock, audio output support)
 - [x] Internal camera
 - [x] WiFi using [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
 - [x] Bluetooth using [BrcmFirmareData and BrcmPatchRAM3](https://github.com/acidanthera/BrcmPatchRAM)
@@ -86,7 +86,7 @@ Tips:
 <summary><strong>What's not working</strong></summary>
 </br>
 
-- [ ] Audio through type-c monitor
+None so far.
 
 </details>
 

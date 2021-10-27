@@ -100,7 +100,7 @@ Tips:
 |	VoodooI2CHID	|	1|
 |	WhateverGreen	|	1.5.5|
 
-</detail>
+</details>
 
 ## Status
 

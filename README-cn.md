@@ -55,7 +55,9 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 * 不要开启查找我的Mac功能！
 </details>
 
-## 驱动版本
+<details>  
+<summary><strong>驱动版本</strong></summary>
+</br>
 
 | 驱动          | 版本号                        |
 |:----------------|:-------------------------------------------|
@@ -95,7 +97,7 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 |	VoodooI2C	|	2.6.5|
 |	VoodooI2CHID	|	1|
 |	WhateverGreen	|	1.5.5|
-
+</details>
 
 ## 工作状态
 

@@ -24,9 +24,9 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 <details>  
 <summary><strong>MacOS Supported/Tested</strong></summary>
 </br>
-- Big Sur 11.5.0 - 11.5.2</br>
-- Big Sur 11.6</br>
-- Monterey 12.0 </br>
+- Big Sur 11.5.0 - 11.5.2 </br>
+- Big Sur 11.6 - 11.6.1 </br>
+- Monterey 12.0 - 12.0.1 </br>
 </details>
 
 <details>  

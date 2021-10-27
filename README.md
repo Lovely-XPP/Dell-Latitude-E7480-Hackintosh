@@ -1,8 +1,9 @@
 # Dell Latitude E7480 macOS Big Sur 11 / Monterey 12.0 (OpenCore)
 
 <div style="align: center">
-<img src="https://user-images.githubusercontent.com/66028151/130625664-655722d1-5936-4fd5-bc4c-4fb8c9720aab.png">
+<img src="https://user-images.githubusercontent.com/66028151/139106659-df5a4237-6c56-4bdf-8f02-7bbeb89fbc4b.png">
 </div>
+
  
 ## 语言 / Lanuage
 [简体中文](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/README-cn.md)

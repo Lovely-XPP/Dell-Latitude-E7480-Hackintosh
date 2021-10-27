@@ -57,7 +57,9 @@ Tips:
 
 </details>
 
-## Kexts
+<details>  
+<summary><strong>Kexts Version</strong></summary>
+</br>
 
 | Kexts          | version                        |
 |:----------------|:-------------------------------------------|
@@ -97,6 +99,8 @@ Tips:
 |	VoodooI2C	|	2.6.5|
 |	VoodooI2CHID	|	1|
 |	WhateverGreen	|	1.5.5|
+
+</details>
 
 ## Status
 

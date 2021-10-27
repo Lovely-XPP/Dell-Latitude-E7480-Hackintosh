@@ -1,7 +1,7 @@
 # 戴尔 Latitude E7480 macOS Big Sur 11 / Monterey 12.0 (OpenCore引导)
 
 <div style="align: center">
-<img src="https://user-images.githubusercontent.com/66028151/130625664-655722d1-5936-4fd5-bc4c-4fb8c9720aab.png">
+<img src="https://user-images.githubusercontent.com/66028151/139106659-df5a4237-6c56-4bdf-8f02-7bbeb89fbc4b.png">
 </div>
  
 ## 语言 / Lanuage
@@ -24,8 +24,8 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 <summary><strong>测试过/支持的系统版本</strong></summary>
 </br>
 - Big Sur 11.5.0 - 11.5.2</br>
-- Big Sur 11.6</br>
-- Monterey 12.0 </br>
+- Big Sur 11.6 - 11.6.1</br>
+- Monterey 12.0 - 12.0.1</br>
 </details>
 
 <details>  

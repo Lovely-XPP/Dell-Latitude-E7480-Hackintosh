@@ -55,6 +55,48 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 * 不要开启查找我的Mac功能！
 </details>
 
+## 驱动版本
+
+| 驱动          | 版本号                        |
+|:----------------|:-------------------------------------------|
+|	AirportBrcmFixup	|	2.1.4|
+|	AirportItlwm	|	2.1.0|
+|	AirportItlwm	|	2.1.0|
+|	AlpsT4USB	|	1.0.0d1|
+|	AppleALC	|	1.6.5|
+|	BlueToolFixup	|	2.6.1|
+|	BrcmBluetoothInjector	|	2.6.1|
+|	BrcmFirmwareData	|	2.6.1|
+|	BrcmPatchRAM3	|	2.6.1|
+|	BrightnessKeys	|	1.0.3|
+|	CPUFriend	|	1.2.5|
+|	CpuTscSync	|	1.0.5|
+|	ECEnabler	|	1.0.2|
+|	FeatureUnlock	|	1.0.4|
+|	HibernationFixup	|	1.4.5|
+|	IOElectrify	|	1.0.0|
+|	IntelBluetoothFirmware	|	2.0.1|
+|	IntelBluetoothInjector	|	2.0.1|
+|	IntelMausi	|	1.0.8|
+|	Lilu	|	1.5.7|
+|	NVMeFix	|	1.1.0|
+|	RealtekCardReader	|	0.9.7|
+|	RealtekCardReaderFriend	|	1.0.0|
+|	RestrictEvents	|	1.0.5|
+|	SMCBatteryManager	|	1.2.7|
+|	SMCDellSensors	|	1.2.7|
+|	SMCLightSensor	|	1.2.7|
+|	SMCProcessor	|	1.2.7|
+|	SMCSuperIO	|	1.2.7|
+|	USBMap	|	1.0|
+|	VerbStub	|	1.0.4|
+|	VirtualSMC	|	1.2.7|
+|	Voodoo PS/2 Controller	|	2.2.6|
+|	VoodooI2C	|	2.6.5|
+|	VoodooI2CHID	|	1|
+|	WhateverGreen	|	1.5.5|
+
+
 ## 工作状态
 
 <details>  

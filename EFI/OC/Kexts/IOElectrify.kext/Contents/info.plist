@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>17E199</string>
+	<string>21A5543b</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -29,17 +29,19 @@
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>9E145</string>
+	<string>13A233</string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>GM</string>
+	<string>11.3</string>
 	<key>DTSDKBuild</key>
-	<string>17E189</string>
+	<string>20E214</string>
 	<key>DTSDKName</key>
-	<string>macosx10.13</string>
+	<string>macosx11.3</string>
 	<key>DTXcode</key>
-	<string>0930</string>
+	<string>1300</string>
 	<key>DTXcodeBuild</key>
-	<string>9E145</string>
+	<string>13A233</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>IOElectrify</key>
@@ -48,6 +50,8 @@
 			<string>org.darkvoid.driver.IOElectrify</string>
 			<key>IOClass</key>
 			<string>IOElectrify</string>
+			<key>IOElectrifyPowerHook</key>
+			<integer>0</integer>
 			<key>IONameMatch</key>
 			<array>
 				<string>PNP0C14</string>
@@ -62,6 +66,8 @@
 			</dict>
 			<key>IOProviderClass</key>
 			<string>IOACPIPlatformDevice</string>
+			<key>IOUserClientClass</key>
+			<string>IOElectrifyUserClient</string>
 		</dict>
 		<key>IOElectrifyBridge</key>
 		<dict>
@@ -69,6 +75,8 @@
 			<string>org.darkvoid.driver.IOElectrify</string>
 			<key>IOClass</key>
 			<string>IOElectrifyBridge</string>
+			<key>IOElectrifyBridgePowerHook</key>
+			<false/>
 			<key>IOMatchCategory</key>
 			<string>IOElectrify</string>
 			<key>IOPCIClassMatch</key>
@@ -79,8 +87,14 @@
 			<integer>10</integer>
 			<key>IOProviderClass</key>
 			<string>IOPCI2PCIBridge</string>
+			<key>IOUserClientClass</key>
+			<string>IOElectrifyBridgeUserClient</string>
+			<key>MatchParentName</key>
+			<string>RP05</string>
 		</dict>
 	</dict>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.13</string>
 	<key>OSBundleCompatibleVersion</key>
 	<string>1.0.0</string>
 	<key>OSBundleLibraries</key>

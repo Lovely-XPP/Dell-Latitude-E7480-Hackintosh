@@ -64,27 +64,27 @@ Tips:
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
 |	AirportBrcmFixup	|	2.1.4	|	2021-08-16	|	Compile on Local Machine	|
-|	AirportItlwm	|	2.1.0	|	2021-10-27	|	Official Release	|
-|	AirportItlwm	|	2.1.0	|	2021-10-27	|	Official Release	|
+|	AirportItlwm	|	2.1.0	|	2021-10-27	|	Compile on Local Machine	|
+|	AirportItlwm	|	2.1.0	|	2021-10-27	|	Compile on Local Machine	|
 |	AlpsT4USB	|	1.0.0d1	|	2021-10-09	|	Official Release	|
 |	AppleALC	|	1.6.5	|	2021-10-04	|	Official Release	|
-|	BlueToolFixup	|	2.6.1	|	2021-10-27	|	Official Release	|
+|	BlueToolFixup	|	2.6.1	|	2021-10-27	|	Compile on Local Machine	|
 |	BrcmBluetoothInjector	|	2.6.1	|	2021-10-22	|	Official Release	|
-|	BrcmFirmwareData	|	2.6.1	|	2021-10-27	|	Official Release	|
-|	BrcmPatchRAM3	|	2.6.1	|	2021-10-27	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.1	|	2021-10-27	|	Compile on Local Machine	|
+|	BrcmPatchRAM3	|	2.6.1	|	2021-10-27	|	Compile on Local Machine	|
 |	BrightnessKeys	|	1.0.3	|	2021-08-16	|	Compile on Local Machine	|
 |	CPUFriend	|	1.2.5	|	2021-08-16	|	Compile on Local Machine	|
 |	CpuTscSync	|	1.0.5	|	2021-10-04	|	Official Release	|
-|	ECEnabler	|	1.0.2	|	2021-10-27	|	Official Release	|
-|	FeatureUnlock	|	1.0.4	|	2021-10-22	|	Official Release	|
-|	HibernationFixup	|	1.4.5	|	2021-10-27	|	Official Release	|
-|	IOElectrify	|	1.0.0	|	2021-10-10	|	Official Release	|
-|	IntelBluetoothFirmware	|	2.0.1	|	2021-10-27	|	Official Release	|
-|	IntelBluetoothInjector	|	2.0.1	|	2021-10-27	|	Official Release	|
+|	ECEnabler	|	1.0.2	|	2021-10-27	|	Compile on Local Machine	|
+|	FeatureUnlock	|	1.0.4	|	2021-10-22	|	Compile on Local Machine	|
+|	HibernationFixup	|	1.4.5	|	2021-10-27	|	Compile on Local Machine	|
+|	IOElectrify	|	1.0.0	|	2021-10-10	|	Compile on Local Machine	|
+|	IntelBluetoothFirmware	|	2.0.1	|	2021-10-27	|	Compile on Local Machine	|
+|	IntelBluetoothInjector	|	2.0.1	|	2021-10-27	|	Compile on Local Machine	|
 |	IntelMausi	|	1.0.8	|	2021-08-27	|	Official Release	|
-|	Lilu	|	1.5.7	|	2021-10-27	|	Official Release	|
+|	Lilu	|	1.5.7	|	2021-10-27	|	Compile on Local Machine	|
 |	NVMeFix	|	1.1.0	|	2021-08-23	|	Compile on Local Machine	|
-|	RealtekCardReader	|	0.9.7	|	2021-10-27	|	Official Release	|
+|	RealtekCardReader	|	0.9.7	|	2021-10-27	|	Compile on Local Machine	|
 |	RealtekCardReaderFriend	|	1.0.0	|	2021-08-16	|	Compile on Local Machine	|
 |	RestrictEvents	|	1.0.5	|	2021-10-04	|	Official Release	|
 |	SMCBatteryManager	|	1.2.7	|	2021-09-06	|	Official Release	|
@@ -98,7 +98,7 @@ Tips:
 |	Voodoo PS/2 Controller	|	2.2.6	|	2021-10-04	|	Official Release	|
 |	VoodooI2C	|	2.6.5	|	2021-02-28	|	Official Release	|
 |	VoodooI2CHID	|	1	|	2021-10-10	|	Official Release	|
-|	WhateverGreen	|	1.5.5	|	2021-10-27	|	Official Release	|
+|	WhateverGreen	|	1.5.5	|	2021-10-27	|	Compile on Local Machine	|
 
 </details>
 

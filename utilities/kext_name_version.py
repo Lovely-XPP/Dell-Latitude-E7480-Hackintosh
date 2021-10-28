@@ -24,7 +24,9 @@ for kext in os.listdir(os.path.join(root,'EFI/OC/Kexts')):
     if kext == 'USBMap.kext':
         kext_type.append('USB Ports Inject')
         continue
-    if plist['BuildMachineOSBuild'] == '21A5304g':
+    build_version = plist['BuildMachineOSBuild']
+    build_version = build_version[0:2]
+    if build_version == '21':
         kext_type.append('Compile on Local Machine')
     else:
         kext_type.append('Official Release')

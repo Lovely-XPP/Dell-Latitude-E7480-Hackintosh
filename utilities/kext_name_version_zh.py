@@ -24,7 +24,9 @@ for kext in os.listdir(os.path.join(root,'EFI/OC/Kexts')):
     if kext == 'USBMap.kext':
         kext_type.append('USB 端口注入')
         continue
-    if plist['BuildMachineOSBuild'] == '21A5304g':
+    build_version = plist['BuildMachineOSBuild']
+    build_version = build_version[0:2]
+    if build_version == '21':
         kext_type.append('本地编译')
     else:
         kext_type.append('官方编译')

@@ -61,42 +61,42 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 
 | 驱动          | 版本号                        | 更新日期        | 更新方式         |
 |:-------------|:-----------------------------|:---------------|:----------------|
-|	AirportBrcmFixup	|	2.1.4	|	2021-08-16	|	Compile on Local Machine	|
-|	AirportItlwm-Monterey	|	2.1.0	|	2021-10-27	|	Compile on Local Machine	|
-|	AirportItlwm	|	2.1.0	|	2021-10-27	|	Compile on Local Machine	|
-|	AlpsT4USB	|	1.0.0d1	|	2021-10-09	|	Official Release	|
-|	AppleALC	|	1.6.5	|	2021-10-04	|	Official Release	|
-|	BlueToolFixup	|	2.6.1	|	2021-10-27	|	Compile on Local Machine	|
-|	BrcmBluetoothInjector	|	2.6.1	|	2021-10-22	|	Official Release	|
-|	BrcmFirmwareData	|	2.6.1	|	2021-10-27	|	Compile on Local Machine	|
-|	BrcmPatchRAM3	|	2.6.1	|	2021-10-27	|	Compile on Local Machine	|
-|	BrightnessKeys	|	1.0.3	|	2021-08-16	|	Compile on Local Machine	|
-|	CPUFriend	|	1.2.5	|	2021-08-16	|	Compile on Local Machine	|
-|	CpuTscSync	|	1.0.5	|	2021-10-04	|	Official Release	|
-|	ECEnabler	|	1.0.2	|	2021-10-27	|	Compile on Local Machine	|
-|	FeatureUnlock	|	1.0.4	|	2021-10-22	|	Compile on Local Machine	|
-|	HibernationFixup	|	1.4.5	|	2021-10-27	|	Compile on Local Machine	|
-|	IOElectrify	|	1.0.0	|	2021-10-10	|	Compile on Local Machine	|
-|	IntelBluetoothFirmware	|	2.0.1	|	2021-10-27	|	Compile on Local Machine	|
-|	IntelBluetoothInjector	|	2.0.1	|	2021-10-27	|	Compile on Local Machine	|
-|	IntelMausi	|	1.0.8	|	2021-08-27	|	Official Release	|
-|	Lilu	|	1.5.7	|	2021-10-27	|	Compile on Local Machine	|
-|	NVMeFix	|	1.1.0	|	2021-08-23	|	Compile on Local Machine	|
-|	RealtekCardReader	|	0.9.7	|	2021-10-27	|	Compile on Local Machine	|
-|	RealtekCardReaderFriend	|	1.0.0	|	2021-08-16	|	Compile on Local Machine	|
-|	RestrictEvents	|	1.0.5	|	2021-10-04	|	Official Release	|
-|	SMCBatteryManager	|	1.2.7	|	2021-09-06	|	Official Release	|
-|	SMCDellSensors	|	1.2.7	|	2021-09-06	|	Official Release	|
-|	SMCLightSensor	|	1.2.7	|	2021-09-06	|	Official Release	|
-|	SMCProcessor	|	1.2.7	|	2021-09-06	|	Official Release	|
-|	SMCSuperIO	|	1.2.7	|	2021-09-06	|	Official Release	|
-|	USBMap	|	1.0	|	2021-09-06	|	USB Ports Inject	|
-|	VerbStub	|	1.0.4	|	2021-06-20	|	Official Release	|
-|	VirtualSMC	|	1.2.7	|	2021-09-06	|	Official Release	|
-|	Voodoo PS/2 Controller	|	2.2.6	|	2021-10-04	|	Official Release	|
-|	VoodooI2C	|	2.6.5	|	2021-02-28	|	Official Release	|
-|	VoodooI2CHID	|	1	|	2021-10-10	|	Official Release	|
-|	WhateverGreen	|	1.5.5	|	2021-10-27	|	Compile on Local Machine	|
+|	AirportBrcmFixup	|	2.1.4	|	2021-08-16	|	本地编译	|
+|	AirportItlwm	|	2.1.0	|	2021-10-27	|	本地编译	|
+|	AirportItlwm	|	2.1.0	|	2021-10-27	|	本地编译	|
+|	AlpsT4USB	|	1.0.0d1	|	2021-10-09	|	官方编译	|
+|	AppleALC	|	1.6.5	|	2021-10-04	|	官方编译	|
+|	BlueToolFixup	|	2.6.1	|	2021-10-27	|	本地编译	|
+|	BrcmBluetoothInjector	|	2.6.1	|	2021-10-22	|	官方编译	|
+|	BrcmFirmwareData	|	2.6.1	|	2021-10-27	|	本地编译	|
+|	BrcmPatchRAM3	|	2.6.1	|	2021-10-27	|	本地编译	|
+|	BrightnessKeys	|	1.0.3	|	2021-08-16	|	本地编译	|
+|	CPUFriend	|	1.2.5	|	2021-08-16	|	本地编译	|
+|	CpuTscSync	|	1.0.5	|	2021-10-04	|	官方编译	|
+|	ECEnabler	|	1.0.2	|	2021-10-27	|	本地编译	|
+|	FeatureUnlock	|	1.0.4	|	2021-10-22	|	本地编译	|
+|	HibernationFixup	|	1.4.5	|	2021-10-27	|	本地编译	|
+|	IOElectrify	|	1.0.0	|	2021-10-10	|	本地编译	|
+|	IntelBluetoothFirmware	|	2.0.1	|	2021-10-27	|	本地编译	|
+|	IntelBluetoothInjector	|	2.0.1	|	2021-10-27	|	本地编译	|
+|	IntelMausi	|	1.0.8	|	2021-08-27	|	官方编译	|
+|	Lilu	|	1.5.7	|	2021-10-27	|	本地编译	|
+|	NVMeFix	|	1.1.0	|	2021-08-23	|	本地编译	|
+|	RealtekCardReader	|	0.9.7	|	2021-10-27	|	本地编译	|
+|	RealtekCardReaderFriend	|	1.0.0	|	2021-08-16	|	本地编译	|
+|	RestrictEvents	|	1.0.5	|	2021-10-04	|	官方编译	|
+|	SMCBatteryManager	|	1.2.7	|	2021-09-06	|	官方编译	|
+|	SMCDellSensors	|	1.2.7	|	2021-09-06	|	官方编译	|
+|	SMCLightSensor	|	1.2.7	|	2021-09-06	|	官方编译	|
+|	SMCProcessor	|	1.2.7	|	2021-09-06	|	官方编译	|
+|	SMCSuperIO	|	1.2.7	|	2021-09-06	|	官方编译	|
+|	USBMap	|	1.0	|	2021-09-06	|	USB 端口注入	|
+|	VerbStub	|	1.0.4	|	2021-06-20	|	官方编译	|
+|	VirtualSMC	|	1.2.7	|	2021-09-06	|	官方编译	|
+|	Voodoo PS/2 Controller	|	2.2.6	|	2021-10-04	|	官方编译	|
+|	VoodooI2C	|	2.6.5	|	2021-02-28	|	官方编译	|
+|	VoodooI2CHID	|	1	|	2021-10-10	|	官方编译	|
+|	WhateverGreen	|	1.5.5	|	2021-10-27	|	本地编译	|
 </details>
 
 ## 工作状态

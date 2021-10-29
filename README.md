@@ -112,8 +112,8 @@ Tips:
 - [x] All USB ports (Warn: Type-C fully support hot plug)
 - [x] HDMI/Type-C display monitor Hot-Plug fully supported(Sleep/dim after lock, audio output support)
 - [x] Internal camera
-- [x] WiFi using [AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
-- [x] Bluetooth using [BrcmFirmareData and BrcmPatchRAM3](https://github.com/acidanthera/BrcmPatchRAM)
+- [x] WiFi （2.4GHz/5G）
+- [x] Bluetooth
 - [x] Shutdown/ Reboot/ Sleep/ Wake (include Fn + insert and LID device to sleep)
 - [x] All fn key work (You need to setting on bios first. Go to POST Behavior -> Fn Lock Options. Check Fn Lock and Lock mode disable/standard)  
 - [x] Speakers and headphones jack

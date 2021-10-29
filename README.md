@@ -109,7 +109,7 @@ Tips:
 </br>
 
 - [x] Intel HD 620 Graphics `incuding graphics acceleration`
-- [x] All USB ports (Warn: Type-C fully support hot plug)
+- [x] All USB ports (Tip: Type-C fully support hot plug)
 - [x] HDMI/Type-C display monitor Hot-Plug fully supported(Sleep/dim after lock, audio output support)
 - [x] Internal camera
 - [x] WiFi （2.4GHz/5G）
@@ -123,7 +123,7 @@ Tips:
 - [x] (unsure, associated with your apple account) iMessage and Facetime 
 - [x] miniDP and HDMI with digital audio passthrough(If you experience cursor lags, try turning on and off one of the displays.)
 - [x] Keyboard and Trackpad (support Multitouch gestures)
-- [x] Airdrop , Handoff , Sidecar and Airplay(Airplay is only support for macOS12)
+- [x] Airdrop , Handoff , Sidecar and Airplay (These features are only for Brcmcom wireless card, and Airplay is only support for macOS12)
 - [x] SD Card Reader
 
 </details>

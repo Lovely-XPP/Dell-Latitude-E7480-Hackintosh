@@ -121,7 +121,7 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 - [x] miniDP 和 HDMI （支持音频输入）
 - [x] 键盘、触摸屏(触摸屏支持手势)、触摸板（触摸板支持多手势）
 - [x] 隔空投送、接力、随航、隔空播放（这些功能仅适用于博通网卡，且隔空播放仅限macOS 12）
-- [x] SD读卡器使用 [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) 和 [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend) 驱动，使得SD读卡器原生化。
+- [x] SD读卡器
 
 </details>
 

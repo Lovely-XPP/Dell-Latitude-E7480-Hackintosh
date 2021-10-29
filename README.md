@@ -124,7 +124,7 @@ Tips:
 - [x] miniDP and HDMI with digital audio passthrough(If you experience cursor lags, try turning on and off one of the displays.)
 - [x] Keyboard and Trackpad (support Multitouch gestures)
 - [x] Airdrop , Handoff , Sidecar and Airplay(Airplay is only support for macOS12)
-- [x] SD Card Reader using [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) and [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend)
+- [x] SD Card Reader
 
 </details>
 
@@ -157,6 +157,7 @@ Follow this step:
 * [daliansky](https://github.com/daliansky) for awsome SSDTs in [OC-little](https://github.com/daliansky/OC-little).
 * [Dortania](https://dortania.github.io/) for installation and other guides.
 * [the-darkvoid](https://github.com/the-darkvoid) for partly solve thunderbolt(type-C) hot-plug issue in [IOElectrify](https://github.com/the-darkvoid/macOS-IOElectrify)
-* [hackintosh-stuff](https://github.com/hackintosh-stuff)for support externel mic/headphone with ALC256 in [combojack](https://github.com/hackintosh-stuff/ComboJack)
+* [hackintosh-stuff](https://github.com/hackintosh-stuff)for support externel mic/headphone with ALC256 in [combojack](https://github.com/hackintosh-stuff/ComboJack).
+* [0xFireWolf](https://github.com/0xFireWolf)for SD card reader support in [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) and [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend).
 * [blankmac](https://github.com/blankmac) for trackpad with multitouch gestures in [AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
 * All contributors for this EFI.

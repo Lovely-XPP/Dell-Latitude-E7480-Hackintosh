@@ -114,13 +114,13 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 - [x] 关机/ 重启/ 睡眠/ 唤醒 (包含 Fn + insert 键睡眠和合盖睡眠)
 - [x] 所有Fn键的功能 (需要关闭bios关于Fn键锁：bios -> POST Behavior -> Fn Lock Options)
 - [x] 扬声器和耳机插孔
-- [x] 外置麦克风和耳麦(仅在Big Sur 11.6 上测试成功，使用的是[combojack](https://github.com/hackintosh-stuff/ComboJack)) 
+- [x] 外置麦克风和耳麦(需要与[combojack](https://github.com/hackintosh-stuff/ComboJack)配合使用) 
 - [x] Intel 有线网络
 - [x] 苹果商店和iCloud账户服务，不要开启查找我的Mac功能！
 - [x] (不一定可用，和你的账户也有关系) iMessage 和 Facetime 
 - [x] miniDP 和 HDMI （支持音频输入）
 - [x] 键盘、触摸屏(触摸屏支持手势)、触摸板（触摸板支持多手势）
-- [x] 隔空投送、接力、随航、隔空播放（隔空播放仅限macOS 12）
+- [x] 隔空投送、接力、随航、隔空播放（这些功能仅适用于博通网卡，且隔空播放仅限macOS 12）
 - [x] SD读卡器使用 [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) 和 [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend) 驱动，使得SD读卡器原生化。
 
 </details>
@@ -154,7 +154,7 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 * [daliansky](https://github.com/daliansky) 的很棒的SSDTs：[OC-little](https://github.com/daliansky/OC-little)
 * [Dortania](https://dortania.github.io/)的OC安装教程
 * [the-darkvoid](https://github.com/the-darkvoid)解决了部分Type-C设备的热插拔问题：[IOElectrify](https://github.com/the-darkvoid/macOS-IOElectrify)
-* [hackintosh-stuff](https://github.com/hackintosh-stuff)给出了相应声卡（ALC256）对应外置麦克风的解决方案：[combojack](https://github.com/hackintosh-stuff/ComboJack)
+* [hackintosh-stuff](https://github.com/hackintosh-stuff)给出了相应声卡（ALC256）对应外置麦克风的解决方案在[combojack](https://github.com/hackintosh-stuff/ComboJack)
 * [blankmac](https://github.com/blankmac)给出了触摸板支持多首饰的驱动：[AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
 * 所有为这个EFI和黑苹果做出贡献的人
 

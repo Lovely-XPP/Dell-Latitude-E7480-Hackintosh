@@ -117,7 +117,7 @@ Tips:
 - [x] Shutdown/ Reboot/ Sleep/ Wake (include Fn + insert and LID device to sleep)
 - [x] All fn key work (You need to setting on bios first. Go to POST Behavior -> Fn Lock Options. Check Fn Lock and Lock mode disable/standard)  
 - [x] Speakers and headphones jack
-- [x] External mic/Headphone mic jack(Working only with Big Sur 11.6 and [combojack](https://github.com/hackintosh-stuff/ComboJack)) 
+- [x] External mic/Headphone mic jack(Working with [combojack](https://github.com/hackintosh-stuff/ComboJack)) 
 - [x] Intel Gigabit Ethernet
 - [x] App Store
 - [x] (unsure, associated with your apple account) iMessage and Facetime 
@@ -157,6 +157,6 @@ Follow this step:
 * [daliansky](https://github.com/daliansky) for awsome SSDTs in [OC-little](https://github.com/daliansky/OC-little).
 * [Dortania](https://dortania.github.io/) for installation and other guides.
 * [the-darkvoid](https://github.com/the-darkvoid) for partly solve thunderbolt(type-C) hot-plug issue in [IOElectrify](https://github.com/the-darkvoid/macOS-IOElectrify)
-* [hackintosh-stuff](https://github.com/hackintosh-stuff)for support externel mic/headphone with ALC256 ：[combojack](https://github.com/hackintosh-stuff/ComboJack)
+* [hackintosh-stuff](https://github.com/hackintosh-stuff)for support externel mic/headphone with ALC256 in [combojack](https://github.com/hackintosh-stuff/ComboJack)
 * [blankmac](https://github.com/blankmac) for trackpad with multitouch gestures in [AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
 * All contributors for this EFI.

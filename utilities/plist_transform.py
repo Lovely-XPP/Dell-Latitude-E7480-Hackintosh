@@ -3,17 +3,16 @@ import sys
 import shutil
 from biplist import *
 
+# set work dir and read the origin config
 os.chdir(sys.path[0])
 root = os.path.abspath('..')
+origin_plist = readPlist("config.plist")
 
 # set the files path
 BCM_origin = 'config_BCM.plist'
 BCM_destination = os.path.join(root, 'EFI/OC/config.plist')
 Intel_origin = 'config-Intel-wirelss-card.plist'
 Intel_destination = os.path.join(root, 'EFI/OC/config-Intel-wirelss-card.plist')
-
-origin_plist = readPlist("config.plist")
-writePlist(origin_plist, "config.plist", binary=False)
 
 # Change the Platform Info (Serial number)
 plat_info = origin_plist['PlatformInfo']

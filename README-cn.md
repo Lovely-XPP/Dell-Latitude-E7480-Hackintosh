@@ -3,6 +3,10 @@
 <div style="align: center">
 <img src="https://user-images.githubusercontent.com/66028151/139106659-df5a4237-6c56-4bdf-8f02-7bbeb89fbc4b.png">
 </div>
+
+<div style="align: center">
+<img src="https://user-images.githubusercontent.com/66028151/139422612-eb1a5d19-1772-4417-94b6-bfee991ee13d.png">
+</div>
  
 ## 语言 / Lanuage
 简体中文(当前语言)

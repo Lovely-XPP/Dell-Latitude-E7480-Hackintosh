@@ -109,8 +109,8 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 - [x] 所有的USB端口都正常工作 (注意：Type-C接口已经部分支持热插拔！但是要使用Type-C接口仍然需要关机后接上再启动！)
 - [x] HDMI/Type-C 接口支持音频输出并支持热插拔 
 - [x] 内置摄像头
-- [x] Wifi 使用[AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)成功稳定驱动（2.4GHz/5G）
-- [x] 蓝牙 使用[BrcmFirmareData and BrcmPatchRAM3](https://github.com/acidanthera/BrcmPatchRAM)驱动（macOS仅需使用其中的BlueToolfixup，配置文件都已经设置好）
+- [x] Wifi（2.4GHz/5G）
+- [x] 蓝牙
 - [x] 关机/ 重启/ 睡眠/ 唤醒 (包含 Fn + insert 键睡眠和合盖睡眠)
 - [x] 所有Fn键的功能 (需要关闭bios关于Fn键锁：bios -> POST Behavior -> Fn Lock Options)
 - [x] 扬声器和耳机插孔

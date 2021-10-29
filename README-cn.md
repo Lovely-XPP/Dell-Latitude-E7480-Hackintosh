@@ -12,6 +12,10 @@
 ## 下载
 [![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.4.1-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases)
 
+## 更新日志
+
+详见 [Changelogs.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelogs.md).
+
 ## 引导 & 硬件信息
 
 <details>  

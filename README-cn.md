@@ -150,12 +150,12 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 * 完成。请注意在插入插孔后，会有弹窗提示你选择相应的接口。（建议选耳麦）
 
 ## 致谢
-* [Acidanthera](https://github.com/Acidanthera) 的 OC包和主要的驱动
-* [daliansky](https://github.com/daliansky) 的很棒的SSDTs：[OC-little](https://github.com/daliansky/OC-little)
+* [Acidanthera](https://github.com/Acidanthera) 的 OC 包和主要的驱动
+* [daliansky](https://github.com/daliansky) 的很棒的SSDTs在 [OC-little](https://github.com/daliansky/OC-little)
 * [Dortania](https://dortania.github.io/)的OC安装教程
-* [the-darkvoid](https://github.com/the-darkvoid)解决了部分Type-C设备的热插拔问题：[IOElectrify](https://github.com/the-darkvoid/macOS-IOElectrify)
-* [hackintosh-stuff](https://github.com/hackintosh-stuff)给出了相应声卡（ALC256）对应外置麦克风的解决方案在[combojack](https://github.com/hackintosh-stuff/ComboJack)
-* [blankmac](https://github.com/blankmac)给出了触摸板支持多手势的驱动在[AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
-* [0xFireWolf](https://github.com/0xFireWolf)提供了原生化SD读卡器的驱动在[RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader)和[RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend).
+* [the-darkvoid](https://github.com/the-darkvoid) 解决了部分Type-C设备的热插拔问题在 [IOElectrify](https://github.com/the-darkvoid/macOS-IOElectrify)
+* [hackintosh-stuff](https://github.com/hackintosh-stuff) 给出了相应声卡（ALC256）对应外置麦克风的解决方案在 [combojack](https://github.com/hackintosh-stuff/ComboJack)
+* [blankmac](https://github.com/blankmac) 给出了触摸板支持多手势的驱动在 [AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
+* [0xFireWolf](https://github.com/0xFireWolf) 提供了原生化SD读卡器的驱动在 [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) 和 [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend).
 * 所有为这个EFI和黑苹果做出贡献的人
 

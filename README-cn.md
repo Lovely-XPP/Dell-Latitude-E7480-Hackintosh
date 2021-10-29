@@ -155,6 +155,6 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 * [Dortania](https://dortania.github.io/)的OC安装教程
 * [the-darkvoid](https://github.com/the-darkvoid)解决了部分Type-C设备的热插拔问题：[IOElectrify](https://github.com/the-darkvoid/macOS-IOElectrify)
 * [hackintosh-stuff](https://github.com/hackintosh-stuff)给出了相应声卡（ALC256）对应外置麦克风的解决方案在[combojack](https://github.com/hackintosh-stuff/ComboJack)
-* [blankmac](https://github.com/blankmac)给出了触摸板支持多首饰的驱动：[AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
+* [blankmac](https://github.com/blankmac)给出了触摸板支持多手势的驱动在[AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
 * 所有为这个EFI和黑苹果做出贡献的人
 

@@ -1,6 +1,8 @@
 # Changelogs / 更新日志
 
-## 2021-10-29
+## V0.7.4.2
+
+### Pubilsh date / 发布时间： 2021.10.29
 
 ### English
 

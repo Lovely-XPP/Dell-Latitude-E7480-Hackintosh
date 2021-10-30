@@ -21,7 +21,7 @@ for kext in os.listdir(os.path.join(root,'EFI/OC/Kexts')):
     plist = readPlist(plist)
     kext_name.append(plist['CFBundleName'])
     kext_version.append(plist['CFBundleVersion'])
-    if kext == 'USBMap.kext':
+    if kext == 'USBPorts.kext':
         kext_type.append('USB Ports Inject')
         continue
     build_version = plist['BuildMachineOSBuild']

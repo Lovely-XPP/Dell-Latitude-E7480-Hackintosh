@@ -86,7 +86,6 @@ Tips:
 |	ECEnabler	|	1.0.2	|	2021-10-27	|	Compile on Local Machine	|
 |	FeatureUnlock	|	1.0.4	|	2021-10-22	|	Compile on Local Machine	|
 |	HibernationFixup	|	1.4.5	|	2021-10-27	|	Compile on Local Machine	|
-|	IOElectrify	|	1.0.0	|	2021-10-10	|	Compile on Local Machine	|
 |	IntelBluetoothFirmware	|	2.0.1	|	2021-10-27	|	Compile on Local Machine	|
 |	IntelBluetoothInjector	|	2.0.1	|	2021-10-27	|	Compile on Local Machine	|
 |	IntelMausi	|	1.0.8	|	2021-08-27	|	Official Release	|
@@ -100,7 +99,7 @@ Tips:
 |	SMCLightSensor	|	1.2.7	|	2021-09-06	|	Official Release	|
 |	SMCProcessor	|	1.2.7	|	2021-09-06	|	Official Release	|
 |	SMCSuperIO	|	1.2.7	|	2021-09-06	|	Official Release	|
-|	USBMap	|	1.0	|	2021-09-06	|	USB Ports Inject	|
+|	USBPorts	|	1.0	|	2021-10-30	|	USB Ports Inject	|
 |	VerbStub	|	1.0.4	|	2021-06-20	|	Official Release	|
 |	VirtualSMC	|	1.2.7	|	2021-09-06	|	Official Release	|
 |	Voodoo PS/2 Controller	|	2.2.6	|	2021-10-04	|	Official Release	|
@@ -117,7 +116,7 @@ Tips:
 </br>
 
 - [x] Intel HD 620 Graphics `incuding graphics acceleration`
-- [x] All USB ports (Tip: Type-C fully support hot plug)
+- [x] All USB ports
 - [x] HDMI/Type-C display monitor Hot-Plug fully supported(Sleep/dim after lock, audio output support)
 - [x] Internal camera
 - [x] WiFi （2.4GHz/5G）

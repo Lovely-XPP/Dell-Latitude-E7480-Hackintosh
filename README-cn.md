@@ -84,7 +84,6 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 |	ECEnabler	|	1.0.2	|	2021-10-27	|	本地编译	|
 |	FeatureUnlock	|	1.0.4	|	2021-10-22	|	本地编译	|
 |	HibernationFixup	|	1.4.5	|	2021-10-27	|	本地编译	|
-|	IOElectrify	|	1.0.0	|	2021-10-10	|	本地编译	|
 |	IntelBluetoothFirmware	|	2.0.1	|	2021-10-27	|	本地编译	|
 |	IntelBluetoothInjector	|	2.0.1	|	2021-10-27	|	本地编译	|
 |	IntelMausi	|	1.0.8	|	2021-08-27	|	官方编译	|
@@ -98,7 +97,7 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 |	SMCLightSensor	|	1.2.7	|	2021-09-06	|	官方编译	|
 |	SMCProcessor	|	1.2.7	|	2021-09-06	|	官方编译	|
 |	SMCSuperIO	|	1.2.7	|	2021-09-06	|	官方编译	|
-|	USBMap	|	1.0	|	2021-09-06	|	USB 端口注入	|
+|	USBPorts	|	1.0	|	2021-10-30	|	USB 端口注入	|
 |	VerbStub	|	1.0.4	|	2021-06-20	|	官方编译	|
 |	VirtualSMC	|	1.2.7	|	2021-09-06	|	官方编译	|
 |	Voodoo PS/2 Controller	|	2.2.6	|	2021-10-04	|	官方编译	|
@@ -114,7 +113,7 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 </br>
 
 - [x] 显卡Intel HD 620 Graphics的正常驱动（包含双硬解码、GPU加速）
-- [x] 所有的USB端口都正常工作 (注意：Type-C接口已经部分支持热插拔！但是要使用Type-C接口仍然需要关机后接上再启动！)
+- [x] 所有的USB端口都正常工作
 - [x] HDMI/Type-C 接口支持音频输出并支持热插拔 
 - [x] 内置摄像头
 - [x] Wifi（2.4GHz/5G）

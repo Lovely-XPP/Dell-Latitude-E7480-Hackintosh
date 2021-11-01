@@ -14,7 +14,7 @@
 [English](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/README.md)
 
 ## 下载
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.4.2-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.4.3-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases)
 
 ## 更新日志
 
@@ -74,20 +74,20 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 |	AirportItlwm	|	2.1.0	|	2021-10-27	|	本地编译	|
 |	AlpsT4USB	|	1.0.0d1	|	2021-10-09	|	官方编译	|
 |	AppleALC	|	1.6.5	|	2021-10-04	|	官方编译	|
-|	BlueToolFixup	|	2.6.1	|	2021-10-27	|	本地编译	|
-|	BrcmBluetoothInjector	|	2.6.1	|	2021-10-22	|	官方编译	|
-|	BrcmFirmwareData	|	2.6.1	|	2021-10-27	|	本地编译	|
-|	BrcmPatchRAM3	|	2.6.1	|	2021-10-27	|	本地编译	|
+|	BlueToolFixup	|	2.6.1	|	2021-11-01	|	本地编译	|
+|	BrcmBluetoothInjector	|	2.6.1	|	2021-10-29	|	官方编译	|
+|	BrcmFirmwareData	|	2.6.1	|	2021-11-01	|	本地编译	|
+|	BrcmPatchRAM3	|	2.6.1	|	2021-11-01	|	本地编译	|
 |	BrightnessKeys	|	1.0.3	|	2021-08-16	|	本地编译	|
 |	CPUFriend	|	1.2.5	|	2021-08-16	|	本地编译	|
 |	CpuTscSync	|	1.0.5	|	2021-10-04	|	官方编译	|
 |	ECEnabler	|	1.0.2	|	2021-10-27	|	本地编译	|
 |	FeatureUnlock	|	1.0.4	|	2021-10-22	|	本地编译	|
 |	HibernationFixup	|	1.4.5	|	2021-10-27	|	本地编译	|
-|	IntelBluetoothFirmware	|	2.0.1	|	2021-10-27	|	本地编译	|
-|	IntelBluetoothInjector	|	2.0.1	|	2021-10-27	|	本地编译	|
+|	IntelBluetoothFirmware	|	2.0.1	|	2021-10-29	|	本地编译	|
+|	IntelBluetoothInjector	|	2.0.1	|	2021-10-29	|	本地编译	|
 |	IntelMausi	|	1.0.8	|	2021-08-27	|	官方编译	|
-|	Lilu	|	1.5.7	|	2021-10-27	|	本地编译	|
+|	Lilu	|	1.5.7	|	2021-10-29	|	本地编译	|
 |	NVMeFix	|	1.1.0	|	2021-08-23	|	本地编译	|
 |	RealtekCardReader	|	0.9.7	|	2021-10-27	|	本地编译	|
 |	RealtekCardReaderFriend	|	1.0.0	|	2021-08-16	|	本地编译	|

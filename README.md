@@ -5,8 +5,9 @@
 </div>
 
 <div style="align: center">
-<img src="https://user-images.githubusercontent.com/66028151/139422612-eb1a5d19-1772-4417-94b6-bfee991ee13d.png">
+<img src="https://user-images.githubusercontent.com/66028151/139807421-260c1fdd-56ef-47a1-a353-017a8382fd16.png">
 </div>
+
 
 
 ## 语言 / Lanuage
@@ -140,7 +141,7 @@ Tips:
 - [x] All USB ports
 - [x] HDMI/Type-C display monitor Hot-Plug fully supported(Sleep/dim after lock, audio output support)
 - [x] Internal camera
-- [x] WiFi （2.4GHz/5G）
+- [x] WiFi （2.4 GHz / 5 GHz）
 - [x] Bluetooth
 - [x] Shutdown/ Reboot/ Sleep/ Wake (include Fn + insert and LID device to sleep)
 - [x] All fn key work (You need to setting on bios first. Go to POST Behavior -> Fn Lock Options. Check Fn Lock and Lock mode disable/standard)  

@@ -14,7 +14,7 @@
 [English](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/README.md)
 
 ## 下载
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.4.3-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.4.3-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/v0.7.5.0/EFI.zip)
 
 ## 更新日志：V0.7.5.0
 

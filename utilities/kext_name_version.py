@@ -9,6 +9,7 @@ kext_name = []
 kext_version = []
 kext_time = []
 kext_type = []
+kext_type_zh = []
 for kext in os.listdir(os.path.join(root,'EFI/OC/Kexts')):
     if kext == ".DS_Store":
         continue
@@ -23,13 +24,16 @@ for kext in os.listdir(os.path.join(root,'EFI/OC/Kexts')):
     kext_version.append(plist['CFBundleVersion'])
     if kext == 'USBPorts.kext':
         kext_type.append('USB Ports Inject')
+        kext_type_zh.append('USB 端口注入')
         continue
     build_version = plist['BuildMachineOSBuild']
     build_version = build_version[0:2]
     if build_version == '21':
         kext_type.append('Compile on Local Machine')
+        kext_type_zh.append('本地编译')
     else:
         kext_type.append('Official Release')
+        kext_type_zh.append('官方编译')
 for i in range(len(kext_name)):
     for j in range(len(kext_name)-i-1):
         if kext_name[j] > kext_name[j+1]:
@@ -37,15 +41,24 @@ for i in range(len(kext_name)):
             temp2 = kext_version[j+1]
             temp3 = kext_time[j+1]
             temp4 = kext_type[j+1]
+            temp5 = kext_type_zh[j+1]
             kext_name[j+1] = kext_name[j]
             kext_version[j+1] = kext_version[j]
             kext_time[j+1] = kext_time[j]
             kext_type[j+1] = kext_type[j]
+            kext_type_zh[j+1] = kext_type_zh[j]
             kext_name[j] = temp1
             kext_version[j] = temp2
             kext_time[j] = temp3
             kext_type[j] = temp4
+            kext_type_zh[j] = temp5
 file = open('kexts.txt', 'w')
 for i in range(len(kext_name)):
     str = '|\t' + kext_name[i] + '\t|\t' + kext_version[i] + '\t|\t' + kext_time[i] + '\t|\t' + kext_type[i] + '\t|\n'
     file.write(str)
+file.close()
+file = open('kexts_zh.txt', 'w')
+for i in range(len(kext_name)):
+    str = '|\t' + kext_name[i] + '\t|\t' + kext_version[i] + '\t|\t' + kext_time[i] + '\t|\t' + kext_type_zh[i] + '\t|\n'
+    file.write(str)
+file.close()

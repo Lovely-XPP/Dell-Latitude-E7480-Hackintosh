@@ -1,3 +1,4 @@
 .DS_Store
 utilities/*.plist
 utilities/*.txt
+utilities/update_kexts/*

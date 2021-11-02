@@ -16,9 +16,32 @@
 ## 下载
 [![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.4.3-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases)
 
-## 更新日志
+## 更新日志：V0.7.5.0
 
-详见 [Changelogs.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelogs.md).
+### 发布时间： 2021.11.2
+
+#### 添加功能 :
+1. 更新OC版本至0.7.5并更新了驱动
+
+#### 文件变化 :
+
+1. 整个EFI文件夹以适配OC0.7.5
+2. 更新官方编译的驱动：
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AppleALC	|	1.6.6	|	2021-11-01	|	官方编译	|
+|	BlueToolFixup	|	2.6.1	|	2021-11-01	|	官方编译	|
+|	BrcmBluetoothInjector	|	2.6.1	|	2021-11-01	|	官方编译	|
+|	BrcmFirmwareData	|	2.6.1	|	2021-11-01	|	官方编译	|
+|	BrcmPatchRAM3	|	2.6.1	|	2021-11-01	|	官方编译	|
+|	HibernationFixup	|	1.4.5	|	2021-11-01	|	官方编译	|
+|	Lilu	|	1.5.7	|	2021-11-01	|	官方编译	|
+|	Voodoo PS/2 Controller	|	2.2.7	|	2021-11-01	|	官方编译	|
+|	WhateverGreen	|	1.5.5	|	2021-11-01	|	官方编译	|
+
+
+更多版本的更新详见 [Changelog_zh.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog_zh.md).
 
 ## 引导 & 硬件信息
 
@@ -73,21 +96,21 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 |	AirportItlwm	|	2.1.0	|	2021-10-27	|	本地编译	|
 |	AirportItlwm	|	2.1.0	|	2021-10-27	|	本地编译	|
 |	AlpsT4USB	|	1.0.0d1	|	2021-10-09	|	官方编译	|
-|	AppleALC	|	1.6.5	|	2021-10-04	|	官方编译	|
-|	BlueToolFixup	|	2.6.1	|	2021-11-01	|	本地编译	|
-|	BrcmBluetoothInjector	|	2.6.1	|	2021-10-29	|	官方编译	|
-|	BrcmFirmwareData	|	2.6.1	|	2021-11-01	|	本地编译	|
-|	BrcmPatchRAM3	|	2.6.1	|	2021-11-01	|	本地编译	|
+|	AppleALC	|	1.6.6	|	2021-11-01	|	官方编译	|
+|	BlueToolFixup	|	2.6.1	|	2021-11-01	|	官方编译	|
+|	BrcmBluetoothInjector	|	2.6.1	|	2021-11-01	|	官方编译	|
+|	BrcmFirmwareData	|	2.6.1	|	2021-11-01	|	官方编译	|
+|	BrcmPatchRAM3	|	2.6.1	|	2021-11-01	|	官方编译	|
 |	BrightnessKeys	|	1.0.3	|	2021-08-16	|	本地编译	|
 |	CPUFriend	|	1.2.5	|	2021-08-16	|	本地编译	|
 |	CpuTscSync	|	1.0.5	|	2021-10-04	|	官方编译	|
 |	ECEnabler	|	1.0.2	|	2021-10-27	|	本地编译	|
 |	FeatureUnlock	|	1.0.4	|	2021-10-22	|	本地编译	|
-|	HibernationFixup	|	1.4.5	|	2021-10-27	|	本地编译	|
+|	HibernationFixup	|	1.4.5	|	2021-11-01	|	官方编译	|
 |	IntelBluetoothFirmware	|	2.0.1	|	2021-10-29	|	本地编译	|
 |	IntelBluetoothInjector	|	2.0.1	|	2021-10-29	|	本地编译	|
 |	IntelMausi	|	1.0.8	|	2021-08-27	|	官方编译	|
-|	Lilu	|	1.5.7	|	2021-10-29	|	本地编译	|
+|	Lilu	|	1.5.7	|	2021-11-01	|	官方编译	|
 |	NVMeFix	|	1.1.0	|	2021-08-23	|	本地编译	|
 |	RealtekCardReader	|	0.9.7	|	2021-10-27	|	本地编译	|
 |	RealtekCardReaderFriend	|	1.0.0	|	2021-08-16	|	本地编译	|
@@ -100,10 +123,10 @@ OpenCore 0.7.2 / 0.7.3 / 0.7.4
 |	USBPorts	|	1.0	|	2021-10-30	|	USB 端口注入	|
 |	VerbStub	|	1.0.4	|	2021-06-20	|	官方编译	|
 |	VirtualSMC	|	1.2.7	|	2021-09-06	|	官方编译	|
-|	Voodoo PS/2 Controller	|	2.2.6	|	2021-10-04	|	官方编译	|
+|	Voodoo PS/2 Controller	|	2.2.7	|	2021-11-01	|	官方编译	|
 |	VoodooI2C	|	2.6.5	|	2021-02-28	|	官方编译	|
 |	VoodooI2CHID	|	1	|	2021-10-10	|	官方编译	|
-|	WhateverGreen	|	1.5.5	|	2021-10-27	|	本地编译	|
+|	WhateverGreen	|	1.5.5	|	2021-11-01	|	官方编译	|
 </details>
 
 ## 工作状态

@@ -568,6 +568,8 @@
 			<integer>0</integer>
 			<key>RebuildAppleMemoryMap</key>
 			<false/>
+			<key>ResizeAppleGpuBars</key>
+			<integer>-1</integer>
 			<key>SetupVirtualMap</key>
 			<true/>
 			<key>SignalAppleOS</key>
@@ -599,17 +601,17 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>
-				AAAbWQ==
-				</data>
-				<key>device-id</key>
-				<data>
-				FlkAAA==
+				AAAWWQ==
 				</data>
 				<key>disable-agdc</key>
 				<data>
 				AQAAAA==
 				</data>
 				<key>enable-hdmi-dividers-fix</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>enable-hdmi20</key>
 				<data>
 				AQAAAA==
 				</data>
@@ -2046,6 +2048,8 @@
 			<false/>
 			<key>RequestBootVarRouting</key>
 			<true/>
+			<key>ResizeGpuBars</key>
+			<integer>-1</integer>
 			<key>TscSyncTimeout</key>
 			<integer>0</integer>
 			<key>UnblockFsConnect</key>

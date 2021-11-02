@@ -48,7 +48,7 @@
 <details>  
 <summary><strong>OC引导版本</strong></summary>
 </br>
-OpenCore 0.7.2 / 0.7.3 / 0.7.4
+OpenCore 0.7.3 / 0.7.4 / 0.7.5
 </details>
 
 <details>  

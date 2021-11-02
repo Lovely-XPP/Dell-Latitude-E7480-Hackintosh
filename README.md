@@ -27,7 +27,7 @@ English (Current)
 #### Files Changed:
 
 1. All the EFI folder to adapt OC 0.7.5
-2. update kexts with offical Release:
+2. update kexts with official Release:
 
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|

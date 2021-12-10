@@ -1,11 +1,12 @@
 # 戴尔 Latitude E7480 macOS Big Sur 11 / Monterey 12.0 (OpenCore引导)
 
 <div style="align: center">
-<img src="https://user-images.githubusercontent.com/66028151/139106659-df5a4237-6c56-4bdf-8f02-7bbeb89fbc4b.png">
+<img src="https://user-images.githubusercontent.com/66028151/145524844-83fadbd1-0762-47d8-81fc-69697136ef48.png">
 </div>
 
+
 <div style="align: center">
-<img src="https://user-images.githubusercontent.com/66028151/139807421-260c1fdd-56ef-47a1-a353-017a8382fd16.png">
+<img src="https://user-images.githubusercontent.com/66028151/145524637-d3c351bd-7ae5-48b5-9f9d-080d97101d1e.png">
 </div>
 
 ## 语言 / Lanuage

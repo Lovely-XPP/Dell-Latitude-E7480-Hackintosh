@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>21A559</string>
+	<string>21C5045a</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleIdentifier</key>
@@ -15,13 +15,13 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0.1</string>
+	<string>2.1.0</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2.0.1</string>
+	<string>2.1.0</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -187,6 +187,21 @@
 			<string>IOUSBHostDevice</string>
 			<key>idProduct</key>
 			<integer>51</integer>
+			<key>idVendor</key>
+			<integer>32903</integer>
+		</dict>
+		<key>csr</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.iokit.CSRBluetoothHostControllerUSBTransport</string>
+			<key>IOClass</key>
+			<string>CSRBluetoothHostControllerUSBTransport</string>
+			<key>IOProbeScore</key>
+			<integer>3000</integer>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>idProduct</key>
+			<integer>2010</integer>
 			<key>idVendor</key>
 			<integer>32903</integer>
 		</dict>

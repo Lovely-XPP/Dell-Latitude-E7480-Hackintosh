@@ -1,16 +1,46 @@
 # Changelog / 更新日志
 
+## V0.7.6.0
+### Pubilsh date ： 2021.12.10
+
+#### Add Features :
+1. Update kexts and OC boot version to 0.7.6
+
+#### Files Changed:
+
+1. All the EFI folder to adapt OC 0.7.6
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AirportItlwm-Monterey	|	2.1.0	|	2021-12-10	|	Compile on Local Machine	|
+|	AirportItlwm	|	2.1.0	|	2021-12-10	|	Compile on Local Machine	|
+|	AppleALC	|	1.6.7	|	2021-12-06	|	Official Release	|
+|	FeatureUnlock	|	1.0.4	|	2021-12-06	|	Official Release	|
+|	IntelBluetoothFirmware	|	2.1.0	|	2021-12-10	|	Compile on Local Machine	|
+|	IntelBluetoothInjector	|	2.1.0	|	2021-12-10	|	Compile on Local Machine	|
+|	Lilu	|	1.5.8	|	2021-12-06	|	Official Release	|
+|	SMCBatteryManager	|	1.2.8	|	2021-12-06	|	Official Release	|
+|	SMCDellSensors	|	1.2.8	|	2021-12-06	|	Official Release	|
+|	SMCLightSensor	|	1.2.8	|	2021-12-06	|	Official Release	|
+|	SMCProcessor	|	1.2.8	|	2021-12-06	|	Official Release	|
+|	SMCSuperIO	|	1.2.8	|	2021-12-06	|	Official Release	|
+|	VirtualSMC	|	1.2.8	|	2021-12-06	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V0.7.5.0
 
 ### Pubilsh date ： 2021.11.2
 
 #### Add Features :
-1. update kexts and OC boot version to 0.7.5
+1. Update kexts and OC boot version to 0.7.5
 
 #### Files Changed:
 
 1. All the EFI folder to adapt OC 0.7.5
-2. update kexts with official Release:
+2. Update kexts with official Release:
 
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|

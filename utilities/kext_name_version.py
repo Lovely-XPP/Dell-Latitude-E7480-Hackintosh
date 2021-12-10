@@ -52,12 +52,22 @@ for i in range(len(kext_name)):
             kext_time[j] = temp3
             kext_type[j] = temp4
             kext_type_zh[j] = temp5
+
 file = open('kexts.txt', 'w')
+str0 = '| Kexts          | Version                        | Updated Time       | Updated Way              |\n'
+str1 = '|:----------------|:-------------------------------------------|:---------------|:----------------|\n'
+file.write(str0)
+file.write(str1)
 for i in range(len(kext_name)):
     str = '|\t' + kext_name[i] + '\t|\t' + kext_version[i] + '\t|\t' + kext_time[i] + '\t|\t' + kext_type[i] + '\t|\n'
     file.write(str)
 file.close()
+
 file = open('kexts_zh.txt', 'w')
+str0 = '| 驱动名称          | 版本号                       | 更新时间       | 更新方式              |\n'
+str1 = '|:----------------|:-------------------------------------------|:---------------|:----------------|\n'
+file.write(str0)
+file.write(str1)
 for i in range(len(kext_name)):
     str = '|\t' + kext_name[i] + '\t|\t' + kext_version[i] + '\t|\t' + kext_time[i] + '\t|\t' + kext_type_zh[i] + '\t|\n'
     file.write(str)

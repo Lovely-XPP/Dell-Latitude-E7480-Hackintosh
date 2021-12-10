@@ -18,12 +18,14 @@
 English (Current)
 
 ## Download
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.6.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/v0.7.6.0/EFI.zip)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.6.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.7.6.0/EFI.zip)
 
 ## Changelog : V0.7.6.0
+
 ### Pubilsh date ： 2021.12.10
 
 #### Add Features :
+
 1. Update kexts and OC boot version to 0.7.6
 
 #### Files Changed:

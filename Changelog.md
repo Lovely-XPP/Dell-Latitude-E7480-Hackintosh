@@ -1,5 +1,32 @@
 # Changelog / 更新日志
 
+## V0.7.7.0
+### Pubilsh date ： 2021.01.16
+
+#### Add Features :
+1. Update kexts and OC boot version to 0.7.7
+
+#### Files Changed:
+
+1. All the EFI folder to adapt OC 0.7.7
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AirportItlwm	|	2.1.0	|	2021-12-31	|	Official Release	|
+|	AppleALC	|	1.6.8	|	2022-01-10	|	Official Release	|
+|	FeatureUnlock	|	1.0.5	|	2022-01-10	|	Official Release	|
+|	IntelBluetoothFirmware	|	2.1.0	|	2022-01-01	|	Official Release	|
+|	IntelBluetoothInjector	|	2.1.0	|	2022-01-01	|	Official Release	|
+|	Lilu	|	1.5.9	|	2022-01-10	|	Official Release	|
+|	RestrictEvents	|	1.0.6	|	2022-01-10	|	Official Release	|
+|	WhateverGreen	|	1.5.6	|	2022-01-10	|	Official Release	|
+
+
+
+-----------------------------------------------------
+
+
 ## V0.7.6.0
 ### Pubilsh date ： 2021.12.10
 

@@ -18,33 +18,28 @@
 
 [![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.6.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.7.6.0/EFI.zip)
 
-## 更新日志：V0.7.6.0
+## 更新日志：V0.7.7.0
 
-### 发布时间： 2021.12.10
+### 发布时间： 2021.01.16
 
 #### 添加功能 :
-1. 更新OC版本至0.7.6并更新了驱动
+1. 更新OC版本至0.7.7并更新了驱动
 
 #### 文件变化 :
 
-1. 整个EFI文件夹以适配OC0.7.6
+1. 整个EFI文件夹以适配OC 0.7.7
 2. 更新官方编译的驱动：
 
 | 驱动名称          | 版本号                       | 更新时间       | 更新方式              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AirportItlwm-Monterey	|	2.1.0	|	2021-12-10	|	本地编译	|
-|	AirportItlwm	|	2.1.0	|	2021-12-10	|	本地编译	|
-|	AppleALC	|	1.6.7	|	2021-12-06	|	官方编译	|
-|	FeatureUnlock	|	1.0.4	|	2021-12-06	|	官方编译	|
-|	IntelBluetoothFirmware	|	2.1.0	|	2021-12-10	|	本地编译	|
-|	IntelBluetoothInjector	|	2.1.0	|	2021-12-10	|	本地编译	|
-|	Lilu	|	1.5.8	|	2021-12-06	|	官方编译	|
-|	SMCBatteryManager	|	1.2.8	|	2021-12-06	|	官方编译	|
-|	SMCDellSensors	|	1.2.8	|	2021-12-06	|	官方编译	|
-|	SMCLightSensor	|	1.2.8	|	2021-12-06	|	官方编译	|
-|	SMCProcessor	|	1.2.8	|	2021-12-06	|	官方编译	|
-|	SMCSuperIO	|	1.2.8	|	2021-12-06	|	官方编译	|
-|	VirtualSMC	|	1.2.8	|	2021-12-06	|	官方编译	|
+|	AirportItlwm	|	2.1.0	|	2021-12-31	|	官方编译	|
+|	AppleALC	|	1.6.8	|	2022-01-10	|	官方编译	|
+|	FeatureUnlock	|	1.0.5	|	2022-01-10	|	官方编译	|
+|	IntelBluetoothFirmware	|	2.1.0	|	2022-01-01	|	官方编译	|
+|	IntelBluetoothInjector	|	2.1.0	|	2022-01-01	|	官方编译	|
+|	Lilu	|	1.5.9	|	2022-01-10	|	官方编译	|
+|	RestrictEvents	|	1.0.6	|	2022-01-10	|	官方编译	|
+|	WhateverGreen	|	1.5.6	|	2022-01-10	|	官方编译	|
 
 更多版本的更新日志详见 [Changelog_zh.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog_zh.md).
 
@@ -98,10 +93,9 @@ OpenCore 0.7.3 / 0.7.4 / 0.7.5
 | 驱动名称          | 版本号                       | 更新时间       | 更新方式              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
 |	AirportBrcmFixup	|	2.1.4	|	2021-08-16	|	本地编译	|
-|	AirportItlwm-Monterey	|	2.1.0	|	2021-12-10	|	本地编译	|
-|	AirportItlwm	|	2.1.0	|	2021-12-10	|	本地编译	|
+|	AirportItlwm	|	2.1.0	|	2021-12-31	|	官方编译	|
 |	AlpsT4USB	|	1.0.0d1	|	2021-10-09	|	官方编译	|
-|	AppleALC	|	1.6.7	|	2021-12-06	|	官方编译	|
+|	AppleALC	|	1.6.8	|	2022-01-10	|	官方编译	|
 |	BlueToolFixup	|	2.6.1	|	2021-11-01	|	官方编译	|
 |	BrcmBluetoothInjector	|	2.6.1	|	2021-11-01	|	官方编译	|
 |	BrcmFirmwareData	|	2.6.1	|	2021-11-01	|	官方编译	|
@@ -110,16 +104,16 @@ OpenCore 0.7.3 / 0.7.4 / 0.7.5
 |	CPUFriend	|	1.2.5	|	2021-08-16	|	本地编译	|
 |	CpuTscSync	|	1.0.5	|	2021-10-04	|	官方编译	|
 |	ECEnabler	|	1.0.2	|	2021-10-27	|	本地编译	|
-|	FeatureUnlock	|	1.0.4	|	2021-12-06	|	官方编译	|
+|	FeatureUnlock	|	1.0.5	|	2022-01-10	|	官方编译	|
 |	HibernationFixup	|	1.4.5	|	2021-11-01	|	官方编译	|
-|	IntelBluetoothFirmware	|	2.1.0	|	2021-12-10	|	本地编译	|
-|	IntelBluetoothInjector	|	2.1.0	|	2021-12-10	|	本地编译	|
+|	IntelBluetoothFirmware	|	2.1.0	|	2022-01-01	|	官方编译	|
+|	IntelBluetoothInjector	|	2.1.0	|	2022-01-01	|	官方编译	|
 |	IntelMausi	|	1.0.8	|	2021-08-27	|	官方编译	|
-|	Lilu	|	1.5.8	|	2021-12-06	|	官方编译	|
+|	Lilu	|	1.5.9	|	2022-01-10	|	官方编译	|
 |	NVMeFix	|	1.1.0	|	2021-08-23	|	本地编译	|
 |	RealtekCardReader	|	0.9.7	|	2021-10-27	|	本地编译	|
 |	RealtekCardReaderFriend	|	1.0.0	|	2021-08-16	|	本地编译	|
-|	RestrictEvents	|	1.0.5	|	2021-10-04	|	官方编译	|
+|	RestrictEvents	|	1.0.6	|	2022-01-10	|	官方编译	|
 |	SMCBatteryManager	|	1.2.8	|	2021-12-06	|	官方编译	|
 |	SMCDellSensors	|	1.2.8	|	2021-12-06	|	官方编译	|
 |	SMCLightSensor	|	1.2.8	|	2021-12-06	|	官方编译	|
@@ -131,7 +125,7 @@ OpenCore 0.7.3 / 0.7.4 / 0.7.5
 |	Voodoo PS/2 Controller	|	2.2.7	|	2021-11-01	|	官方编译	|
 |	VoodooI2C	|	2.6.5	|	2021-02-28	|	官方编译	|
 |	VoodooI2CHID	|	1	|	2021-10-10	|	官方编译	|
-|	WhateverGreen	|	1.5.5	|	2021-11-01	|	官方编译	|
+|	WhateverGreen	|	1.5.6	|	2022-01-10	|	官方编译	|
 </details>
 
 ## 工作状态

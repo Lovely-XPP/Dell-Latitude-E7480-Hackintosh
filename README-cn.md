@@ -16,7 +16,7 @@
 
 ## 下载
 
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.6.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.7.6.0/EFI.zip)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.7.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/v0.7.7.0/EFI.zip)
 
 ## 更新日志：V0.7.7.0
 
@@ -48,7 +48,7 @@
 <details>  
 <summary><strong>OC引导版本</strong></summary>
 </br>
-OpenCore 0.7.3 / 0.7.4 / 0.7.5
+OpenCore 0.7.5 / 0.7.6 / 0.7.7
 </details>
 
 <details>  
@@ -56,7 +56,7 @@ OpenCore 0.7.3 / 0.7.4 / 0.7.5
 </br>
 - Big Sur 11.5.0 - 11.5.2</br>
 - Big Sur 11.6 - 11.6.1</br>
-- Monterey 12.0 - 12.0.1</br>
+- Monterey 12.0 - 12.1</br>
 </details>
 
 <details>  

@@ -1,12 +1,13 @@
 import os
 import sys
 import shutil
-from biplist import *
+from plistlib import *
 
 # set work dir and read the origin config
 os.chdir(sys.path[0])
 root = os.path.abspath('..')
-origin_plist = readPlist("config.plist")
+with open("config.plist", 'rb') as pl:
+    origin_plist = load(pl)
 
 # set the files path
 BCM_origin = 'config_BCM.plist'
@@ -60,7 +61,8 @@ for element in kernel['Add']:
         element['Enabled'] = True
 
 BCM_config = origin_plist.copy()
-writePlist(BCM_config, "config_BCM.plist", binary=False)
+with open("config_BCM.plist", 'wb') as pl_BCM:
+    dump(BCM_config, pl_BCM, fmt=FMT_XML, sort_keys=True, skipkeys=False)
 
 # change kexts for Intel wireless card user
 for element in kernel['Add']:
@@ -108,7 +110,8 @@ boot_args = nvram_add['7C436110-AB2A-4BBB-A880-FE41995C9F82']
 boot_args['boot-args'] = 'alcid=56 igfxonln=1'
 
 Intel_config = origin_plist.copy()
-writePlist(Intel_config, "config-Intel-wirelss-card.plist", binary=False)
+with open("config-Intel-wirelss-card.plist", 'wb') as pl_Intel:
+    dump(Intel_config, pl_Intel, fmt=FMT_XML, sort_keys=True, skipkeys=False)
 
 # move the config files
 shutil.move(BCM_origin, BCM_destination)

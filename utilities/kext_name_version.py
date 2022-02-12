@@ -1,7 +1,7 @@
 import os
 import sys
 import time
-from biplist import *
+from plistlib import *
 
 os.chdir(sys.path[0])
 root = os.path.abspath('..')
@@ -19,7 +19,8 @@ for kext in os.listdir(os.path.join(root,'EFI/OC/Kexts')):
     k_time = os.stat(plist).st_mtime
     k_time = time.strftime('%Y-%m-%d', time.localtime(k_time))
     kext_time.append(k_time)
-    plist = readPlist(plist)
+    with open(plist, 'rb') as pl:
+        plist = load(pl)
     kext_name.append(plist['CFBundleName'])
     kext_version.append(plist['CFBundleVersion'])
     if kext == 'USBPorts.kext':

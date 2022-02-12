@@ -1,5 +1,30 @@
 # Changelog / 更新日志
 
+## V0.7.8.0
+### Pubilsh date ： 2021.02.12
+
+#### Add Features :
+1. Update kexts and OC boot version to 0.7.8
+2. Universal Contorl supported (need MacOS 12.3, BoardCom wireless card, iPad OS 15.4, works for me).
+
+#### Files Changed:
+
+1. All the EFI folder to adapt OC 0.7.8
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AirportBrcmFixup	|	2.1.4	|	2022-02-08	|	Official Release	|
+|	AppleALC	|	1.6.9	|	2022-02-08	|	Official Release	|
+|	CpuTscSync	|	1.0.6	|	2022-02-08	|	Official Release	|
+|	FeatureUnlock	|	1.0.6	|	2022-02-08	|	Official Release	|
+|	Lilu	|	1.6.0	|	2022-02-08	|	Official Release	|
+|	RestrictEvents	|	1.0.7	|	2022-02-08	|	Official Release	|
+|	WhateverGreen	|	1.5.7	|	2022-02-08	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V0.7.7.0
 ### Pubilsh date ： 2021.01.16
 

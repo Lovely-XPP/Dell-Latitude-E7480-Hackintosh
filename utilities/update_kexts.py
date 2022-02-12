@@ -1,7 +1,7 @@
 import os
 import sys
 import time
-from biplist import *
+from plistlib import *
 
 os.chdir(sys.path[0])
 root = os.path.abspath('./')
@@ -13,18 +13,20 @@ kext_type_zh = []
 for kext in os.listdir(os.path.join(root,'update_kexts')):
     if kext == ".DS_Store":
         continue
+    print(kext)
     domain = os.path.abspath(os.path.join(root, 'update_kexts'))
     kext_full = os.path.join(domain, kext)
     plist = os.path.join(kext_full, 'Contents/Info.plist')
     k_time = os.stat(plist).st_mtime
     k_time = time.strftime('%Y-%m-%d', time.localtime(k_time))
     kext_time.append(k_time)
-    plist = readPlist(plist)
+    with open(plist, 'rb') as pl:
+        plist = load(pl)
     kext_name.append(plist['CFBundleName'])
     kext_version.append(plist['CFBundleVersion'])
     build_version = plist['BuildMachineOSBuild']
-    build_version = build_version[0:2]
-    if build_version == '21':
+    build_version = build_version[0:3]
+    if build_version == '21E':
         kext_type.append('Compile on Local Machine')
         kext_type_zh.append('本地编译')
     else:

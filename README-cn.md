@@ -1,4 +1,4 @@
-# 戴尔 Latitude E7480 macOS Big Sur 11 / Monterey 12.0 (OpenCore引导)
+# 戴尔 Latitude E7480 macOS Big Sur 11 / Monterey 12 (OpenCore引导)
 
 <div style="align: center">
 <img src="https://user-images.githubusercontent.com/66028151/145524844-83fadbd1-0762-47d8-81fc-69697136ef48.png">
@@ -18,28 +18,28 @@
 
 [![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.7.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/v0.7.7.0/EFI.zip)
 
-## 更新日志：V0.7.7.0
+## 更新日志：V0.7.8.0
 
-### 发布时间： 2021.01.16
+### 发布时间： 2021.02.12
 
 #### 添加功能 :
-1. 更新OC版本至0.7.7并更新了驱动
+1. 更新OC版本至0.7.8并更新了驱动
+2. 支持通用控制（需要macOS 12.3，博通网卡，iPad OS 15.4，亲测可用）
 
 #### 文件变化 :
 
-1. 整个EFI文件夹以适配OC 0.7.7
+1. 整个EFI文件夹以适配OC 0.7.8
 2. 更新官方编译的驱动：
 
 | 驱动名称          | 版本号                       | 更新时间       | 更新方式              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AirportItlwm	|	2.1.0	|	2021-12-31	|	官方编译	|
-|	AppleALC	|	1.6.8	|	2022-01-10	|	官方编译	|
-|	FeatureUnlock	|	1.0.5	|	2022-01-10	|	官方编译	|
-|	IntelBluetoothFirmware	|	2.1.0	|	2022-01-01	|	官方编译	|
-|	IntelBluetoothInjector	|	2.1.0	|	2022-01-01	|	官方编译	|
-|	Lilu	|	1.5.9	|	2022-01-10	|	官方编译	|
-|	RestrictEvents	|	1.0.6	|	2022-01-10	|	官方编译	|
-|	WhateverGreen	|	1.5.6	|	2022-01-10	|	官方编译	|
+|	AirportBrcmFixup	|	2.1.4	|	2022-02-08	|	官方编译	|
+|	AppleALC	|	1.6.9	|	2022-02-08	|	官方编译	|
+|	CpuTscSync	|	1.0.6	|	2022-02-08	|	官方编译	|
+|	FeatureUnlock	|	1.0.6	|	2022-02-08	|	官方编译	|
+|	Lilu	|	1.6.0	|	2022-02-08	|	官方编译	|
+|	RestrictEvents	|	1.0.7	|	2022-02-08	|	官方编译	|
+|	WhateverGreen	|	1.5.7	|	2022-02-08	|	官方编译	|
 
 更多版本的更新日志详见 [Changelog_zh.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog_zh.md).
 
@@ -48,7 +48,7 @@
 <details>  
 <summary><strong>OC引导版本</strong></summary>
 </br>
-OpenCore 0.7.5 / 0.7.6 / 0.7.7
+OpenCore 0.7.5 / 0.7.6 / 0.7.7 / 0.7.8
 </details>
 
 <details>  
@@ -56,7 +56,7 @@ OpenCore 0.7.5 / 0.7.6 / 0.7.7
 </br>
 - Big Sur 11.5.0 - 11.5.2</br>
 - Big Sur 11.6 - 11.6.1</br>
-- Monterey 12.0 - 12.1</br>
+- Monterey 12.0 - 12.3 beta</br>
 </details>
 
 <details>  
@@ -80,8 +80,9 @@ OpenCore 0.7.5 / 0.7.6 / 0.7.7
 
 使用小贴士: 
 * 对于苹果 macOS 12 Monterey, DW1820A网卡兼容性不那么好，主要是蓝牙驱动，导致隔空投送、接力等服务无法使用，于是换了张BCM9460Z4的网卡，目前无任何不兼容的问题！
-* 强烈建议在进入系统以后使用[USBMap](https://github.com/corpnewt/USBMap) 工具进行USB定制！
-* 如果你进行了硬件更改（比如网卡更换），同样也建议你使用[USBMap](https://github.com/corpnewt/USBMap) 工具重新进行USB定制！
+* Monterey 12.3 （需要博通网卡）和 iPad OS 15.4 开始支持通用控制，亲测可用！
+* 强烈建议在进入系统以后使用 [USBMap](https://github.com/corpnewt/USBMap) 工具进行USB定制！
+* 如果你进行了硬件更改（比如网卡更换），同样也建议你使用 [USBMap](https://github.com/corpnewt/USBMap) 工具重新进行USB定制！
 * 进入系统后，建议重新生成对应机型序列号（需要经过官网查询无效方可使用）！
 * 不要开启查找我的Mac功能！
 </details>
@@ -92,40 +93,40 @@ OpenCore 0.7.5 / 0.7.6 / 0.7.7
 
 | 驱动名称          | 版本号                       | 更新时间       | 更新方式              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AirportBrcmFixup	|	2.1.4	|	2021-08-16	|	本地编译	|
-|	AirportItlwm	|	2.1.0	|	2021-12-31	|	官方编译	|
-|	AlpsT4USB	|	1.0.0d1	|	2021-10-09	|	官方编译	|
-|	AppleALC	|	1.6.8	|	2022-01-10	|	官方编译	|
-|	BlueToolFixup	|	2.6.1	|	2021-11-01	|	官方编译	|
-|	BrcmBluetoothInjector	|	2.6.1	|	2021-11-01	|	官方编译	|
-|	BrcmFirmwareData	|	2.6.1	|	2021-11-01	|	官方编译	|
-|	BrcmPatchRAM3	|	2.6.1	|	2021-11-01	|	官方编译	|
-|	BrightnessKeys	|	1.0.3	|	2021-08-16	|	本地编译	|
-|	CPUFriend	|	1.2.5	|	2021-08-16	|	本地编译	|
-|	CpuTscSync	|	1.0.5	|	2021-10-04	|	官方编译	|
-|	ECEnabler	|	1.0.2	|	2021-10-27	|	本地编译	|
-|	FeatureUnlock	|	1.0.5	|	2022-01-10	|	官方编译	|
-|	HibernationFixup	|	1.4.5	|	2021-11-01	|	官方编译	|
-|	IntelBluetoothFirmware	|	2.1.0	|	2022-01-01	|	官方编译	|
-|	IntelBluetoothInjector	|	2.1.0	|	2022-01-01	|	官方编译	|
-|	IntelMausi	|	1.0.8	|	2021-08-27	|	官方编译	|
-|	Lilu	|	1.5.9	|	2022-01-10	|	官方编译	|
-|	NVMeFix	|	1.1.0	|	2021-08-23	|	本地编译	|
-|	RealtekCardReader	|	0.9.7	|	2021-10-27	|	本地编译	|
-|	RealtekCardReaderFriend	|	1.0.0	|	2021-08-16	|	本地编译	|
-|	RestrictEvents	|	1.0.6	|	2022-01-10	|	官方编译	|
-|	SMCBatteryManager	|	1.2.8	|	2021-12-06	|	官方编译	|
-|	SMCDellSensors	|	1.2.8	|	2021-12-06	|	官方编译	|
-|	SMCLightSensor	|	1.2.8	|	2021-12-06	|	官方编译	|
-|	SMCProcessor	|	1.2.8	|	2021-12-06	|	官方编译	|
-|	SMCSuperIO	|	1.2.8	|	2021-12-06	|	官方编译	|
-|	USBPorts	|	1.0	|	2021-10-30	|	USB 端口注入	|
-|	VerbStub	|	1.0.4	|	2021-06-20	|	官方编译	|
-|	VirtualSMC	|	1.2.8	|	2021-12-06	|	官方编译	|
-|	Voodoo PS/2 Controller	|	2.2.7	|	2021-11-01	|	官方编译	|
-|	VoodooI2C	|	2.6.5	|	2021-02-28	|	官方编译	|
-|	VoodooI2CHID	|	1	|	2021-10-10	|	官方编译	|
-|	WhateverGreen	|	1.5.6	|	2022-01-10	|	官方编译	|
+|	AirportBrcmFixup	|	2.1.4	|	2022-02-08	|	官方编译	|
+|	AirportItlwm	|	2.1.0	|	2022-02-10	|	官方编译	|
+|	AlpsT4USB	|	1.0.0d1	|	2022-02-10	|	官方编译	|
+|	AppleALC	|	1.6.9	|	2022-02-08	|	官方编译	|
+|	BlueToolFixup	|	2.6.1	|	2022-02-10	|	官方编译	|
+|	BrcmBluetoothInjector	|	2.6.1	|	2022-02-10	|	官方编译	|
+|	BrcmFirmwareData	|	2.6.1	|	2022-02-10	|	官方编译	|
+|	BrcmPatchRAM3	|	2.6.1	|	2022-02-10	|	官方编译	|
+|	BrightnessKeys	|	1.0.3	|	2022-02-10	|	本地编译	|
+|	CPUFriend	|	1.2.5	|	2022-02-10	|	本地编译	|
+|	CpuTscSync	|	1.0.6	|	2022-02-08	|	官方编译	|
+|	ECEnabler	|	1.0.2	|	2022-02-10	|	本地编译	|
+|	FeatureUnlock	|	1.0.6	|	2022-02-08	|	官方编译	|
+|	HibernationFixup	|	1.4.5	|	2022-02-10	|	官方编译	|
+|	IntelBluetoothFirmware	|	2.1.0	|	2022-02-10	|	官方编译	|
+|	IntelBluetoothInjector	|	2.1.0	|	2022-02-10	|	官方编译	|
+|	IntelMausi	|	1.0.8	|	2022-02-10	|	官方编译	|
+|	Lilu	|	1.6.0	|	2022-02-08	|	官方编译	|
+|	NVMeFix	|	1.1.0	|	2022-02-10	|	本地编译	|
+|	RealtekCardReader	|	0.9.7	|	2022-02-10	|	本地编译	|
+|	RealtekCardReaderFriend	|	1.0.0	|	2022-02-10	|	本地编译	|
+|	RestrictEvents	|	1.0.7	|	2022-02-08	|	官方编译	|
+|	SMCBatteryManager	|	1.2.8	|	2022-02-10	|	官方编译	|
+|	SMCDellSensors	|	1.2.8	|	2022-02-10	|	官方编译	|
+|	SMCLightSensor	|	1.2.8	|	2022-02-10	|	官方编译	|
+|	SMCProcessor	|	1.2.8	|	2022-02-10	|	官方编译	|
+|	SMCSuperIO	|	1.2.8	|	2022-02-10	|	官方编译	|
+|	USBPorts	|	1.0	|	2022-02-10	|	USB 端口注入	|
+|	VerbStub	|	1.0.4	|	2022-02-10	|	官方编译	|
+|	VirtualSMC	|	1.2.8	|	2022-02-10	|	官方编译	|
+|	Voodoo PS/2 Controller	|	2.2.7	|	2022-02-10	|	官方编译	|
+|	VoodooI2C	|	2.6.5	|	2022-02-10	|	官方编译	|
+|	VoodooI2CHID	|	1	|	2022-02-10	|	官方编译	|
+|	WhateverGreen	|	1.5.7	|	2022-02-08	|	官方编译	|
 </details>
 
 ## 工作状态
@@ -140,16 +141,16 @@ OpenCore 0.7.5 / 0.7.6 / 0.7.7
 - [x] 内置摄像头
 - [x] Wifi（2.4GHz/5G）
 - [x] 蓝牙
-- [x] 关机/ 重启/ 睡眠/ 唤醒 (包含 Fn + insert 键睡眠和合盖睡眠)
-- [x] 所有Fn键的功能 (需要关闭bios关于Fn键锁：bios -> POST Behavior -> Fn Lock Options)
+- [x] 关机/ 重启/ 睡眠/ 唤醒 （包含 Fn + insert 键睡眠和合盖睡眠）
+- [x] 所有Fn键的功能 （需要关闭bios关于Fn键锁：bios -> POST Behavior -> Fn Lock Options）
 - [x] 扬声器和耳机插孔
-- [x] 外置麦克风和耳麦(需要与[combojack](https://github.com/hackintosh-stuff/ComboJack)配合使用) 
+- [x] 外置麦克风和耳麦 （需要与[combojack](https://github.com/hackintosh-stuff/ComboJack)配合使用）
 - [x] Intel 有线网络
 - [x] 苹果商店和iCloud账户服务，不要开启查找我的Mac功能！
 - [x] (不一定可用，和你的账户也有关系) iMessage 和 Facetime 
 - [x] miniDP 和 HDMI （支持音频输入）
 - [x] 键盘、触摸屏(触摸屏支持手势)、触摸板（触摸板支持多手势）
-- [x] 隔空投送、接力、随航、隔空播放（这些功能仅适用于博通网卡，且隔空播放仅限macOS 12）
+- [x] 隔空投送、接力、随航、隔空播放、通用控制（这些功能仅适用于博通网卡，且隔空播放仅限macOS 12，通用控制仅限macOS 12.3及以上）
 - [x] SD读卡器
 
 </details>
@@ -186,5 +187,5 @@ OpenCore 0.7.5 / 0.7.6 / 0.7.7
 * [hackintosh-stuff](https://github.com/hackintosh-stuff) 给出了相应声卡（ALC256）对应外置麦克风的解决方案在 [combojack](https://github.com/hackintosh-stuff/ComboJack)
 * [blankmac](https://github.com/blankmac) 给出了触摸板支持多手势的驱动在 [AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
 * [0xFireWolf](https://github.com/0xFireWolf) 提供了原生化SD读卡器的驱动在 [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) 和 [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend)
-* 所有为这个EFI和黑苹果做出贡献的人
+* 所有为这个EFI和黑苹果做出贡献的成员
 

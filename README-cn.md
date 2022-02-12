@@ -1,7 +1,7 @@
 # 戴尔 Latitude E7480 macOS Big Sur 11 / Monterey 12 (OpenCore引导)
 
 <div style="align: center">
-<img src="https://user-images.githubusercontent.com/66028151/145524844-83fadbd1-0762-47d8-81fc-69697136ef48.png">
+<img src="https://user-images.githubusercontent.com/66028151/153699782-042a7d2a-df92-421c-a940-1c3e62960ae4.png">
 </div>
 
 
@@ -16,7 +16,7 @@
 
 ## 下载
 
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.7.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/v0.7.7.0/EFI.zip)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.7.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/v0.7.8.0/EFI.zip)
 
 ## 更新日志：V0.7.8.0
 

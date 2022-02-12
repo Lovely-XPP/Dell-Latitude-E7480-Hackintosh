@@ -1,4 +1,4 @@
-# Dell Latitude E7480 macOS Big Sur 11 / Monterey 12.0 (OpenCore)
+# Dell Latitude E7480 macOS Big Sur 11 / Monterey 12 (OpenCore)
 
 <div style="align: center">
 <img src="https://user-images.githubusercontent.com/66028151/145524844-83fadbd1-0762-47d8-81fc-69697136ef48.png">

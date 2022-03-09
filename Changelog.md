@@ -1,6 +1,36 @@
 # Changelog / 更新日志
 
+## V0.7.9.0
+
+### Pubilsh date ： 2021.03.09
+
+#### Add Features :
+
+1. Update kexts and OC boot version to 0.7.9
+
+#### Files Changed:
+
+1. All the EFI folder to adapt OC 0.7.9
+2. Update kexts with official Release:
+ | Kexts                  | Version | Updated Time | Updated Way      |
+   | :--------------------- | :------ | :----------- | :--------------- |
+   | AppleALC               | 1.7.0   | 2022-03-08   | Official Release |
+   | CpuTscSync             | 1.0.7   | 2022-03-08   | Official Release |
+   | FeatureUnlock          | 1.0.7   | 2022-03-08   | Official Release |
+   | SMCBatteryManager      | 1.2.9   | 2022-03-08   | Official Release |
+   | SMCDellSensors         | 1.2.9   | 2022-03-08   | Official Release |
+   | SMCLightSensor         | 1.2.9   | 2022-03-08   | Official Release |
+   | SMCProcessor           | 1.2.9   | 2022-03-08   | Official Release |
+   | SMCSuperIO             | 1.2.9   | 2022-03-08   | Official Release |
+   | VirtualSMC             | 1.2.9   | 2022-03-08   | Official Release |
+   | Voodoo PS/2 Controller | 2.2.8   | 2022-03-08   | Official Release |
+   | WhateverGreen          | 1.5.8   | 2022-03-08   | Official Release |
+
+
+-----------------------------------------------------
+
 ## V0.7.8.0
+
 ### Pubilsh date ： 2021.02.12
 
 #### Add Features :

@@ -18,29 +18,33 @@
 English (Current)
 
 ## Download
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.7.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/v0.7.8.0/EFI.zip)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.9.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/v0.7.9.0/EFI.zip)
 
-## Changelog : V0.7.8.0
-### Pubilsh date ： 2021.02.12
+## Changelog: V0.7.9.0
+
+### Pubilsh date ： 2021.03.09
 
 #### Add Features :
-1. Update kexts and OC boot version to 0.7.8
-2. Universal Contorl supported (need MacOS 12.3, BoardCom wireless card, iPad OS 15.4, works for me).
+
+1. Update kexts and OC boot version to 0.7.9
 
 #### Files Changed:
 
-1. All the EFI folder to adapt OC 0.7.8
+1. All the EFI folder to adapt OC 0.7.9
 2. Update kexts with official Release:
-
-| Kexts          | Version                        | Updated Time       | Updated Way              |
-|:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AirportBrcmFixup	|	2.1.4	|	2022-02-08	|	Official Release	|
-|	AppleALC	|	1.6.9	|	2022-02-08	|	Official Release	|
-|	CpuTscSync	|	1.0.6	|	2022-02-08	|	Official Release	|
-|	FeatureUnlock	|	1.0.6	|	2022-02-08	|	Official Release	|
-|	Lilu	|	1.6.0	|	2022-02-08	|	Official Release	|
-|	RestrictEvents	|	1.0.7	|	2022-02-08	|	Official Release	|
-|	WhateverGreen	|	1.5.7	|	2022-02-08	|	Official Release	|
+ | Kexts                  | Version | Updated Time | Updated Way      |
+   | :--------------------- | :------ | :----------- | :--------------- |
+   | AppleALC               | 1.7.0   | 2022-03-08   | Official Release |
+   | CpuTscSync             | 1.0.7   | 2022-03-08   | Official Release |
+   | FeatureUnlock          | 1.0.7   | 2022-03-08   | Official Release |
+   | SMCBatteryManager      | 1.2.9   | 2022-03-08   | Official Release |
+   | SMCDellSensors         | 1.2.9   | 2022-03-08   | Official Release |
+   | SMCLightSensor         | 1.2.9   | 2022-03-08   | Official Release |
+   | SMCProcessor           | 1.2.9   | 2022-03-08   | Official Release |
+   | SMCSuperIO             | 1.2.9   | 2022-03-08   | Official Release |
+   | VirtualSMC             | 1.2.9   | 2022-03-08   | Official Release |
+   | Voodoo PS/2 Controller | 2.2.8   | 2022-03-08   | Official Release |
+   | WhateverGreen          | 1.5.8   | 2022-03-08   | Official Release |
 
 
 
@@ -98,20 +102,20 @@ Tips:
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
 |	AirportBrcmFixup	|	2.1.4	|	2022-02-08	|	Official Release	|
-|	AirportItlwm	|	2.1.0	|	2022-02-10	|	Official Release	|
+|	AirportItlwm	|	2.1.0	|	2022-03-02	|	Official Release	|
 |	AlpsT4USB	|	1.0.0d1	|	2022-02-10	|	Official Release	|
-|	AppleALC	|	1.6.9	|	2022-02-08	|	Official Release	|
+|	AppleALC	|	1.7.0	|	2022-03-08	|	Official Release	|
 |	BlueToolFixup	|	2.6.1	|	2022-02-10	|	Official Release	|
 |	BrcmBluetoothInjector	|	2.6.1	|	2022-02-10	|	Official Release	|
-|	BrcmFirmwareData	|	2.6.1	|	2022-02-10	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.1	|	2022-03-02	|	Official Release	|
 |	BrcmPatchRAM3	|	2.6.1	|	2022-02-10	|	Official Release	|
 |	BrightnessKeys	|	1.0.3	|	2022-02-10	|	Compile on Local Machine	|
 |	CPUFriend	|	1.2.5	|	2022-02-10	|	Compile on Local Machine	|
-|	CpuTscSync	|	1.0.6	|	2022-02-08	|	Official Release	|
+|	CpuTscSync	|	1.0.7	|	2022-03-08	|	Official Release	|
 |	ECEnabler	|	1.0.2	|	2022-02-10	|	Compile on Local Machine	|
-|	FeatureUnlock	|	1.0.6	|	2022-02-08	|	Official Release	|
+|	FeatureUnlock	|	1.0.7	|	2022-03-08	|	Official Release	|
 |	HibernationFixup	|	1.4.5	|	2022-02-10	|	Official Release	|
-|	IntelBluetoothFirmware	|	2.1.0	|	2022-02-10	|	Official Release	|
+|	IntelBluetoothFirmware	|	2.1.0	|	2022-03-02	|	Official Release	|
 |	IntelBluetoothInjector	|	2.1.0	|	2022-02-10	|	Official Release	|
 |	IntelMausi	|	1.0.8	|	2022-02-10	|	Official Release	|
 |	Lilu	|	1.6.0	|	2022-02-08	|	Official Release	|
@@ -119,18 +123,19 @@ Tips:
 |	RealtekCardReader	|	0.9.7	|	2022-02-10	|	Compile on Local Machine	|
 |	RealtekCardReaderFriend	|	1.0.0	|	2022-02-10	|	Compile on Local Machine	|
 |	RestrictEvents	|	1.0.7	|	2022-02-08	|	Official Release	|
-|	SMCBatteryManager	|	1.2.8	|	2022-02-10	|	Official Release	|
-|	SMCDellSensors	|	1.2.8	|	2022-02-10	|	Official Release	|
-|	SMCLightSensor	|	1.2.8	|	2022-02-10	|	Official Release	|
-|	SMCProcessor	|	1.2.8	|	2022-02-10	|	Official Release	|
-|	SMCSuperIO	|	1.2.8	|	2022-02-10	|	Official Release	|
-|	USBPorts	|	1.0	|	2022-02-10	|	USB Ports Inject	|
+|	SMCBatteryManager	|	1.2.9	|	2022-03-08	|	Official Release	|
+|	SMCDellSensors	|	1.2.9	|	2022-03-08	|	Official Release	|
+|	SMCLightSensor	|	1.2.9	|	2022-03-08	|	Official Release	|
+|	SMCProcessor	|	1.2.9	|	2022-03-08	|	Official Release	|
+|	SMCSuperIO	|	1.2.9	|	2022-03-08	|	Official Release	|
+|	USBPorts	|	1.0	|	2022-02-23	|	USB Ports Inject	|
 |	VerbStub	|	1.0.4	|	2022-02-10	|	Official Release	|
-|	VirtualSMC	|	1.2.8	|	2022-02-10	|	Official Release	|
-|	Voodoo PS/2 Controller	|	2.2.7	|	2022-02-10	|	Official Release	|
+|	VirtualSMC	|	1.2.9	|	2022-03-08	|	Official Release	|
+|	Voodoo PS/2 Controller	|	2.2.8	|	2022-03-08	|	Official Release	|
 |	VoodooI2C	|	2.6.5	|	2022-02-10	|	Official Release	|
 |	VoodooI2CHID	|	1	|	2022-02-10	|	Official Release	|
-|	WhateverGreen	|	1.5.7	|	2022-02-08	|	Official Release	|
+|	WhateverGreen	|	1.5.8	|	2022-03-08	|	Official Release	|
+
 
 
 </details>

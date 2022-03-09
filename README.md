@@ -1,12 +1,11 @@
 # Dell Latitude E7480 macOS Big Sur 11 / Monterey 12 (OpenCore)
 
 <div style="align: center">
-<img src="https://user-images.githubusercontent.com/66028151/153699782-042a7d2a-df92-421c-a940-1c3e62960ae4.png">
+<img src="https://user-images.githubusercontent.com/66028151/157452650-b009b4d7-df1d-4bca-b82f-f34cd57e47f7.png">
 </div>
 
-
 <div style="align: center">
-<img src="https://user-images.githubusercontent.com/66028151/145524637-d3c351bd-7ae5-48b5-9f9d-080d97101d1e.png">
+<img src="https://user-images.githubusercontent.com/66028151/157452639-e4d76e74-16f1-4604-a15d-699f72818842.png">
 </div>
 
 

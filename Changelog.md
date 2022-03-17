@@ -1,5 +1,19 @@
 # Changelog / 更新日志
 
+## V0.7.9.1
+
+### Pubilsh date ： 2021.03.17
+
+#### Add Features :
+
+​	Fix a bug: Can not get the lastest MacOS update from Software Update module in System Preferences Panel.
+
+#### Files Changed:
+
+​	Update `config.plist`: Key `misc -> security -> SecureBootModel` changed :`Disabled -> Default`.
+
+----------------------------------------------------
+
 ## V0.7.9.0
 
 ### Pubilsh date ： 2021.03.09

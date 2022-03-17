@@ -15,35 +15,19 @@
 
 ## 下载
 
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.9.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/v0.7.9.0/EFI.zip)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.9.1-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/v0.7.9.1/EFI.zip)
 
-## 更新日志：V0.7.9.0
+## 更新日志：V0.7.9.1
 
-### 发布时间： 2021.03.09
+### 发布时间： 2021.03.17
 
 #### 添加功能 :
 
-1. 更新OC版本至0.7.9并更新了驱动
+​	修复了一个bug：系统偏好设置中的软件更新模块无法检测到系统更新.
 
 #### 文件变化 :
 
-1. 整个EFI文件夹以适配OC 0.7.9
-2. 更新官方编译的驱动：
-
-| 驱动名称          | 版本号                       | 更新时间       | 更新方式              |
-|:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AppleALC	|	1.7.0	|	2022-03-08	|	官方编译	|
-|	CpuTscSync	|	1.0.7	|	2022-03-08	|	官方编译	|
-|	FeatureUnlock	|	1.0.7	|	2022-03-08	|	官方编译	|
-|	SMCBatteryManager	|	1.2.9	|	2022-03-08	|	官方编译	|
-|	SMCDellSensors	|	1.2.9	|	2022-03-08	|	官方编译	|
-|	SMCLightSensor	|	1.2.9	|	2022-03-08	|	官方编译	|
-|	SMCProcessor	|	1.2.9	|	2022-03-08	|	官方编译	|
-|	SMCSuperIO	|	1.2.9	|	2022-03-08	|	官方编译	|
-|	VirtualSMC	|	1.2.9	|	2022-03-08	|	官方编译	|
-|	Voodoo PS/2 Controller	|	2.2.8	|	2022-03-08	|	官方编译	|
-|	WhateverGreen	|	1.5.8	|	2022-03-08	|	官方编译	|
-
+​	更新了`config.plist`文件：键值`misc -> security -> SecureBootModel`变化：`Disabled -> Default`.
 
 更多版本的更新日志详见 [Changelog_zh.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog_zh.md).
 

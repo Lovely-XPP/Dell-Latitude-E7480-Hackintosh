@@ -21,7 +21,7 @@ English (Current)
 
 ## Changelog: V0.7.9.1
 
-### Pubilsh date ： 2021.03.17
+### Publish date ： 2021.03.17
 
 #### Add Features :
 

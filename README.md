@@ -33,7 +33,8 @@ English (Current)
 1. All the EFI folder to adapt OC 0.8.0
 2. Delete unused kext `CPUFriend.kext`
 3. Update kexts with official Release:
- | Kexts          | Version                        | Updated Time       | Updated Way              |
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
 |	CpuTscSync	|	1.0.8	|	2022-04-18	|	Official Release	|
 |	FeatureUnlock	|	1.0.8	|	2022-04-18	|	Official Release	|

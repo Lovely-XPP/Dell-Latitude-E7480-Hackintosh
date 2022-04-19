@@ -1,5 +1,26 @@
 # Changelog / 更新日志
 
+## V0.8.0.0
+
+### Pubilsh date ： 2021.04.19
+
+#### Add Features :
+
+1. Update kexts and OC boot version to 0.8.0
+2. Clean unused kext `CPUFriend.kext`
+
+#### Files Changed:
+
+1. All the EFI folder to adapt OC 0.8.0
+2. Delete unused kext `CPUFriend.kext`
+3. Update kexts with official Release:
+ | Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	CpuTscSync	|	1.0.8	|	2022-04-18	|	Official Release	|
+|	FeatureUnlock	|	1.0.8	|	2022-04-18	|	Official Release	|
+
+-----------------------------------------------------
+
 ## V0.7.9.1
 
 ### Pubilsh date ： 2021.03.17

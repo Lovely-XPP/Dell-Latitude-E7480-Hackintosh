@@ -19,17 +19,25 @@ English (Current)
 ## Download
 [![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.9.1-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/v0.7.9.1/EFI.zip)
 
-## Changelog: V0.7.9.1
+## ChangeLog：V0.8.0.0
 
-### Publish date ： 2021.03.17
+### Pubilsh date ： 2021.04.19
 
 #### Add Features :
 
-​	Fix a bug: Can not get the lastest MacOS update from Software Update module in System Preferences Panel.
+1. Update kexts and OC boot version to 0.8.0
+2. Clean unused kext `CPUFriend.kext`
 
 #### Files Changed:
 
-​	Update `config.plist`: Key `misc -> security -> SecureBootModel` changed :`Disabled -> Default`.
+1. All the EFI folder to adapt OC 0.8.0
+2. Delete unused kext `CPUFriend.kext`
+3. Update kexts with official Release:
+ | Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	CpuTscSync	|	1.0.8	|	2022-04-18	|	Official Release	|
+|	FeatureUnlock	|	1.0.8	|	2022-04-18	|	Official Release	|
+
 
 For more information, see the [Changelog.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog.md).
 
@@ -38,7 +46,7 @@ For more information, see the [Changelog.md](https://github.com/Lovely-XPP/Dell-
 <details>  
 <summary><strong>Booter</strong></summary>
 </br>
-OpenCore 0.7.6 / 0.7.7 / 0.7.8 / 0.7.9
+OpenCore  0.7.8 / 0.7.9 / 0.8.0
 </details>
 
 <details>  
@@ -46,7 +54,7 @@ OpenCore 0.7.6 / 0.7.7 / 0.7.8 / 0.7.9
 </br>
 - Big Sur 11.5.0 - 11.5.2 </br>
 - Big Sur 11.6 - 11.6.5 </br>
-- Monterey 12.0 - 12.3 (I am using)</br>
+- Monterey 12.0 - 12.4.1 beta (I am using)</br>
 </details>
 
 <details>  
@@ -85,40 +93,38 @@ Tips:
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
 |	AirportBrcmFixup	|	2.1.4	|	2022-02-08	|	Official Release	|
-|	AirportItlwm	|	2.1.0	|	2022-03-02	|	Official Release	|
-|	AlpsT4USB	|	1.0.0d1	|	2022-02-10	|	Official Release	|
+|	AirportItlwm	|	2.1.0	|	2021-12-10	|	Compile on Local Machine	|
+|	AlpsHID	|	1.0.0d1	|	2021-12-05	|	Official Release	|
 |	AppleALC	|	1.7.0	|	2022-03-08	|	Official Release	|
-|	BlueToolFixup	|	2.6.1	|	2022-02-10	|	Official Release	|
-|	BrcmBluetoothInjector	|	2.6.1	|	2022-02-10	|	Official Release	|
-|	BrcmFirmwareData	|	2.6.1	|	2022-03-02	|	Official Release	|
-|	BrcmPatchRAM3	|	2.6.1	|	2022-02-10	|	Official Release	|
-|	BrightnessKeys	|	1.0.3	|	2022-02-10	|	Compile on Local Machine	|
-|	CPUFriend	|	1.2.5	|	2022-02-10	|	Compile on Local Machine	|
-|	CpuTscSync	|	1.0.7	|	2022-03-08	|	Official Release	|
-|	ECEnabler	|	1.0.2	|	2022-02-10	|	Compile on Local Machine	|
-|	FeatureUnlock	|	1.0.7	|	2022-03-08	|	Official Release	|
-|	HibernationFixup	|	1.4.5	|	2022-02-10	|	Official Release	|
-|	IntelBluetoothFirmware	|	2.1.0	|	2022-03-02	|	Official Release	|
-|	IntelBluetoothInjector	|	2.1.0	|	2022-02-10	|	Official Release	|
-|	IntelMausi	|	1.0.8	|	2022-02-10	|	Official Release	|
+|	BlueToolFixup	|	2.6.2	|	2021-11-02	|	Compile on Local Machine	|
+|	BrcmBluetoothInjector	|	2.6.2	|	2021-11-02	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.2	|	2021-11-02	|	Compile on Local Machine	|
+|	BrcmPatchRAM3	|	2.6.2	|	2021-11-02	|	Compile on Local Machine	|
+|	BrightnessKeys	|	1.0.3	|	2021-08-16	|	Compile on Local Machine	|
+|	CpuTscSync	|	1.0.8	|	2022-04-18	|	Official Release	|
+|	ECEnabler	|	1.0.2	|	2021-10-27	|	Compile on Local Machine	|
+|	FeatureUnlock	|	1.0.8	|	2022-04-18	|	Official Release	|
+|	HibernationFixup	|	1.4.5	|	2021-11-01	|	Official Release	|
+|	IntelBluetoothFirmware	|	2.1.0	|	2021-12-10	|	Compile on Local Machine	|
+|	IntelBluetoothInjector	|	2.1.0	|	2021-12-10	|	Compile on Local Machine	|
+|	IntelMausi	|	1.0.8	|	2021-08-27	|	Official Release	|
 |	Lilu	|	1.6.0	|	2022-02-08	|	Official Release	|
-|	NVMeFix	|	1.1.0	|	2022-02-10	|	Compile on Local Machine	|
-|	RealtekCardReader	|	0.9.7	|	2022-02-10	|	Compile on Local Machine	|
-|	RealtekCardReaderFriend	|	1.0.0	|	2022-02-10	|	Compile on Local Machine	|
+|	NVMeFix	|	1.1.0	|	2021-08-23	|	Compile on Local Machine	|
+|	RealtekCardReader	|	0.9.7	|	2022-02-23	|	Compile on Local Machine	|
+|	RealtekCardReaderFriend	|	1.0.2	|	2022-02-23	|	Compile on Local Machine	|
 |	RestrictEvents	|	1.0.7	|	2022-02-08	|	Official Release	|
 |	SMCBatteryManager	|	1.2.9	|	2022-03-08	|	Official Release	|
 |	SMCDellSensors	|	1.2.9	|	2022-03-08	|	Official Release	|
 |	SMCLightSensor	|	1.2.9	|	2022-03-08	|	Official Release	|
 |	SMCProcessor	|	1.2.9	|	2022-03-08	|	Official Release	|
 |	SMCSuperIO	|	1.2.9	|	2022-03-08	|	Official Release	|
-|	USBPorts	|	1.0	|	2022-02-23	|	USB Ports Inject	|
-|	VerbStub	|	1.0.4	|	2022-02-10	|	Official Release	|
+|	USBPorts	|	1.0	|	2021-10-30	|	USB Ports Inject	|
+|	VerbStub	|	1.0.4	|	2021-11-05	|	Official Release	|
 |	VirtualSMC	|	1.2.9	|	2022-03-08	|	Official Release	|
 |	Voodoo PS/2 Controller	|	2.2.8	|	2022-03-08	|	Official Release	|
-|	VoodooI2C	|	2.6.5	|	2022-02-10	|	Official Release	|
-|	VoodooI2CHID	|	1	|	2022-02-10	|	Official Release	|
+|	VoodooI2C	|	2.6.5	|	2021-02-28	|	Official Release	|
+|	VoodooI2CHID	|	1	|	2021-12-05	|	Official Release	|
 |	WhateverGreen	|	1.5.8	|	2022-03-08	|	Official Release	|
-
 
 
 </details>

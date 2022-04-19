@@ -17,17 +17,25 @@
 
 [![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.7.9.1-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/v0.7.9.1/EFI.zip)
 
-## 更新日志：V0.7.9.1
+## 更新日志：V0.8.0.0
 
-### 发布时间： 2021.03.17
+### 发布时间： 2021.04.19
 
 #### 添加功能 :
 
-​	修复了一个bug：系统偏好设置中的软件更新模块无法检测到系统更新.
+1. 更新OC版本至0.8.0并更新了驱动
+2. 清理了未使用的驱动`CPUFriend.kext`
 
 #### 文件变化 :
 
-​	更新了`config.plist`文件：键值`misc -> security -> SecureBootModel`变化：`Disabled -> Default`.
+1. 整个EFI文件夹以适配OC 0.8.0
+2. 删除了未使用的驱动`CPUFriend.kext`
+3. 更新官方编译的驱动：
+| 驱动名称          | 版本号                       | 更新时间       | 更新方式              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	CpuTscSync	|	1.0.8	|	2022-04-18	|	官方编译	|
+|	FeatureUnlock	|	1.0.8	|	2022-04-18	|	官方编译	|
+
 
 更多版本的更新日志详见 [Changelog_zh.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog_zh.md).
 
@@ -36,7 +44,7 @@
 <details>  
 <summary><strong>OC引导版本</strong></summary>
 </br>
-OpenCore 0.7.6 / 0.7.7 / 0.7.8 / 0.7.9
+OpenCore  0.7.8 / 0.7.9 / 0.8.0
 </details>
 
 <details>  
@@ -44,7 +52,7 @@ OpenCore 0.7.6 / 0.7.7 / 0.7.8 / 0.7.9
 </br>
 - Big Sur 11.5.0 - 11.5.2</br>
 - Big Sur 11.6 - 11.6.5</br>
-- Monterey 12.0 - 12.3 (我正在使用)</br>
+- Monterey 12.0 - 12.4.1 beta (我正在使用)</br>
 </details>
 
 <details>  
@@ -82,39 +90,40 @@ OpenCore 0.7.6 / 0.7.7 / 0.7.8 / 0.7.9
 | 驱动名称          | 版本号                       | 更新时间       | 更新方式              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
 |	AirportBrcmFixup	|	2.1.4	|	2022-02-08	|	官方编译	|
-|	AirportItlwm	|	2.1.0	|	2022-03-02	|	官方编译	|
-|	AlpsT4USB	|	1.0.0d1	|	2022-02-10	|	官方编译	|
+|	AirportItlwm	|	2.1.0	|	2021-12-10	|	本地编译	|
+|	AlpsHID	|	1.0.0d1	|	2021-12-05	|	官方编译	|
 |	AppleALC	|	1.7.0	|	2022-03-08	|	官方编译	|
-|	BlueToolFixup	|	2.6.1	|	2022-02-10	|	官方编译	|
-|	BrcmBluetoothInjector	|	2.6.1	|	2022-02-10	|	官方编译	|
-|	BrcmFirmwareData	|	2.6.1	|	2022-03-02	|	官方编译	|
-|	BrcmPatchRAM3	|	2.6.1	|	2022-02-10	|	官方编译	|
-|	BrightnessKeys	|	1.0.3	|	2022-02-10	|	本地编译	|
-|	CPUFriend	|	1.2.5	|	2022-02-10	|	本地编译	|
-|	CpuTscSync	|	1.0.7	|	2022-03-08	|	官方编译	|
-|	ECEnabler	|	1.0.2	|	2022-02-10	|	本地编译	|
-|	FeatureUnlock	|	1.0.7	|	2022-03-08	|	官方编译	|
-|	HibernationFixup	|	1.4.5	|	2022-02-10	|	官方编译	|
-|	IntelBluetoothFirmware	|	2.1.0	|	2022-03-02	|	官方编译	|
-|	IntelBluetoothInjector	|	2.1.0	|	2022-02-10	|	官方编译	|
-|	IntelMausi	|	1.0.8	|	2022-02-10	|	官方编译	|
+|	BlueToolFixup	|	2.6.2	|	2021-11-02	|	本地编译	|
+|	BrcmBluetoothInjector	|	2.6.2	|	2021-11-02	|	官方编译	|
+|	BrcmFirmwareData	|	2.6.2	|	2021-11-02	|	本地编译	|
+|	BrcmPatchRAM3	|	2.6.2	|	2021-11-02	|	本地编译	|
+|	BrightnessKeys	|	1.0.3	|	2021-08-16	|	本地编译	|
+|	CpuTscSync	|	1.0.8	|	2022-04-18	|	官方编译	|
+|	ECEnabler	|	1.0.2	|	2021-10-27	|	本地编译	|
+|	FeatureUnlock	|	1.0.8	|	2022-04-18	|	官方编译	|
+|	HibernationFixup	|	1.4.5	|	2021-11-01	|	官方编译	|
+|	IntelBluetoothFirmware	|	2.1.0	|	2021-12-10	|	本地编译	|
+|	IntelBluetoothInjector	|	2.1.0	|	2021-12-10	|	本地编译	|
+|	IntelMausi	|	1.0.8	|	2021-08-27	|	官方编译	|
 |	Lilu	|	1.6.0	|	2022-02-08	|	官方编译	|
-|	NVMeFix	|	1.1.0	|	2022-02-10	|	本地编译	|
-|	RealtekCardReader	|	0.9.7	|	2022-02-10	|	本地编译	|
-|	RealtekCardReaderFriend	|	1.0.0	|	2022-02-10	|	本地编译	|
+|	NVMeFix	|	1.1.0	|	2021-08-23	|	本地编译	|
+|	RealtekCardReader	|	0.9.7	|	2022-02-23	|	本地编译	|
+|	RealtekCardReaderFriend	|	1.0.2	|	2022-02-23	|	本地编译	|
 |	RestrictEvents	|	1.0.7	|	2022-02-08	|	官方编译	|
 |	SMCBatteryManager	|	1.2.9	|	2022-03-08	|	官方编译	|
 |	SMCDellSensors	|	1.2.9	|	2022-03-08	|	官方编译	|
 |	SMCLightSensor	|	1.2.9	|	2022-03-08	|	官方编译	|
 |	SMCProcessor	|	1.2.9	|	2022-03-08	|	官方编译	|
 |	SMCSuperIO	|	1.2.9	|	2022-03-08	|	官方编译	|
-|	USBPorts	|	1.0	|	2022-02-23	|	USB 端口注入	|
-|	VerbStub	|	1.0.4	|	2022-02-10	|	官方编译	|
+|	USBPorts	|	1.0	|	2021-10-30	|	USB 端口注入	|
+|	VerbStub	|	1.0.4	|	2021-11-05	|	官方编译	|
 |	VirtualSMC	|	1.2.9	|	2022-03-08	|	官方编译	|
 |	Voodoo PS/2 Controller	|	2.2.8	|	2022-03-08	|	官方编译	|
-|	VoodooI2C	|	2.6.5	|	2022-02-10	|	官方编译	|
-|	VoodooI2CHID	|	1	|	2022-02-10	|	官方编译	|
+|	VoodooI2C	|	2.6.5	|	2021-02-28	|	官方编译	|
+|	VoodooI2CHID	|	1	|	2021-12-05	|	官方编译	|
 |	WhateverGreen	|	1.5.8	|	2022-03-08	|	官方编译	|
+
+
 </details>
 
 ## 工作状态

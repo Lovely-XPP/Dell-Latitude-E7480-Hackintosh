@@ -151,7 +151,7 @@ Tips:
 - [x] (unsure, associated with your apple account) iMessage and Facetime 
 - [x] miniDP and HDMI with digital audio passthrough(If you experience cursor lags, try turning on and off one of the displays.)
 - [x] Keyboard and Trackpad (support Multitouch gestures)
-- [x] Airdrop , Handoff , Sidecar, Airplay and Universal Control (These features are only for Brcmcom wireless card, besides, Airplay is only support for macOS 12 and Universal Control need macOS 12.3)
+- [x] Airdrop , Handoff , Sidecar, Airplay and Universal Control (These features are only for Broadcom wireless card, besides, Airplay is only support for macOS 12 and Universal Control need macOS 12.3)
 - [x] SD Card Reader
 
 </details>

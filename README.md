@@ -17,29 +17,45 @@
 
 English (Current)
 
+## To Do
+- [ ] Add macOS 13 support
+
 ## Download
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.0.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.8.0.0/EFI.zip)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.1.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.8.1.0/EFI.zip)
 
-## ChangeLog：V0.8.0.0
+## ChangeLog：V0.8.1.0
 
-### Pubilsh date ： 2021.04.19
+### Publish date ： 2021.06.11
 
 #### Add Features :
 
-1. Update kexts and OC boot version to 0.8.0
-2. Clean unused kext `CPUFriend.kext`
+1. Update kexts and OC boot version to 0.8.1
 
 #### Files Changed:
 
-1. All the EFI folder to adapt OC 0.8.0
-2. Delete unused kext `CPUFriend.kext`
-3. Update kexts with official Release:
+1. All the EFI folder to adapt OC 0.8.1
+2. Update kexts :
 
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	CpuTscSync	|	1.0.8	|	2022-04-18	|	Official Release	|
-|	FeatureUnlock	|	1.0.8	|	2022-04-18	|	Official Release	|
-
+|	AirportBrcmFixup	|	2.1.6	|	2022-06-09	|	Compile on Local Machine	|
+|	AlpsHID	|	1.3	|	2022-06-11	|	Compile on Local Machine	|
+|	AppleALC	|	1.7.3	|	2022-06-08	|	Compile on Local Machine	|
+|	BlueToolFixup	|	2.6.3	|	2022-06-09	|	Compile on Local Machine	|
+|	BrcmBluetoothInjector	|	2.6.3	|	2022-06-09	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.3	|	2022-06-09	|	Compile on Local Machine	|
+|	BrcmPatchRAM3	|	2.6.3	|	2022-06-09	|	Compile on Local Machine	|
+|	FeatureUnlock	|	1.0.9	|	2022-06-09	|	Compile on Local Machine	|
+|	HibernationFixup	|	1.4.6	|	2022-06-09	|	Compile on Local Machine	|
+|	Lilu	|	1.6.1	|	2022-06-08	|	Compile on Local Machine	|
+|	NVMeFix	|	1.1.0	|	2022-06-09	|	Compile on Local Machine	|
+|	SMCBatteryManager	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	SMCDellSensors	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	SMCLightSensor	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	SMCProcessor	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	SMCSuperIO	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	VirtualSMC	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	WhateverGreen	|	1.6.0	|	2022-06-11	|	Compile on Local Machine	|
 
 For more information, see the [Changelog.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog.md).
 
@@ -54,9 +70,8 @@ OpenCore  0.7.8 / 0.7.9 / 0.8.0
 <details>  
 <summary><strong>MacOS Supported/Tested</strong></summary>
 </br>
-- Big Sur 11.5.0 - 11.5.2 </br>
-- Big Sur 11.6 - 11.6.5 </br>
-- Monterey 12.0 - 12.4.1 beta (I am using)</br>
+- Big Sur 11.0 - 11.7 </br>
+- Monterey 12.0 - 12.5.1 beta (I am using)</br>
 </details>
 
 <details>  
@@ -94,39 +109,40 @@ Tips:
 
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AirportBrcmFixup	|	2.1.4	|	2022-02-08	|	Official Release	|
+|	AirportBrcmFixup	|	2.1.6	|	2022-06-09	|	Compile on Local Machine	|
 |	AirportItlwm	|	2.1.0	|	2021-12-10	|	Compile on Local Machine	|
-|	AlpsHID	|	1.0.0d1	|	2021-12-05	|	Official Release	|
-|	AppleALC	|	1.7.0	|	2022-03-08	|	Official Release	|
-|	BlueToolFixup	|	2.6.2	|	2021-11-02	|	Compile on Local Machine	|
-|	BrcmBluetoothInjector	|	2.6.2	|	2021-11-02	|	Official Release	|
-|	BrcmFirmwareData	|	2.6.2	|	2021-11-02	|	Compile on Local Machine	|
-|	BrcmPatchRAM3	|	2.6.2	|	2021-11-02	|	Compile on Local Machine	|
+|	AirportItlwm	|	2.1.0	|	2021-12-10	|	Compile on Local Machine	|
+|	AlpsHID	|	1.3	|	2022-06-11	|	Compile on Local Machine	|
+|	AppleALC	|	1.7.3	|	2022-06-08	|	Compile on Local Machine	|
+|	BlueToolFixup	|	2.6.3	|	2022-06-09	|	Compile on Local Machine	|
+|	BrcmBluetoothInjector	|	2.6.3	|	2022-06-09	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.3	|	2022-06-09	|	Compile on Local Machine	|
+|	BrcmPatchRAM3	|	2.6.3	|	2022-06-09	|	Compile on Local Machine	|
 |	BrightnessKeys	|	1.0.3	|	2021-08-16	|	Compile on Local Machine	|
 |	CpuTscSync	|	1.0.8	|	2022-04-18	|	Official Release	|
 |	ECEnabler	|	1.0.2	|	2021-10-27	|	Compile on Local Machine	|
-|	FeatureUnlock	|	1.0.8	|	2022-04-18	|	Official Release	|
-|	HibernationFixup	|	1.4.5	|	2021-11-01	|	Official Release	|
+|	FeatureUnlock	|	1.0.9	|	2022-06-09	|	Compile on Local Machine	|
+|	HibernationFixup	|	1.4.6	|	2022-06-09	|	Compile on Local Machine	|
 |	IntelBluetoothFirmware	|	2.1.0	|	2021-12-10	|	Compile on Local Machine	|
 |	IntelBluetoothInjector	|	2.1.0	|	2021-12-10	|	Compile on Local Machine	|
 |	IntelMausi	|	1.0.8	|	2021-08-27	|	Official Release	|
-|	Lilu	|	1.6.0	|	2022-02-08	|	Official Release	|
-|	NVMeFix	|	1.1.0	|	2021-08-23	|	Compile on Local Machine	|
+|	Lilu	|	1.6.1	|	2022-06-08	|	Compile on Local Machine	|
+|	NVMeFix	|	1.1.0	|	2022-06-09	|	Compile on Local Machine	|
 |	RealtekCardReader	|	0.9.7	|	2022-02-23	|	Compile on Local Machine	|
 |	RealtekCardReaderFriend	|	1.0.2	|	2022-02-23	|	Compile on Local Machine	|
 |	RestrictEvents	|	1.0.7	|	2022-02-08	|	Official Release	|
-|	SMCBatteryManager	|	1.2.9	|	2022-03-08	|	Official Release	|
-|	SMCDellSensors	|	1.2.9	|	2022-03-08	|	Official Release	|
-|	SMCLightSensor	|	1.2.9	|	2022-03-08	|	Official Release	|
-|	SMCProcessor	|	1.2.9	|	2022-03-08	|	Official Release	|
-|	SMCSuperIO	|	1.2.9	|	2022-03-08	|	Official Release	|
+|	SMCBatteryManager	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	SMCDellSensors	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	SMCLightSensor	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	SMCProcessor	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	SMCSuperIO	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
 |	USBPorts	|	1.0	|	2021-10-30	|	USB Ports Inject	|
 |	VerbStub	|	1.0.4	|	2021-11-05	|	Official Release	|
-|	VirtualSMC	|	1.2.9	|	2022-03-08	|	Official Release	|
+|	VirtualSMC	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
 |	Voodoo PS/2 Controller	|	2.2.8	|	2022-03-08	|	Official Release	|
 |	VoodooI2C	|	2.6.5	|	2021-02-28	|	Official Release	|
 |	VoodooI2CHID	|	1	|	2021-12-05	|	Official Release	|
-|	WhateverGreen	|	1.5.8	|	2022-03-08	|	Official Release	|
+|	WhateverGreen	|	1.6.0	|	2022-06-11	|	Compile on Local Machine	|
 
 
 </details>

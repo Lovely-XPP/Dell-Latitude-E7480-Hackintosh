@@ -1,8 +1,44 @@
 # Changelog / 更新日志
 
+## V0.8.1.0
+
+### Publish date ： 2021.06.11
+
+#### Add Features :
+
+1. Update kexts and OC boot version to 0.8.1
+
+#### Files Changed:
+
+1. All the EFI folder to adapt OC 0.8.1
+2. Update kexts :
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AirportBrcmFixup	|	2.1.6	|	2022-06-09	|	Compile on Local Machine	|
+|	AlpsHID	|	1.3	|	2022-06-11	|	Compile on Local Machine	|
+|	AppleALC	|	1.7.3	|	2022-06-08	|	Compile on Local Machine	|
+|	BlueToolFixup	|	2.6.3	|	2022-06-09	|	Compile on Local Machine	|
+|	BrcmBluetoothInjector	|	2.6.3	|	2022-06-09	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.3	|	2022-06-09	|	Compile on Local Machine	|
+|	BrcmPatchRAM3	|	2.6.3	|	2022-06-09	|	Compile on Local Machine	|
+|	FeatureUnlock	|	1.0.9	|	2022-06-09	|	Compile on Local Machine	|
+|	HibernationFixup	|	1.4.6	|	2022-06-09	|	Compile on Local Machine	|
+|	Lilu	|	1.6.1	|	2022-06-08	|	Compile on Local Machine	|
+|	NVMeFix	|	1.1.0	|	2022-06-09	|	Compile on Local Machine	|
+|	SMCBatteryManager	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	SMCDellSensors	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	SMCLightSensor	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	SMCProcessor	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	SMCSuperIO	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	VirtualSMC	|	1.3.0	|	2022-06-07	|	Compile on Local Machine	|
+|	WhateverGreen	|	1.6.0	|	2022-06-11	|	Compile on Local Machine	|
+
+-----------------------------------------------------
+
 ## V0.8.0.0
 
-### Pubilsh date ： 2021.04.19
+### Publish date ： 2021.04.19
 
 #### Add Features :
 
@@ -23,7 +59,7 @@
 
 ## V0.7.9.1
 
-### Pubilsh date ： 2021.03.17
+### Publish date ： 2021.03.17
 
 #### Add Features :
 
@@ -37,7 +73,7 @@
 
 ## V0.7.9.0
 
-### Pubilsh date ： 2021.03.09
+### Publish date ： 2021.03.09
 
 #### Add Features :
 
@@ -66,7 +102,7 @@
 
 ## V0.7.8.0
 
-### Pubilsh date ： 2021.02.12
+### Publish date ： 2021.02.12
 
 #### Add Features :
 1. Update kexts and OC boot version to 0.7.8
@@ -91,7 +127,7 @@
 -----------------------------------------------------
 
 ## V0.7.7.0
-### Pubilsh date ： 2021.01.16
+### Publish date ： 2021.01.16
 
 #### Add Features :
 1. Update kexts and OC boot version to 0.7.7
@@ -118,7 +154,7 @@
 
 
 ## V0.7.6.0
-### Pubilsh date ： 2021.12.10
+### Publish date ： 2021.12.10
 
 #### Add Features :
 1. Update kexts and OC boot version to 0.7.6
@@ -149,7 +185,7 @@
 
 ## V0.7.5.0
 
-### Pubilsh date ： 2021.11.2
+### Publish date ： 2021.11.2
 
 #### Add Features :
 1. Update kexts and OC boot version to 0.7.5
@@ -175,7 +211,7 @@
 
 ## V0.7.4.3
 
-### Pubilsh date ： 2021.10.30
+### Publish date ： 2021.10.30
 
 #### Add Features :
 1. ``Thunderbult 3`` / ``Type-C`` port fully supported
@@ -192,7 +228,7 @@
 
 ## V0.7.4.2
 
-### Pubilsh date ： 2021.10.29
+### Publish date ： 2021.10.29
 
 #### Add Features :
 1. Delete the useless entries in ``config.plist``

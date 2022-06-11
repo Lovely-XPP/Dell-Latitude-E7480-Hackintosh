@@ -2,3 +2,4 @@
 utilities/*.plist
 utilities/*.txt
 utilities/update_kexts/*
+EFI.zip

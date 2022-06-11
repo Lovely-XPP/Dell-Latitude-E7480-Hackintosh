@@ -25,8 +25,8 @@ for kext in os.listdir(os.path.join(root,'update_kexts')):
     kext_name.append(plist['CFBundleName'])
     kext_version.append(plist['CFBundleVersion'])
     build_version = plist['BuildMachineOSBuild']
-    build_version = build_version[0:3]
-    if build_version == '21E':
+    build_version = build_version[0:2]
+    if build_version == '21':
         kext_type.append('Compile on Local Machine')
         kext_type_zh.append('本地编译')
     else:

@@ -1,4 +1,4 @@
-# Dell Latitude E7480 macOS Big Sur 11 / Monterey 12 (OpenCore)
+# Dell Latitude E7480 macOS 11 / 12 / 13(beta) (OpenCore)
 
 <div style="align: center">
 <img src="https://raw.githubusercontent.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/main/demo/system_info.png">
@@ -8,21 +8,19 @@
 <img src="https://raw.githubusercontent.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/main/demo/OC_info.png">
 </div>
 
-
-
-
-
 ## 语言 / Lanuage
 [简体中文](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/README-cn.md)
 
 English (Current)
 
+## Warning
+Warning: THIS IS A BETA VERSION, NOT FOR DAILY USE!
+
 ## To Do
-- [x] Testing macOS 13 reliability
-- [ ] Add macOS 13 support
+- [x] Add macOS 13 support
 
 ## Download
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.1.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.8.1.0/EFI.zip)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.1.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.8.1.1/EFI.zip)
 
 ## ChangeLog：V0.8.1.0
 

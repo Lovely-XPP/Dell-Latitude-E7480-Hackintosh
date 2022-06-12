@@ -1,7 +1,7 @@
 # 戴尔 Latitude E7480 macOS 11 / 12 / 13(Beta) (OpenCore引导)
 
 <div style="align: center">
-<img src="https://raw.githubusercontent.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/main/demo/system_info.png">
+<img src="https://raw.githubusercontent.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/macOS-13/demo/system_info.png">
 </div>
 
 <div style="align: center">

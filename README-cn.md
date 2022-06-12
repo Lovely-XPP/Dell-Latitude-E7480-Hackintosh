@@ -1,4 +1,4 @@
-# 戴尔 Latitude E7480 macOS Big Sur 11 / Monterey 12 (OpenCore引导)
+# 戴尔 Latitude E7480 macOS 11 / 12 / 13(Beta) (OpenCore引导)
 
 <div style="align: center">
 <img src="https://raw.githubusercontent.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/main/demo/system_info.png">

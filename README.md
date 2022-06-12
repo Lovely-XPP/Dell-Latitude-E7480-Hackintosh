@@ -18,6 +18,7 @@
 English (Current)
 
 ## To Do
+- [x] Testing macOS 13 reliability
 - [ ] Add macOS 13 support
 
 ## Download

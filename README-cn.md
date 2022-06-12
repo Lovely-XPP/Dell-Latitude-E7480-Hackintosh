@@ -14,6 +14,7 @@
 [English](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/README.md)
 
 ## 计划
+- [x] 正在测试 macOS 13
 - [ ] 添加macOS 13支持
 
 

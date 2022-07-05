@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+import platform
 from plistlib import *
 
 os.chdir(sys.path[0])
@@ -10,6 +11,18 @@ kext_version = []
 kext_time = []
 kext_type = []
 kext_type_zh = []
+
+# 获取本地 MacOS 版本
+kernel = platform.system()
+if kernel != "Darwin":
+    print("The script is only supported for MacOS !")
+    exit()
+t = os.popen('sw_vers').read()
+t = t.split('BuildVersion:')
+t = t[1]
+t = t.strip()
+system_ver = t
+
 for kext in os.listdir(os.path.join(root,'EFI/OC/Kexts')):
     if kext == ".DS_Store":
         continue
@@ -23,13 +36,12 @@ for kext in os.listdir(os.path.join(root,'EFI/OC/Kexts')):
         plist = load(pl)
     kext_name.append(plist['CFBundleName'])
     kext_version.append(plist['CFBundleVersion'])
-    if kext == 'USBPorts.kext':
+    if kext == 'USBPorts.kext' or kext == 'USBMap.kext':
         kext_type.append('USB Ports Inject')
         kext_type_zh.append('USB 端口注入')
         continue
     build_version = plist['BuildMachineOSBuild']
-    build_version = build_version[0:2]
-    if build_version == '21':
+    if build_version[0:4] == system_ver[0:4]:
         kext_type.append('Compile on Local Machine')
         kext_type_zh.append('本地编译')
     else:

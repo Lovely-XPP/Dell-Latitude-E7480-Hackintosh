@@ -1,5 +1,43 @@
 # Changelog / 更新日志
 
+## V0.8.2.0
+
+### Publish date ： 2021.07.05
+
+#### Add Features :
+
+1. Update kexts and OC boot version to 0.8.2
+2. Add MacOS 13 Ventura support.
+3. Change `USBPorts.kext` to `USBMap.kext`, improve USB port performance.
+
+#### Files Changed:
+
+1. All the EFI folder to adapt OC 0.8.2
+2. `USBPorts.kext` -> `USBMap.kext`
+3. Update kexts :
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AirportBrcmFixup	|	2.1.6	|	2022-07-03	|	Official Release	|
+|	AppleALC	|	1.7.3	|	2022-07-05	|	Official Release	|
+|	BlueToolFixup	|	2.6.3	|	2022-06-25	|	Official Release	|
+|	BrcmBluetoothInjector	|	2.6.3	|	2022-06-25	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.3	|	2022-06-25	|	Official Release	|
+|	BrcmPatchRAM3	|	2.6.3	|	2022-06-25	|	Official Release	|
+|	CpuTscSync	|	1.0.9	|	2022-06-09	|	Official Release	|
+|	FeatureUnlock	|	1.0.9	|	2022-07-05	|	Official Release	|
+|	HibernationFixup	|	1.4.6	|	2022-07-04	|	Official Release	|
+|	Lilu	|	1.6.1	|	2022-07-05	|	Official Release	|
+|	SMCBatteryManager	|	1.3.0	|	2022-07-05	|	Official Release	|
+|	SMCDellSensors	|	1.3.0	|	2022-07-05	|	Official Release	|
+|	SMCLightSensor	|	1.3.0	|	2022-07-05	|	Official Release	|
+|	SMCProcessor	|	1.3.0	|	2022-07-05	|	Official Release	|
+|	SMCSuperIO	|	1.3.0	|	2022-07-05	|	Official Release	|
+|	VirtualSMC	|	1.3.0	|	2022-07-05	|	Official Release	|
+|	WhateverGreen	|	1.6.0	|	2022-07-05	|	Official Release	|
+
+-----------------------------------------------------
+
 ## V0.8.1.0
 
 ### Publish date ： 2021.06.11

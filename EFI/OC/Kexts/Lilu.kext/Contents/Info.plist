@@ -3,11 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-<<<<<<< Updated upstream
-	<string>21G5037d</string>
-=======
 	<string>20G624</string>
->>>>>>> Stashed changes
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

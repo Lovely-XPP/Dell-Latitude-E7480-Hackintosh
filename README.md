@@ -63,7 +63,7 @@ For more information, see the [Changelog.md](https://github.com/Lovely-XPP/Dell-
 <details>  
 <summary><strong>Booter</strong></summary>
 </br>
-OpenCore  0.7.8 / 0.7.9 / 0.8.0
+OpenCore  0.8.0 / 0.8.1 / 0.8.2
 </details>
 
 <details>  

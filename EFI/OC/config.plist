@@ -620,51 +620,6 @@
 				<key>name</key>
 				<string>JHL6340 Thunderbolt 3 NHI (C step) [Alpine Ridge 2C 2016]</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built-in</string>
-				<key>device_id</key>
-				<data>
-				7xUAAA==
-				</data>
-				<key>device_type</key>
-				<string>PCI bridge</string>
-				<key>model</key>
-				<string>JHL7540 Thunderbolt 3 Bridge [Titan Ridge DD 2018]</string>
-				<key>name</key>
-				<string>JHL7540 Thunderbolt 3 Bridge [Titan Ridge DD 2018]</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built-in</string>
-				<key>device_id</key>
-				<data>
-				AqgAAA==
-				</data>
-				<key>device_type</key>
-				<string>Non-Volatile memory controller</string>
-				<key>model</key>
-				<string>NVMe SSD Controller SM951/PM951</string>
-				<key>name</key>
-				<string>NVMe SSD Controller SM951/PM951</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x2,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built-in</string>
-				<key>device_id</key>
-				<data>
-				8BUAAA==
-				</data>
-				<key>device_type</key>
-				<string>USB controller</string>
-				<key>model</key>
-				<string>JHL7540 Thunderbolt 3 USB Controller [Titan Ridge DD 2018]</string>
-				<key>name</key>
-				<string>JHL7540 Thunderbolt 3 USB Controller [Titan Ridge DD 2018]</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)/Pci(0x2,0x0)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -736,7 +691,7 @@
 				</data>
 				<key>framebuffer-stolenmem</key>
 				<data>
-				AAAB
+				AAAwAQ==
 				</data>
 				<key>model</key>
 				<string>Intel HD Graphics 620</string>

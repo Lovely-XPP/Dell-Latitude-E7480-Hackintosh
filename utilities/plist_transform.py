@@ -41,10 +41,50 @@ devices['Add'] = {
         'framebuffer-con2-enable': b'\x01\x00\x00\x00', 
         'framebuffer-fbmem': b'\x00\x00\x90\x00', 
         'framebuffer-patch-enable': b'\x01\x00\x00\x00', 
-        'framebuffer-stolenmem': b'\x00\x000\x01', 
+        'framebuffer-stolenmem': b'\x00\x00\x01', 
         'model': 'Intel HD Graphics 620', 
         'pci-aspm-default': b'\x02\x00\x00\x00'
-    }
+    },
+    'PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)':
+    {
+        'AAPL,slot-name': 'Built-in',
+        'device_type': 'Thunderbolt 3',
+        'device_id': b'\xD9\x15\x00\x00',
+        'model': 'JHL6340 Thunderbolt 3 NHI (C step) [Alpine Ridge 2C 2016]',
+        'name': 'JHL6340 Thunderbolt 3 NHI (C step) [Alpine Ridge 2C 2016]',
+    },
+    'PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)':
+    {
+        'AAPL,slot-name': 'Built-in',
+        'device_type': 'PCI bridge',
+        'device_id': b'\xEF\x15\x00\x00',
+        'model': 'JHL7540 Thunderbolt 3 Bridge [Titan Ridge DD 2018]',
+        'name': 'JHL7540 Thunderbolt 3 Bridge [Titan Ridge DD 2018]',
+    },
+    'PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)':
+    {
+        'AAPL,slot-name': 'Built-in',
+        'device_type': 'Non-Volatile memory controller',
+        'device_id': b'\x02\xA8\x00\x00',
+        'model': 'NVMe SSD Controller SM951/PM951',
+        'name': 'NVMe SSD Controller SM951/PM951',
+    },
+    'PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x2,0x0)/Pci(0x0,0x0)':
+    {
+        'AAPL,slot-name': 'Built-in',
+        'device_type': 'USB controller',
+        'device_id': b'\xF0\x15\x00\x00',
+        'model': 'JHL7540 Thunderbolt 3 USB Controller [Titan Ridge DD 2018]',
+        'name': 'JHL7540 Thunderbolt 3 USB Controller [Titan Ridge DD 2018]',
+    },
+    'PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)/Pci(0x2,0x0)/Pci(0x0,0x0)':
+    {
+        'AAPL,slot-name': 'Built-in',
+        'device_type': 'USB controller',
+        'device_id': b'\xDB\x15\x00\x00',
+        'model': 'JHL6340 Thunderbolt 3 USB 3.1 Controller (C step) [Alpine Ridge 2C 2016]',
+        'name': 'JHL6340 Thunderbolt 3 USB 3.1 Controller (C step) [Alpine Ridge 2C 2016]',
+    },
 }
 
 # Change the Platform Info (Serial number)

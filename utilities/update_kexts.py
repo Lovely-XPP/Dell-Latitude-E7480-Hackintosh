@@ -1,5 +1,4 @@
 import os
-from select import KQ_FILTER_SIGNAL
 import sys
 import time
 import platform

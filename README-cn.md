@@ -20,44 +20,24 @@
 
 ## 下载
 
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.2.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.8.2.0/EFI.zip)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.2.1-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.8.2.1/EFI.zip)
 
-## 更新日志：V0.8.2.0
+## 更新日志：V0.8.2.1
 
-### 发布时间： 2021.07.05
+### 发布时间 ： 2021.07.22
 
 #### 添加功能 :
 
-1. 更新OC版本至0.8.2并更新了驱动
-2. 支持 MacOS 13 Ventura 
-3. 将`USBPorts.kext`替换为`USBMap.kext`以改善USB口的性能
+1. 雷电3支持（不完全支持）
 
-#### 文件变化 :
+Tip: Type-C 口有两个控制器：雷电3控制器和USB控制器，在此更新之前，USB控制器已经完全支持（包括热插拔），但是没有雷电3支持。本次更新仅修复了雷电3的识别，但并不能实现热插拔。如果你需要使用雷电3，请注意一下2点：
 
-1. 整个EFI文件夹以适配OC 0.8.2
-2. `USBPorts.kext` -> `USBMap.kext`
-3. 更新驱动：
+- 在启动电脑之前请插入雷电3设备（如果已经启动请关机插入后再开机）
+- **不支持**热插拔
 
-| 驱动名称          | 版本号                       | 更新时间       | 更新方式              |
-|:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AirportBrcmFixup	|	2.1.6	|	2022-07-03	|	官方编译	|
-|	AppleALC	|	1.7.3	|	2022-07-05	|	官方编译	|
-|	BlueToolFixup	|	2.6.3	|	2022-06-25	|	官方编译	|
-|	BrcmBluetoothInjector	|	2.6.3	|	2022-06-25	|	官方编译	|
-|	BrcmFirmwareData	|	2.6.3	|	2022-06-25	|	官方编译	|
-|	BrcmPatchRAM3	|	2.6.3	|	2022-06-25	|	官方编译	|
-|	CpuTscSync	|	1.0.9	|	2022-06-09	|	官方编译	|
-|	FeatureUnlock	|	1.0.9	|	2022-07-05	|	官方编译	|
-|	HibernationFixup	|	1.4.6	|	2022-07-04	|	官方编译	|
-|	Lilu	|	1.6.1	|	2022-07-05	|	官方编译	|
-|	SMCBatteryManager	|	1.3.0	|	2022-07-05	|	官方编译	|
-|	SMCDellSensors	|	1.3.0	|	2022-07-05	|	官方编译	|
-|	SMCLightSensor	|	1.3.0	|	2022-07-05	|	官方编译	|
-|	SMCProcessor	|	1.3.0	|	2022-07-05	|	官方编译	|
-|	SMCSuperIO	|	1.3.0	|	2022-07-05	|	官方编译	|
-|	VirtualSMC	|	1.3.0	|	2022-07-05	|	官方编译	|
-|	WhateverGreen	|	1.6.0	|	2022-07-05	|	官方编译	|
+#### 文件变化:
 
+1. 注入雷电3控制器信息
 
 更多版本的更新日志详见 [Changelog_zh.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog_zh.md).
 
@@ -178,9 +158,16 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2
 <summary><strong>不可用功能</strong></summary>
 </br>
 
-暂时没有不可用功能
+- [ ] 雷电3热拔插
 
 </details>
+
+## 雷电3使用说明
+
+Type-C 口有两个控制器：雷电3控制器和USB控制器。USB控制器已经完全支持（包括热插拔），而雷电3接口仅能在开机时候进行识别，但并不能实现热插拔。如果你需要使用雷电3，请注意一下2点：
+
+- 在启动电脑之前请插入雷电3设备（如果已经启动请关机插入后再开机）
+- **不支持**热插拔
 
 ## 对于 Intel 无线网卡
 

@@ -18,43 +18,25 @@ English (Current)
 - [x] Add macOS 13 support
 
 ## Download
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.2.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.8.2.0/EFI.zip)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.2.1-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.8.2.1/EFI.zip)
 
-## ChangeLog：V0.8.2.0
+## ChangeLog：V0.8.2.1
 
-### Publish date ： 2021.07.05
+### Publish date ： 2021.07.22
 
 #### Add Features :
 
-1. Update kexts and OC boot version to 0.8.2
-2. Add MacOS 13 Ventura support.
-3. Change `USBPorts.kext` to `USBMap.kext`, improve USB port performance.
+1. Add Thunderbolt 3 support (not fully support)
+
+Tip: Type-C port has 2 controllers: Thunderbolt 3 controller and USB 3.1 controller. Before the release, USB 3/3.1 is fully supported (including hot-plug), but Thunderbolt is not support. This release is only fix the thunderbolt port, but it does not support hot-plug, because it regonize the thunderbolt device as PCI device. If you want to use Thunderbolt, here is the points:
+
+- Plug in the Thunderbolt device before start up
+- Hot-plug NOT Supported
 
 #### Files Changed:
 
-1. All the EFI folder to adapt OC 0.8.2
-2. `USBPorts.kext` -> `USBMap.kext`
-3. Update kexts :
+1. Inject Thunderbolt Information
 
-| Kexts          | Version                        | Updated Time       | Updated Way              |
-|:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AirportBrcmFixup	|	2.1.6	|	2022-07-03	|	Official Release	|
-|	AppleALC	|	1.7.3	|	2022-07-05	|	Official Release	|
-|	BlueToolFixup	|	2.6.3	|	2022-06-25	|	Official Release	|
-|	BrcmBluetoothInjector	|	2.6.3	|	2022-06-25	|	Official Release	|
-|	BrcmFirmwareData	|	2.6.3	|	2022-06-25	|	Official Release	|
-|	BrcmPatchRAM3	|	2.6.3	|	2022-06-25	|	Official Release	|
-|	CpuTscSync	|	1.0.9	|	2022-06-09	|	Official Release	|
-|	FeatureUnlock	|	1.0.9	|	2022-07-05	|	Official Release	|
-|	HibernationFixup	|	1.4.6	|	2022-07-04	|	Official Release	|
-|	Lilu	|	1.6.1	|	2022-07-05	|	Official Release	|
-|	SMCBatteryManager	|	1.3.0	|	2022-07-05	|	Official Release	|
-|	SMCDellSensors	|	1.3.0	|	2022-07-05	|	Official Release	|
-|	SMCLightSensor	|	1.3.0	|	2022-07-05	|	Official Release	|
-|	SMCProcessor	|	1.3.0	|	2022-07-05	|	Official Release	|
-|	SMCSuperIO	|	1.3.0	|	2022-07-05	|	Official Release	|
-|	VirtualSMC	|	1.3.0	|	2022-07-05	|	Official Release	|
-|	WhateverGreen	|	1.6.0	|	2022-07-05	|	Official Release	|
 
 For more information, see the [Changelog.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog.md).
 
@@ -177,9 +159,17 @@ Tips:
 <summary><strong>What's not working</strong></summary>
 </br>
 
-None so far.
+- [ ] Thunderbolt 3 hot-plug
 
 </details>
+
+## Thunderbolt 3 Usage
+
+Type-C port has 2 controllers: Thunderbolt 3 controller and USB controller. USB controller is fully supported (including hot-plug), but Thunderbolt only works when your pulg in your device before start up and it does not support hot-plug, because it regonize the thunderbolt device as PCI device. If you want to use Thunderbolt, here is the points:
+
+- Plug in the Thunderbolt device before start up
+- Hot-plug **NOT** Supported
+
 
 ## For Intel Wireless and Bluetooth
 

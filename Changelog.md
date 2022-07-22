@@ -1,5 +1,25 @@
 # Changelog / 更新日志
 
+## V0.8.2.1
+
+### Publish date ： 2021.07.22
+
+#### Add Features :
+
+1. Add Thunderbolt 3 support (not fully support)
+
+Tip: Type-C port has 2 controllers: Thunderbolt 3 controller and USB 3.1 controller. Before the release, USB 3/3.1 is fully supported (including hot-plug), but Thunderbolt is not support. This release is only fix the thunderbolt port, but it only works when your pulg in your device before start up and it does not support hot-plug, because it regonize the thunderbolt device as PCI device. If you want to use Thunderbolt, here is the points:
+
+- Plug in the Thunderbolt device before start up
+- Hot-plug **NOT** Supported
+
+#### Files Changed:
+
+1. Inject Thunderbolt Information
+
+--------------------------------------------------
+
+
 ## V0.8.2.0
 
 ### Publish date ： 2021.07.05

@@ -15,7 +15,8 @@ English (Current)
 
 
 ## To Do
-- [x] Add macOS 13 support
+- [] Automatically update OpenCorePkg and Kexts by a script
+- [] Automatically generate update info and update ReadMe
 
 ## Download
 [![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.2.1-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.8.2.1/EFI.zip)

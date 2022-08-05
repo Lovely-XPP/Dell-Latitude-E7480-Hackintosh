@@ -1,5 +1,6 @@
 .DS_Store
 utilities/*.plist
+utilities/*.json
 utilities/*.txt
 utilities/update_kexts/*
 EFI.zip

@@ -12,6 +12,7 @@ from plistlib import *
 
 class UpdateRepo:
     def __init__(self, mode) -> None:
+        self.ver = "V1.02"
         self.mode = mode
         self.root = os.path.abspath(sys.path[0])
         self.kext = ""
@@ -102,14 +103,14 @@ class UpdateRepo:
     def main_interface(self, progress):
         os.system("clear")
         self.title()
-        if progress >= 0:
+        if progress < 1:
             print("> Download Database")
             return
-        if progress >= 1:
+        if progress < 2:
             print(self.Colors("- Download Database", fcolor='green'))
             print("> Update OpenCorePkg and Main Kexts")
             return
-        if progress >= 2:
+        if progress < 3:
             print(self.Colors("- Download Database", fcolor='green'))
             print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
             print("> Update Release Info")
@@ -357,12 +358,16 @@ class UpdateRepo:
             except:
                 continue
         self.kexts_list = kexts_list
+        kexts_list.append(self.bootloader)
 
         for i in kexts_list:
             info = row_data[i]
+            info = info['versions']
+            info = info[0]
 
             # download link
-            link = info['links']     
+            link = info['links']
+            
             remote[i] = {'link': link['release']}
         self.remote = remote
 
@@ -771,9 +776,9 @@ class UpdateRepo:
 
 if __name__ == "__main__":
     # 实例化类
-    uprepo = UpdateRepo()
-
-    # run script
     # mode 1: big update, mode 0: daily update
     mode = 1
-    uprepo.main(1)
+    uprepo = UpdateRepo(mode)
+
+    # run script
+    uprepo.main()

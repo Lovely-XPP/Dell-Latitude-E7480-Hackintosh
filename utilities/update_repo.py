@@ -6,11 +6,13 @@ import zipfile
 import time
 import platform
 import requests
+import hashlib
 from plistlib import *
 
 
 class UpdateRepo:
-    def __init__(self) -> None:
+    def __init__(self, mode) -> None:
+        self.mode = mode
         self.root = os.path.abspath(sys.path[0])
         self.kext = ""
         self.update_kext = ""
@@ -640,6 +642,10 @@ class UpdateRepo:
         input("Press [Enter] to continue...")
 
         # update kexts
+        update_path = os.path.abspath(os.path.join(root, 'utilities/update_kexts/'))
+        if self.mode == 1:
+            shutil.rmtree(update_path)
+            os.mkdir(update_path)
         tmp_path = os.path.abspath(os.path.join(self.root, 'cache/'))
         if not os.path.exists(tmp_path):
             os.mkdir(tmp_path)
@@ -684,11 +690,20 @@ class UpdateRepo:
 
             try:
                 for k in self.local[kext]['kexts']:
-                    source = os.path.abspath(
-                        os.path.join(root, 'EFI/OC/Kexts/'))
+                    source = os.path.abspath(os.path.join(root, 'EFI/OC/Kexts/'))
                     update = os.path.abspath(os.path.join(tmp_path0, k))
-                    source = source.replace(' ', '\ ')
-                    os.system('cp -rf ' + update + ' ' + source)
+                    source_plist = os.path.join(source, k + "/Contents/Info.plist")
+                    source_sha = hashlib.md5(open(source_plist).read()).hexdigest()
+                    update_plist = os.path.join(update, "Contents/Info.plist")
+                    update_sha = hashlib.md5(open(update_plist).read()).hexdigest()
+                    if source_sha != update_sha:
+                        source = source.replace(' ', '\ ')
+                        update = update.replace(' ', '\ ')
+                        os.system('cp -rf ' + update + ' ' + source)
+                    else:
+                        update = update.replace(' ', '\ ')
+                        update_path = update_path.replace(' ', '\ ')
+                        os.system('cp -rf ' + update + ' ' + update_path)
                 progress[1] = progress[1] + 1
             except:
                 err.append(kext)
@@ -759,4 +774,6 @@ if __name__ == "__main__":
     uprepo = UpdateRepo()
 
     # run script
-    uprepo.main()
+    # mode 1: big update, mode 0: daily update
+    mode = 1
+    uprepo.main(1)

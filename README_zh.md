@@ -7,8 +7,10 @@
 <div style="align: center">
 <img src="https://raw.githubusercontent.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/main/demo/OC_info.png">
 </div>
+> 提示: 由于我购入了一台MacBookPro, 所以我不能手动更新这个仓库。因此，我写了一个自动化更新脚本来更新这个仓库。如果你遇到了一些错误或问题，欢迎开一个issue，我会尽可能地解决。感谢大家一直以来的支持。
 
 ## 语言 / Lanuage
+
 简体中文(当前语言)
 
 [English](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/README.md)

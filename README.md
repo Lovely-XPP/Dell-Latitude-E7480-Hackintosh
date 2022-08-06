@@ -7,8 +7,10 @@
 <div style="align: center">
 <img src="https://raw.githubusercontent.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/main/demo/OC_info.png">
 </div>
+> Tip: I have bought a MacBookPro, so I can not maintain this repo manully any more. Therefore, I wrote a scrip to update this repo actomatically. If you encount error when using it, please open an issue, I will try my best to fix it. Thanks for your support.
 
 ## 语言 / Lanuage
+
 [简体中文](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/README_zh.md)
 
 English (Current)

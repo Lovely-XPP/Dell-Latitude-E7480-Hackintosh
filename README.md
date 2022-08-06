@@ -9,44 +9,56 @@
 </div>
 
 ## 语言 / Lanuage
-[简体中文](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/README-cn.md)
+[简体中文](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/README-zh.md)
 
 English (Current)
 
 
 ## To Do
-- [] Automatically update OpenCorePkg and Kexts by a script
-- [] Automatically generate update info and update ReadMe
+- [x] Automatically update OpenCorePkg and Kexts by a script
+- [x] Automatically generate update info and update ReadMe
 
 ## Download
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.2.1-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.8.2.1/EFI.zip)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.3.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.8.3.0/EFI.zip)
 
-## ChangeLog：V0.8.2.1
 
-### Publish date ： 2021.07.22
+## ChangeLog: V0.8.3.0
+
+### Publish date : 2022.08.06
 
 #### Add Features :
 
-1. Add Thunderbolt 3 support (not fully support)
+1. Update kexts and OC boot version to  0.8.3
 
-Tip: Type-C port has 2 controllers: Thunderbolt 3 controller and USB 3.1 controller. Before the release, USB 3/3.1 is fully supported (including hot-plug), but Thunderbolt is not support. This release is only fix the thunderbolt port, but it does not support hot-plug, because it regonize the thunderbolt device as PCI device. If you want to use Thunderbolt, here is the points:
+#### Files Changed :
 
-- Plug in the Thunderbolt device before start up
-- Hot-plug NOT Supported
+1. All the EFI folder to adapt OC 0.8.3
+2. Update kexts with official Release:
 
-#### Files Changed:
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AppleALC	|	1.7.4	|	2022-08-06	|	Official Release	|
+|	BrightnessKeys	|	1.0.3	|	2022-08-06	|	Official Release	|
+|	ECEnabler	|	1.0.3	|	2022-08-06	|	Official Release	|
+|	IntelBluetoothFirmware	|	2.2.0	|	2022-08-06	|	Official Release	|
+|	IntelBluetoothInjector	|	2.2.0	|	2022-08-06	|	Official Release	|
+|	IntelMausi	|	1.0.8	|	2022-08-06	|	Official Release	|
+|	Lilu	|	1.6.2	|	2022-08-06	|	Official Release	|
+|	NVMeFix	|	1.1.0	|	2022-08-06	|	Official Release	|
+|	RestrictEvents	|	1.0.8	|	2022-08-06	|	Official Release	|
+|	Voodoo PS/2 Controller	|	2.2.9	|	2022-08-06	|	Official Release	|
+|	VoodooI2C	|	2.7	|	2022-08-06	|	Official Release	|
+|	WhateverGreen	|	1.6.1	|	2022-08-06	|	Official Release	|
 
-1. Inject Thunderbolt Information
 
-
-For more information, see the [Changelog.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog.md).
+For more infomation, see the [Changelog.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog.md).
 
 ## Infomation
 
 <details>  
 <summary><strong>Booter</strong></summary>
 </br>
-OpenCore  0.8.0 / 0.8.1 / 0.8.2
+OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3
 </details>
 
 <details>  

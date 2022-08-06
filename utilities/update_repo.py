@@ -11,9 +11,9 @@ from plistlib import *
 
 
 class UpdateRepo:
-    def __init__(self, mode) -> None:
-        self.ver = "V1.02"
-        self.mode = mode
+    def __init__(self) -> None:
+        self.ver = "V1.03"
+        self.mode = 0
         self.root = os.path.abspath(sys.path[0])
         self.kext = ""
         self.update_kext = ""
@@ -23,6 +23,8 @@ class UpdateRepo:
         self.changelog_zh = ""
         self.readme = ""
         self.readme_zh = ""
+        self.release_info = ""
+        self.oc_ver0 = ""
         self.oc_ver = ""
         self.url = 'https://raw.githubusercontent.com/dortania/build-repo/builds/config.json'
         self.bootloader = ""
@@ -105,20 +107,50 @@ class UpdateRepo:
         self.title()
         if progress < 1:
             print("> Download Database")
+            print("")
             return
         if progress < 2:
             print(self.Colors("- Download Database", fcolor='green'))
             print("> Update OpenCorePkg and Main Kexts")
+            print("")
             return
         if progress < 3:
             print(self.Colors("- Download Database", fcolor='green'))
             print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
             print("> Update Release Info")
+            print("")
+            return
+        if self.mode == 1:
+            if progress < 4:
+                print(self.Colors("- Download Database", fcolor='green'))
+                print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
+                print(self.Colors("- Update Release Info", fcolor='green'))
+                print(self.Colors("> Write README & Changelog"))
+                print("")
+                return
+            if progress < 5:
+                print(self.Colors("- Download Database", fcolor='green'))
+                print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
+                print(self.Colors("- Update Release Info", fcolor='green'))
+                print(self.Colors("- Write README & Changelog", fcolor='green'))
+                print(self.Colors("> Compress EFI Folder"))
+                print("")
+                return
+            print(self.Colors("- Download Database", fcolor='green'))
+            print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
+            print(self.Colors("- Update Release Info", fcolor='green'))
+            print(self.Colors("- Write README & Changelog", fcolor='green'))
+            print(self.Colors("- Compress EFI Folder", fcolor='green'))
+            print(self.Colors("- All Done", fcolor='green'))
+            print("")
             return
         print(self.Colors("- Download Database", fcolor='green'))
         print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
         print(self.Colors("- Update Release Info", fcolor='green'))
+        print(self.Colors(": Write README & Changelog, Skipped", fcolor='yellow'))
+        print(self.Colors(": Compress EFI Folder, Skipped", fcolor='yellow'))
         print(self.Colors("- All Done", fcolor='green'))
+        print("")
 
 
     def update_kexts(self) -> None:
@@ -193,6 +225,10 @@ class UpdateRepo:
         for i in range(len(kext_name)):
             stri = '|\t' + kext_name[i] + '\t|\t' + kext_version[i] + '\t|\t' + kext_time[i] + '\t|\t' + kext_type_zh[i] + '\t|\n'
             self.update_kext_zh = self.update_kext_zh + stri
+        
+        update_path = os.path.abspath(os.path.join(self.root, 'update_kexts/'))
+        if self.mode == 1:
+            shutil.rmtree(update_path)
 
 
     def kexts(self) -> None:
@@ -283,26 +319,33 @@ class UpdateRepo:
         new = "V" + self.oc_ver + ".0\n\n### Publish date : " + now + \
             "\n\n#### Add Features :\n\n1. Update kexts and OC boot version to  " + \
             self.oc_ver + "\n\n#### Files Changed :\n\n1. All the EFI folder to adapt OC " + \
-            self.oc_ver + "\n2. Update kexts with official Release:\n\n" + \
-            self.update_kext
-        self.changelog = changelog[0] + "更新日志\n\n##" + new + "\n\n-----------------------------------------------------" + changelog[1]
+            self.oc_ver + "\n2. Update kexts with official Release:\n\n" + self.update_kext
+        if self.mode == 1:
+            self.changelog = changelog[0] + "更新日志\n\n##" + new + "\n\n-----------------------------------------------------" + changelog[1]
+            self.release_info = "# V" + self.oc_ver + ".0\n\n## Publish date : " + now + \
+                "\n\n### Add Features :\n\n1. Update kexts and OC boot version to  " + \
+                self.oc_ver + "\n\n### Files Changed :\n\n1. All the EFI folder to adapt OC " + \
+                self.oc_ver + "\n2. Update kexts with official Release:\n\n" + \
+                self.update_kext + "\n\n-----------------------------------------------------\n\n"
 
         readme = os.path.abspath(os.path.join(root, 'README.md'))
         with open(readme, 'r') as file:
             readme = file.read()
             file.close()
-        readme = readme.split("OpenCore  ")
-        pre_ver = readme[1].split('\n', 1)
-        readme = readme[0] + "OpenCore  " + pre_ver[0] + " / " + self.oc_ver + "\n" + pre_ver[1]
+        if self.mode == 1:
+            readme = readme.split("OpenCore  ")
+            pre_ver = readme[1].split('\n', 1)
+            readme = readme[0] + "OpenCore  " + pre_ver[0] + " / " + self.oc_ver + "\n" + pre_ver[1]
+            readme = readme.split("## Download")
+            tmp = readme[1].split("EFI.zip)", 1)
+            tmp = tmp[1]
+            download = "[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v" + self.oc_ver +  ".0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/" +  "V" + self.oc_ver + ".0/EFI.zip)"
+            readme = readme[0] + "## Download\n" + download + "\n" + tmp
         readme = readme.split("## ChangeLog")
         tmp = readme[1].split("For more information")
         tmp = "For more infomation" + tmp[1]
-        readme = readme[0] + "## ChangeLog: " + new + "\n\n" + tmp
-        readme = readme.split("## Download")
-        tmp = readme[1].split("EFI.zip)", 1)
-        tmp = tmp[1]
-        download = "[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v" + self.oc_ver + ".0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/" + "V" + self.oc_ver + ".0/EFI.zip)"
-        self.readme = readme[0] + "## Download\n" + download + "\n" + tmp
+        self.readme = readme[0] + "## ChangeLog: " + new + "\n\n" + tmp
+        
 
         changelog = os.path.abspath(os.path.join(root, 'Changelog_zh.md'))
         with open(changelog, 'r') as file:
@@ -312,26 +355,31 @@ class UpdateRepo:
         new = "V" + self.oc_ver + ".0\n\n### 发布时间 : " + now + \
             "\n\n#### 添加功能 :\n\n1. 更新OC版本至" + self.oc_ver + "并更新了驱动" + \
             "\n\n#### 文件变化 :\n\n1. 更新整个EFI文件夹以适配 OC " + \
-            self.oc_ver + "\n2. 更新驱动:\n\n" + \
-            self.update_kext
-        self.changelog_zh = changelog[0] + "更新日志\n\n##" + new + "\n\n-----------------------------------------------------" + changelog[1]
+            self.oc_ver + "\n2. 更新驱动:\n\n" + self.update_kext_zh
+        if self.mode == 1:
+            self.changelog_zh = changelog[0] + "更新日志\n\n##" + new + "\n\n-----------------------------------------------------" + changelog[1]
+            self.release_info = self.release_info + "# V" + self.oc_ver + ".0\n\n## 发布时间 : " + now + \
+                "\n\n### 添加功能 :\n\n1. 更新OC版本至" + self.oc_ver + "并更新了驱动" + \
+                "\n\n### 文件变化 :\n\n1. 更新整个EFI文件夹以适配 OC " + \
+                self.oc_ver + "\n2. 更新驱动:\n\n" + self.update_kext_zh
+        
         readme = os.path.abspath(os.path.join(root, 'README_zh.md'))
-
         with open(readme, 'r') as file:
             readme = file.read()
             file.close()
-        readme = readme.split("OpenCore  ")
-        pre_ver = readme[1].split('\n', 1)
-        readme = readme[0] + "OpenCore  " + pre_ver[0] + " / " + self.oc_ver + "\n" + pre_ver[1]
+        if self.mode == 1:
+            readme = readme.split("OpenCore  ")
+            pre_ver = readme[1].split('\n', 1)
+            readme = readme[0] + "OpenCore  " + pre_ver[0] + " / " + self.oc_ver + "\n" + pre_ver[1]
+            readme = readme.split("## 下载")
+            tmp = readme[1].split("EFI.zip)", 1)
+            tmp = tmp[1]
+            download = "[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v" + self.oc_ver + ".0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/" + "V" + self.oc_ver + ".0/EFI.zip)"
+            readme = readme[0] + "## Download\n" + download + "\n" + tmp
         readme = readme.split("## 更新日志")
         tmp = readme[1].split("更多版本的更新日志")
         tmp = "更多版本的更新日志" + tmp[1]
-        readme = readme[0] + "## 更新日志: " + new + "\n\n" + tmp
-        readme = readme.split("## 下载")
-        tmp = readme[1].split("EFI.zip)", 1)
-        tmp = tmp[1]
-        download = "[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v" + self.oc_ver + ".0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/" + "V" + self.oc_ver + ".0/EFI.zip)"
-        self.readme_zh = readme[0] + "## Download\n" + download + "\n" + tmp
+        self.readme_zh = readme[0] + "## 更新日志: " + new + "\n\n" + tmp
     
     
     def download_database(self):
@@ -345,6 +393,31 @@ class UpdateRepo:
     def get_remote_data(self):
         remote = {}
         kexts_list = []
+        readme = os.path.abspath(os.path.join(self.root, '../README.md'))
+        with open(readme, 'r') as file:
+            readme = file.read()
+            file.close()
+        readme = readme.split("OpenCore  ")
+        pre_ver = readme[1].split('\n', 1)
+        pre_ver = pre_ver[0].split('/')
+        pre_ver = pre_ver[-1].strip()
+        self.oc_ver0 = pre_ver
+        pre_ver = pre_ver.split('.')
+        ver = pre_ver.copy()
+        if pre_ver[-1] == '9':
+            ver[-1] = '0'
+            ver[-2] = str(int(pre_ver[-2]) + 1)
+        else:
+            ver[-1] = str(int(ver[-1]) + 1)
+        if ver[-2] == '10':
+            ver[-2] = '0'
+            ver[-3] = str(int(pre_ver[-3]) + 1)
+        oc_ver = ''
+        for ver0 in ver:
+            oc_ver = oc_ver + ver0 + '.'
+        oc_ver = oc_ver.strip('.')
+        self.oc_ver = oc_ver
+
         path = os.path.abspath(os.path.join(self.root, "database.json"))
         with open(path, 'r') as f:
             row_data = json.load(f)
@@ -361,13 +434,22 @@ class UpdateRepo:
         kexts_list.append(self.bootloader)
 
         for i in kexts_list:
+            k = 0
             info = row_data[i]
-            info = info['versions']
-            info = info[0]
+            info_all = info['versions']
+            info = info_all[k]
+            if i == self.bootloader:
+                oc_ver = info['version']
+                while oc_ver != self.oc_ver and oc_ver != self.oc_ver0:
+                    info = info_all[k]
+                    oc_ver = info['version']
+                    k += 1
+                if k > 0:
+                    self.mode = 1
 
             # download link
             link = info['links']
-            
+
             remote[i] = {'link': link['release']}
         self.remote = remote
 
@@ -382,7 +464,7 @@ class UpdateRepo:
             kext0 = kext0[0]
 
             # IntelBluetoothFirmware
-            if kext0[0:14] == 'IntelBluetooth' or kext0 == 'IntelBTPatcher':
+            if kext0[0:14].lower() == 'intelbluetooth' or kext0.lower() == 'intelbtpatcher':
                 try:
                     local['IntelBluetoothFirmware']['kexts'].append(kext)
                 except:
@@ -391,7 +473,7 @@ class UpdateRepo:
                 continue
 
             # BrcmPatchRAM
-            if kext0[0:4] == 'Brcm' or kext0 == 'BlueToolFixup':
+            if kext0[0:4].lower() == 'brcm' or kext0.lower() == 'bluetoolfixup':
                 try:
                     local['BrcmPatchRAM']['kexts'].append(kext)
                 except:
@@ -400,7 +482,7 @@ class UpdateRepo:
                 continue
 
             # VirtualSMC
-            if kext0[0:3] == 'SMC' or kext0[-3:-1] == 'SMC':
+            if kext0[0:3].upper() == 'SMC' or kext0.upper() == 'VIRTUALSMC':
                 try:
                     local['VirtualSMC']['kexts'].append(kext)
                 except:
@@ -446,22 +528,45 @@ class UpdateRepo:
             up_plist.pop(del_key)
 
         for key in up_plist.keys():
+            if key.lower() == "deviceproperties":
+                up_plist[key] = src_plist[key]
+                continue
             for key2 in up_plist[key].keys():
-                if key2 == "Add" or key2 == "Delete" or key2 == "Patch":
-                    up_plist[key][key2] = src_plist[key][key2]
-                    continue
                 try:
-                    if key == "PlatformInfo":
+                    if key.lower() == "platforminfo":
                         if key2 in src_plist[key].keys():
                             up_plist[key][key2] = src_plist[key][key2]
                             continue
                         del_platform_info.append(key2)
                         continue
-                    for key3 in up_plist[key][key2].keys():
+                    if isinstance(up_plist[key][key2], list):
                         try:
-                            up_plist[key][key2][key3] = src_plist[key][key2][key3]
+                            try:
+                                example = up_plist[key][key2][1]
+                            except:
+                                example = up_plist[key][key2][0]
                         except:
+                            up_plist[key][key2] = src_plist[key][key2]
                             continue
+                        up_plist[key][key2] = src_plist[key][key2]
+                        for ele in up_plist[key][key2]:
+                            keys = ele.keys()
+                            for key3 in example.keys():
+                                if key3 in keys or key3.lower() == 'comment':
+                                    continue
+                                ele[key3] = example[key3]
+                        continue
+                    if isinstance(up_plist[key][key2], dict):
+                        example = up_plist[key][key2]
+                        up_plist[key][key2] = src_plist[key][key2]
+                        ele = up_plist[key][key2]
+                        keys = ele.keys()
+                        for key3 in example.keys():
+                            if key3 in keys or key3.lower() == 'comment':
+                                continue
+                            ele[key3] = example[key3]
+                        continue
+                    up_plist[key][key2] = src_plist[key][key2]
                 except:
                     try:
                         up_plist[key][key2] = src_plist[key][key2]
@@ -474,9 +579,8 @@ class UpdateRepo:
 
         # save new config
         with open(save_config, 'wb') as new_plist:
-            dump(up_plist, new_plist, fmt=FMT_XML,
-                 sort_keys=True, skipkeys=False)
-
+            dump(up_plist, new_plist, fmt=FMT_XML,sort_keys=True, skipkeys=False)
+        
 
     def update_oc_interface(self, kext, progress):
         os.system('clear')
@@ -515,7 +619,7 @@ class UpdateRepo:
         self.get_remote_data()
         self.get_local_data()
         oc = self.remote[self.bootloader]
-        root = os.path.abspath(os.path.join(root, ".."))
+        root = os.path.abspath(os.path.join(self.root, ".."))
         tmp_path = os.path.abspath(os.path.join(self.root, 'cache/'))
         if not os.path.exists(tmp_path):
             os.mkdir(tmp_path)
@@ -528,7 +632,6 @@ class UpdateRepo:
         response = requests.request("GET", oc['link'], headers=headers)
         with open(tmp, "wb") as f:
             f.write(response.content)
-        print("")
         print(self.Colors("[Info] Download Done", fcolor='green'))
 
         # extract zip
@@ -543,10 +646,8 @@ class UpdateRepo:
         # OpenCore.efi update
         print(self.Colors(
             "[Info] Updating OpenCorePkg Core...", fcolor='green'))
-        oc_efi_source = os.path.abspath(
-            os.path.join(root, 'EFI/OC/OpenCore.efi'))
-        oc_efi_update = os.path.abspath(
-            os.path.join(tmp_path, 'X64/EFI/OC/OpenCore.efi'))
+        oc_efi_source = os.path.abspath(os.path.join(root, 'EFI/OC/OpenCore.efi'))
+        oc_efi_update = os.path.abspath(os.path.join(tmp_path, 'X64/EFI/OC/OpenCore.efi'))
         shutil.copy(oc_efi_update, oc_efi_source)
         print(self.Colors("[Info] Update Core Done", fcolor='green'))
 
@@ -554,10 +655,8 @@ class UpdateRepo:
         print(self.Colors(
             "[Info] Updating OpenCorePkg Drivers...", fcolor='green'))
         drivers = []
-        oc_drivers_source = os.path.abspath(
-            os.path.join(root, 'EFI/OC/Drivers/'))
-        oc_drivers_update = os.path.abspath(
-            os.path.join(tmp_path, 'X64/EFI/OC/Drivers/'))
+        oc_drivers_source = os.path.abspath(os.path.join(root, 'EFI/OC/Drivers/'))
+        oc_drivers_update = os.path.abspath(os.path.join(tmp_path, 'X64/EFI/OC/Drivers/'))
         for driver in os.listdir(oc_drivers_update):
             drivers.append(driver)
         for driver in os.listdir(oc_drivers_source):
@@ -573,10 +672,8 @@ class UpdateRepo:
         print(self.Colors(
             "[Info] Updating OpenCorePkg Tools...", fcolor='green'))
         tools = []
-        oc_tools_source = os.path.abspath(
-            os.path.join(root, 'EFI/OC/Tools/'))
-        oc_tools_update = os.path.abspath(
-            os.path.join(tmp_path, 'X64/EFI/OC/Tools/'))
+        oc_tools_source = os.path.abspath(os.path.join(root, 'EFI/OC/Tools/'))
+        oc_tools_update = os.path.abspath(os.path.join(tmp_path, 'X64/EFI/OC/Tools/'))
         for driver in os.listdir(oc_tools_update):
             tools.append(driver)
         for driver in os.listdir(oc_tools_source):
@@ -589,55 +686,46 @@ class UpdateRepo:
         print(self.Colors("[Info] Update Tools Done", fcolor='green'))
 
         # check plist
-        ocvalidate_path = os.path.abspath(os.path.join(
-            tmp_path, 'Utilities/ocvalidate/ocvalidate'))
-        plist_path = os.path.abspath(
-            os.path.join(root, 'EFI/OC/Config.plist'))
-        if not os.path.exists(plist_path):
-            plist_path = os.path.abspath(
-                os.path.join(root, 'EFI/OC/config.plist'))
-        if not os.path.exists(plist_path):
-            print(self.Colors(
-                "[Warning] config plist not found, check skipped", fcolor='yellow'))
-        else:
-            os.popen('chmod +x ' + ocvalidate_path)
-            ocvalidate_path_sys = ocvalidate_path.replace(' ', '\ ')
-            plist_path_sys = plist_path.replace(' ', '\ ')
-            v = os.popen(ocvalidate_path_sys + ' ' + plist_path_sys).read()
-            if "No issues found" in v:
-                print(self.Colors(
-                    "[Info] **** Config plist check Done, No issues Found! ****", fcolor='green'))
-            else:
-                update_config = os.path.abspath(os.path.join(
-                    sys.path[0], "cache/OpenCorePkg/Docs/SampleCustom.plist"))
-                source_config = plist_path
-                save_config = os.path.abspath(os.path.join(
-                    sys.path[0], "cache/OpenCorePkg/Config.plist"))
-                self.update_oc_config(
-                    update_config, source_config, save_config)
-                shutil.copy(save_config, source_config)
-                v2 = os.popen(ocvalidate_path_sys + ' ' +
-                              save_config.replace(' ', '\ ')).read()
-                if "No issues found" in v2:
-                    print(self.Colors(
-                        "[Info] **** Config update automatically and check Done, No issues Found! ****", fcolor='green'))
-                    print(self.Colors(
-                        "[Warning] **** Automatically plist update is not reliable all the time, please check and save your backup EFI in backup_EFI folder ****", fcolor='yellow'))
+        ocvalidate_path = os.path.abspath(os.path.join(tmp_path, 'Utilities/ocvalidate/ocvalidate'))
+        for file in os.listdir(os.path.abspath(os.path.join(root, 'EFI/OC/'))):
+            if file.split(".")[-1] == "plist":
+                print(self.Colors("[Info] Found config file: " + file, fcolor='green'))
+                print(self.Colors("[Info] Checking config file: " + file, fcolor='green'))
+                plist_path = os.path.abspath(os.path.join(root, 'EFI/OC/'+ file))
+                os.popen('chmod +x ' + ocvalidate_path)
+                ocvalidate_path_sys = ocvalidate_path.replace(' ', '\ ')
+                plist_path_sys = plist_path.replace(' ', '\ ')
+                v = os.popen(ocvalidate_path_sys + ' ' + plist_path_sys).read()
+                if "No issues found" in v:
+                    print(self.Colors("[Info] **** " + file + " check Done, No issues Found! ****", fcolor='green'))
                 else:
-                    v = v2.split(self.remote[self.bootloader]['version'] + '!')
-                    v = v[1].strip()
-                    v = v.split('Completed validating')
-                    v1 = v[0].strip()
-                    v1 = v1.replace('\n', '\n\t')
-                    v1 = '\t' + v1
-                    v2 = v[1].split('. Found ')
-                    v2 = 'Found ' + v2[1]
-                    v2 = v2.replace('.', ':')
-                    print(self.Colors(
-                        "[Error] Config plist update automatically and check Done, Errors still occur: " + v2 + ' ', fcolor='red'))
-                    print(self.Colors(v1, fcolor='yellow'))
-                    print(self.Colors(
-                        "[Warning] Please read instruction from the official website to update your config.plist or recover EFI from backup.", fcolor='yellow'))
+                    update_config = os.path.abspath(os.path.join(sys.path[0], "cache/OpenCorePkg/Docs/SampleCustom.plist"))
+                    source_config = plist_path
+                    save_config = os.path.abspath(os.path.join(sys.path[0], "cache/OpenCorePkg/config.plist"))
+                    self.update_oc_config(update_config, source_config, save_config)
+                    shutil.copy(save_config, source_config)
+                    v2 = os.popen(ocvalidate_path_sys + ' ' +
+                                save_config.replace(' ', '\ ')).read()
+                    if "No issues found" in v2:
+                        print(self.Colors(
+                            "[Info] **** " + file + " update automatically and check Done, No issues Found! ****", fcolor='green'))
+                        print(self.Colors(
+                            "[Warning] **** Automatically plist update is not reliable all the time, please check and save your backup EFI in backup_EFI folder ****", fcolor='yellow'))
+                    else:
+                        v = v2.split(self.oc_ver + '!')
+                        v = v[1].strip()
+                        v = v.split('Completed validating')
+                        v1 = v[0].strip()
+                        v1 = v1.replace('\n', '\n\t')
+                        v1 = '\t' + v1
+                        v2 = v[1].split('. Found ')
+                        v2 = 'Found ' + v2[1]
+                        v2 = v2.replace('.', ':')
+                        print(self.Colors(
+                            "[Error] " + file + " update automatically and check Done, Errors still occur: " + v2 + ' ', fcolor='red'))
+                        print(self.Colors(v1, fcolor='yellow'))
+                        print(self.Colors(
+                            "[Warning] Please read instruction from the official website to update your " + file + " or recover EFI from backup.", fcolor='yellow'))
 
         # clean cache
         print(self.Colors("[Info] Cleaning cache...", fcolor='green'))
@@ -647,9 +735,9 @@ class UpdateRepo:
         input("Press [Enter] to continue...")
 
         # update kexts
+        update_kexts = []
         update_path = os.path.abspath(os.path.join(root, 'utilities/update_kexts/'))
-        if self.mode == 1:
-            shutil.rmtree(update_path)
+        if not os.path.exists(update_path):
             os.mkdir(update_path)
         tmp_path = os.path.abspath(os.path.join(self.root, 'cache/'))
         if not os.path.exists(tmp_path):
@@ -698,19 +786,21 @@ class UpdateRepo:
                     source = os.path.abspath(os.path.join(root, 'EFI/OC/Kexts/'))
                     update = os.path.abspath(os.path.join(tmp_path0, k))
                     source_plist = os.path.join(source, k + "/Contents/Info.plist")
-                    source_sha = hashlib.md5(open(source_plist).read()).hexdigest()
+                    source_sha = hashlib.md5(open(source_plist).read().encode('utf8')).hexdigest()
+                    if kext.upper() == "VIRTUALSMC":
+                        update = os.path.abspath(os.path.join(tmp_path0, "Kexts/" + k))
                     update_plist = os.path.join(update, "Contents/Info.plist")
-                    update_sha = hashlib.md5(open(update_plist).read()).hexdigest()
+                    update_sha = hashlib.md5(open(update_plist).read().encode('utf8')).hexdigest()
+                    update = update.replace(' ', '\ ')
                     if source_sha != update_sha:
-                        source = source.replace(' ', '\ ')
-                        update = update.replace(' ', '\ ')
-                        os.system('cp -rf ' + update + ' ' + source)
-                    else:
-                        update = update.replace(' ', '\ ')
                         update_path = update_path.replace(' ', '\ ')
                         os.system('cp -rf ' + update + ' ' + update_path)
+                        update_kexts.append(kext)
+                    source = source.replace(' ', '\ ')
+                    os.system('cp -rf ' + update + ' ' + source)
+                   
                 progress[1] = progress[1] + 1
-            except:
+            except :
                 err.append(kext)
                 continue
 
@@ -725,9 +815,12 @@ class UpdateRepo:
         os.system('clear')
         self.title()
         first_time = 0
-        for i in self.local.keys():
-            if i == self.bootloader:
-                continue
+        if len(update_kexts) + len(err) == 0:
+            print(self.Colors("All Kexts are up-to-date", fcolor='green'))
+            print("")
+            input("Press [Enter] to continue...")
+                
+        for i in update_kexts:
             if i not in err:
                 if first_time == 0:
                     if len(err) > 0:
@@ -744,41 +837,80 @@ class UpdateRepo:
         print("")
         if len(err) > 0:
             first_time = 0
-            for i in self.local.keys():
-                if i == self.bootloader:
-                    continue
-                if i in err:
-                    if first_time == 0:
-                        print(self.Colors(
-                            "These Kext Package(s) Update Unsuccessfully:", fcolor='red'))
-                        first_time = 1
-                    if len(i) < 11:
-                        print(self.Colors("   " + i, fcolor='yellow'))
-                    else:
-                        print(self.Colors("   " + i), fcolor='yellow')
+            for i in err:
+                if first_time == 0:
+                    print(self.Colors(
+                        "These Kext Package(s) Update Unsuccessfully:", fcolor='red'))
+                    first_time = 1
+                if len(i) < 11:
+                    print(self.Colors("   " + i, fcolor='yellow'))
+                else:
+                    print(self.Colors("   " + i, fcolor='yellow'))
             print("")
         input("Press [Enter] to continue...")
     
 
+    def write_files(self):
+        files = {}
+        files['Changelog.md'] = self.changelog
+        files['Changelog_zh.md'] = self.changelog_zh
+        files['README.md'] = self.readme
+        files['README_zh.md'] = self.readme_zh
+        root = os.path.abspath(os.path.join(self.root, '..'))
+        backup_path = os.path.abspath(os.path.join(root, 'backup'))
+        if not os.path.exists(backup_path):
+            os.mkdir(backup_path)
+        for file in files.keys():
+            if file.split(".")[-1] == "md":
+                full_path = os.path.abspath(os.path.join(root, file))
+                shutil.copy(full_path, backup_path)
+                with open(full_path, 'w') as f:
+                    f.write(files[file])
+                    f.close()
+        release_info_path = os.path.abspath(os.path.join(self.root, 'Release_info.txt'))
+        with open(release_info_path, 'w') as f:
+            f.write(self.release_info)
+            f.close()
+        
+
+    def compress_EFI(self):
+        root = os.path.abspath(os.path.join(self.root, ".."))
+        dist = os.path.abspath(os.path.join(root, "EFI.zip"))
+        zip = zipfile.ZipFile(dist, "w", zipfile.ZIP_DEFLATED)
+        for path, dirnames, filenames in os.walk(os.path.join(root, 'EFI')):
+            fpath = path.replace(root, '')
+            for filename in filenames:
+                source_file = os.path.join(fpath, filename)
+                zip.write(os.path.join(path, filename), source_file)
+
+
     def main(self):
         progress = 0
         self.main_interface(progress)
-        self.download_database()
+        try:
+            self.download_database()
+        except:
+            print(self.Colors("NetWork Error !", fcolor="red"))
+            exit()
         progress += 1
         self.main_interface(progress)
         self.update_OpenCore()
         progress += 1
         self.main_interface(progress)
-        self.generate_changelog_readme(progress)
+        self.generate_changelog_readme()
+        progress += 1
+        self.main_interface(progress)
+        if self.mode == 1:
+            self.write_files()
+            progress += 1
+            self.main_interface(progress)
+            self.compress_EFI()
         progress += 1
         self.main_interface(progress)
         
 
 if __name__ == "__main__":
-    # 实例化类
-    # mode 1: big update, mode 0: daily update
-    mode = 1
-    uprepo = UpdateRepo(mode)
+    uprepo = UpdateRepo()
 
     # run script
     uprepo.main()

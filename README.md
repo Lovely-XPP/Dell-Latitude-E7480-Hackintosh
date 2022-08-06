@@ -9,7 +9,7 @@
 </div>
 
 ## 语言 / Lanuage
-[简体中文](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/README-zh.md)
+[简体中文](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/README_zh.md)
 
 English (Current)
 

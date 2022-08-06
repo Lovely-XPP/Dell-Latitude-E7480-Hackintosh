@@ -19,8 +19,7 @@ English (Current)
 - [x] Automatically generate update info and update ReadMe
 
 ## Download
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.3.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/V0.8.3.0/EFI.zip)
-
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.3.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.8.3.0)
 
 ## ChangeLog: V0.8.3.0
 
@@ -51,7 +50,7 @@ English (Current)
 |	WhateverGreen	|	1.6.1	|	2022-08-06	|	Official Release	|
 
 
-For more infomation, see the [Changelog.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog.md).
+For more information, see the [Changelog.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog.md).
 
 ## Infomation
 

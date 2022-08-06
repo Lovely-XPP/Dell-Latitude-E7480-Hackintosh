@@ -12,7 +12,7 @@ from plistlib import *
 
 class UpdateRepo:
     def __init__(self) -> None:
-        self.ver = "V1.03"
+        self.ver = "V1.04"
         self.mode = 0
         self.root = os.path.abspath(sys.path[0])
         self.kext = ""
@@ -229,6 +229,7 @@ class UpdateRepo:
         update_path = os.path.abspath(os.path.join(self.root, 'update_kexts/'))
         if self.mode == 1:
             shutil.rmtree(update_path)
+            os.mkdir(update_path)
 
 
     def kexts(self) -> None:
@@ -337,13 +338,14 @@ class UpdateRepo:
             pre_ver = readme[1].split('\n', 1)
             readme = readme[0] + "OpenCore  " + pre_ver[0] + " / " + self.oc_ver + "\n" + pre_ver[1]
             readme = readme.split("## Download")
-            tmp = readme[1].split("EFI.zip)", 1)
+            tmp = readme[1].split("releases/tag/", 1)
+            tmp = tmp[1].split("\n", 1)
             tmp = tmp[1]
-            download = "[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v" + self.oc_ver +  ".0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/" +  "V" + self.oc_ver + ".0/EFI.zip)"
+            download = "[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v" + self.oc_ver +  ".0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v" + self.oc_ver + ".0)"
             readme = readme[0] + "## Download\n" + download + "\n" + tmp
         readme = readme.split("## ChangeLog")
         tmp = readme[1].split("For more information")
-        tmp = "For more infomation" + tmp[1]
+        tmp = "For more information" + tmp[1]
         self.readme = readme[0] + "## ChangeLog: " + new + "\n\n" + tmp
         
 
@@ -372,9 +374,10 @@ class UpdateRepo:
             pre_ver = readme[1].split('\n', 1)
             readme = readme[0] + "OpenCore  " + pre_ver[0] + " / " + self.oc_ver + "\n" + pre_ver[1]
             readme = readme.split("## 下载")
-            tmp = readme[1].split("EFI.zip)", 1)
+            tmp = readme[1].split("releases/tag/", 1)
+            tmp = tmp[1].split("\n", 1)
             tmp = tmp[1]
-            download = "[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v" + self.oc_ver + ".0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/download/" + "V" + self.oc_ver + ".0/EFI.zip)"
+            download = "[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v" + self.oc_ver +  ".0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/" +  "v" + self.oc_ver + ".0)"
             readme = readme[0] + "## Download\n" + download + "\n" + tmp
         readme = readme.split("## 更新日志")
         tmp = readme[1].split("更多版本的更新日志")
@@ -758,8 +761,7 @@ class UpdateRepo:
                 tmp = os.path.abspath(os.path.join(tmp_path, kext + '.zip'))
                 headers = {"Auth": "{abcd}", "accept": "*/*",
                            "accept-encoding": "gzip;deflate;br"}
-                response = requests.request(
-                    "GET", self.remote[kext]['link'], headers=headers)
+                response = requests.request("GET", self.remote[kext]['link'], headers=headers)
                 with open(tmp, "wb") as f:
                     f.write(response.content)
                 progress[1] = progress[1] + 1
@@ -769,8 +771,7 @@ class UpdateRepo:
             self.update_oc_interface(kext, progress)
 
             try:
-                tmp_path0 = os.path.abspath(
-                    os.path.join(tmp_path,  kext + '/'))
+                tmp_path0 = os.path.abspath(os.path.join(tmp_path,  kext + '/'))
                 ys = zipfile.ZipFile(tmp)
                 ys.extractall(tmp_path0)
                 ys.close()
@@ -786,11 +787,11 @@ class UpdateRepo:
                     source = os.path.abspath(os.path.join(root, 'EFI/OC/Kexts/'))
                     update = os.path.abspath(os.path.join(tmp_path0, k))
                     source_plist = os.path.join(source, k + "/Contents/Info.plist")
-                    source_sha = hashlib.md5(open(source_plist).read().encode('utf8')).hexdigest()
+                    source_sha = hashlib.md5(open(source_plist, 'r').read().encode('utf8')).hexdigest()
                     if kext.upper() == "VIRTUALSMC":
                         update = os.path.abspath(os.path.join(tmp_path0, "Kexts/" + k))
                     update_plist = os.path.join(update, "Contents/Info.plist")
-                    update_sha = hashlib.md5(open(update_plist).read().encode('utf8')).hexdigest()
+                    update_sha = hashlib.md5(open(update_plist, 'r').read().encode('utf8')).hexdigest()
                     update = update.replace(' ', '\ ')
                     if source_sha != update_sha:
                         update_path = update_path.replace(' ', '\ ')

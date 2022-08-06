@@ -322,7 +322,7 @@ class UpdateRepo:
             self.oc_ver + "\n\n#### Files Changed :\n\n1. All the EFI folder to adapt OC " + \
             self.oc_ver + "\n2. Update kexts with official Release:\n\n" + self.update_kext
         if self.mode == 1:
-            self.changelog = changelog[0] + "更新日志\n\n##" + new + "\n\n-----------------------------------------------------" + changelog[1]
+            self.changelog = changelog[0] + "更新日志\n\n## " + new + "\n\n-----------------------------------------------------" + changelog[1]
             self.release_info = "# V" + self.oc_ver + ".0\n\n## Publish date : " + now + \
                 "\n\n### Add Features :\n\n1. Update kexts and OC boot version to  " + \
                 self.oc_ver + "\n\n### Files Changed :\n\n1. All the EFI folder to adapt OC " + \
@@ -359,7 +359,7 @@ class UpdateRepo:
             "\n\n#### 文件变化 :\n\n1. 更新整个EFI文件夹以适配 OC " + \
             self.oc_ver + "\n2. 更新驱动:\n\n" + self.update_kext_zh
         if self.mode == 1:
-            self.changelog_zh = changelog[0] + "更新日志\n\n##" + new + "\n\n-----------------------------------------------------" + changelog[1]
+            self.changelog_zh = changelog[0] + "更新日志\n\n## " + new + "\n\n-----------------------------------------------------" + changelog[1]
             self.release_info = self.release_info + "# V" + self.oc_ver + ".0\n\n## 发布时间 : " + now + \
                 "\n\n### 添加功能 :\n\n1. 更新OC版本至" + self.oc_ver + "并更新了驱动" + \
                 "\n\n### 文件变化 :\n\n1. 更新整个EFI文件夹以适配 OC " + \

@@ -180,6 +180,36 @@ Tips:
 
 </details>
 
+
+
+## IGPU 4K output Enabled
+
+This part is credited from [Lorys89-DELL_LATITUDE_7280](https://github.com/Lorys89/DELL_LATITUDE_7280).
+
+1. Open `config.plist` and delete `framebuffer-fbmem` and `framebuffer-stolenmem` in `DeviceProperties`, `PciRoot(0x0)/Pci(0x2,0x0)`
+
+2. Restart and at the opencore boot GUI, choose the `modGRUBShell.efi`
+
+
+3. For set DVMT PRE Allocated to 64 MB
+
+``setup_var 0x795 0x2``
+
+
+![DMT-PRE](https://raw.githubusercontent.com/Lorys89/DELL_LATITUDE_7280/main/Screenshot/DVMT-PRE.png)
+
+
+
+4. For set DVMT Total GFX Mem to MAX
+
+``setup_var 0x796 0x3``
+
+
+![DMT-PRE](https://raw.githubusercontent.com/Lorys89/DELL_LATITUDE_7280/main/Screenshot/DVMT-TOT.png)
+
+
+
+
 ## Thunderbolt 3 Usage
 
 Type-C port has 2 controllers: Thunderbolt 3 controller and USB controller. USB controller is fully supported (including hot-plug), but Thunderbolt only works when your pulg in your device before start up and it does not support hot-plug, because it regonize the thunderbolt device as PCI device. If you want to use Thunderbolt, here is the points:
@@ -212,4 +242,5 @@ Follow this step:
 * [hackintosh-stuff](https://github.com/hackintosh-stuff) for support externel mic/headphone with ALC256 in [combojack](https://github.com/hackintosh-stuff/ComboJack).
 * [0xFireWolf](https://github.com/0xFireWolf) for SD card reader support in [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) and [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend).
 * [blankmac](https://github.com/blankmac) for trackpad with multitouch gestures in [AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
+* [Lorys89](https://github.com/Lorys89) for providing DVMT fixed up method for 4K Monitor output in [Lorys89-DELL_LATITUDE_7280](https://github.com/Lorys89/DELL_LATITUDE_7280).
 * All contributors for this EFI.

@@ -180,6 +180,32 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3
 
 </details>
 
+
+
+## 核显输出4K显示器方法说明
+
+这个部分引用自 [Lorys89-DELL_LATITUDE_7280](https://github.com/Lorys89/DELL_LATITUDE_7280).
+
+1. 打开`config.plist`，在`DeviceProperties`, `PciRoot(0x0)/Pci(0x2,0x0)`中删除 `framebuffer-fbmem` 和 `framebuffer-stolenmem`项
+
+
+2. 重启电脑，显示 opencore 引导界面后，选择 `modGRUBShell.efi`
+
+
+3. For set DVMT PRE Allocated to 64 MB
+
+``setup_var 0x795 0x2``
+
+![DMT-PRE](https://raw.githubusercontent.com/Lorys89/DELL_LATITUDE_7280/main/Screenshot/DVMT-PRE.png)
+
+
+4. For set DVMT Total GFX Mem to MAX
+
+``setup_var 0x796 0x3``
+
+![DMT-PRE](https://raw.githubusercontent.com/Lorys89/DELL_LATITUDE_7280/main/Screenshot/DVMT-TOT.png)
+
+
 ## 雷电3使用说明
 
 Type-C 口有两个控制器：雷电3控制器和USB控制器。USB控制器已经完全支持（包括热插拔），而雷电3接口仅能在开机时候进行识别，但并不能实现热插拔。如果你需要使用雷电3，请注意一下2点：

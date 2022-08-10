@@ -192,14 +192,14 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3
 2. 重启电脑，显示 opencore 引导界面后，选择 `modGRUBShell.efi`
 
 
-3. For set DVMT PRE Allocated to 64 MB
+3. 将 DVMT PRE 设置为 64 MB
 
 ``setup_var 0x795 0x2``
 
 ![DMT-PRE](https://raw.githubusercontent.com/Lorys89/DELL_LATITUDE_7280/main/Screenshot/DVMT-PRE.png)
 
 
-4. For set DVMT Total GFX Mem to MAX
+4. 将 DVMT Total GFX Mem 设置为最大值
 
 ``setup_var 0x796 0x3``
 
@@ -237,5 +237,6 @@ Type-C 口有两个控制器：雷电3控制器和USB控制器。USB控制器已
 * [hackintosh-stuff](https://github.com/hackintosh-stuff) 给出了相应声卡（ALC256）对应外置麦克风的解决方案在 [combojack](https://github.com/hackintosh-stuff/ComboJack)
 * [blankmac](https://github.com/blankmac) 给出了触摸板支持多手势的驱动在 [AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
 * [0xFireWolf](https://github.com/0xFireWolf) 提供了原生化SD读卡器的驱动在 [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) 和 [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend)
+* [Lorys89](https://github.com/Lorys89) 提供了 DVMT 修改方法以实现4K外接显示器输出在[Lorys89-DELL_LATITUDE_7280](https://github.com/Lorys89/DELL_LATITUDE_7280).
 * 所有为这个EFI和黑苹果做出贡献的成员
 

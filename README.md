@@ -212,7 +212,7 @@ This part is credited from [Lorys89-DELL_LATITUDE_7280](https://github.com/Lorys
 
 ## Thunderbolt 3 Usage
 
-Type-C port has 2 controllers: Thunderbolt 3 controller and USB controller. USB controller is fully supported (including hot-plug), but Thunderbolt only works when your pulg in your device before start up and it does not support hot-plug, because it regonize the thunderbolt device as PCI device. If you want to use Thunderbolt, here is the points:
+Type-C port has 2 controllers: Thunderbolt 3 controller and USB controller. USB controller is fully supported (including hot-plug), but Thunderbolt only works when you plug in the device before start up and it does not support hot-plug, because it regonize the thunderbolt device as PCI device. If you want to use Thunderbolt, here is the points:
 
 - Plug in the Thunderbolt device before start up
 - Hot-plug **NOT** Supported

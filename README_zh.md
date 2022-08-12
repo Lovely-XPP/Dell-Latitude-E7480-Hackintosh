@@ -182,6 +182,31 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3
 
 
 
+## 推荐 Bios 设置
+
+打开以下项目：
+
+1. `System Configuration` -> `Integrated NIC` -> `Enabled`
+
+   但是不要勾选:
+
+   - [ ] `Enable UEFI NetWork`
+
+2. `System Configuration` -> `SATA Operation` -> `AHCI`
+
+3. `System Configuration` -> `Thunderbolt Adapter Configuration` -> 打开所有项目并选择 
+
+   `Security level - No security`
+
+
+
+关闭以下项目：
+
+1. `Secure Boot` -> `Secure Boot Enable` -> `Disabled`
+2. `Intel Software Guard Extension` -> `Intel SGX Enable` -> `Disabled`
+
+
+
 ## 核显输出4K显示器方法说明
 
 这个部分引用自 [Lorys89-DELL_LATITUDE_7280](https://github.com/Lorys89/DELL_LATITUDE_7280).

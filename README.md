@@ -182,6 +182,31 @@ Tips:
 
 
 
+## Recommended Bios Setup
+
+Enable:
+
+1. `System Configuration` -> `Integrated NIC` -> `Enabled`
+
+   But not tick the entry:
+
+   - [ ] `Enable UEFI NetWork`
+
+2. `System Configuration` -> `SATA Operation` -> `AHCI`
+
+3. `System Configuration` -> `Thunderbolt Adapter Configuration` -> Enable all entries and select 
+
+   `Security level - No security`
+   
+   
+
+Disable:
+
+1. `Secure Boot` -> `Secure Boot Enable` -> `Disabled`
+2. `Intel Software Guard Extension` -> `Intel SGX Enable` -> `Disabled`
+
+
+
 ## IGPU 4K output Enabled
 
 This part is credited from [Lorys89-DELL_LATITUDE_7280](https://github.com/Lorys89/DELL_LATITUDE_7280).

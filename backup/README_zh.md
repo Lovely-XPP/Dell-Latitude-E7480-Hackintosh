@@ -25,36 +25,26 @@
 - [x] 添加自动化脚本自动更新README和Changelog说明文件
 
 
-## 下载
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.3.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.8.3.0)
+## Download
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.4.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.8.4.0)
 
-## 更新日志: V0.8.3.0
+## 更新日志: V0.8.4.0
 
-### 发布时间 : 2022.08.06
+### 发布时间 : 2022.09.09
 
 #### 添加功能 :
 
-1. 更新OC版本至0.8.3并更新了驱动
+1. 更新OC版本至0.8.4并更新了驱动
 
 #### 文件变化 :
 
-1. 更新整个EFI文件夹以适配 OC 0.8.3
+1. 更新整个EFI文件夹以适配 OC 0.8.4
 2. 更新驱动:
 
 | 驱动名称          | 版本号                       | 更新时间       | 更新方式              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AppleALC	|	1.7.4	|	2022-08-06	|	官方编译	|
-|	BrightnessKeys	|	1.0.3	|	2022-08-06	|	官方编译	|
-|	ECEnabler	|	1.0.3	|	2022-08-06	|	官方编译	|
-|	IntelBluetoothFirmware	|	2.2.0	|	2022-08-06	|	官方编译	|
-|	IntelBluetoothInjector	|	2.2.0	|	2022-08-06	|	官方编译	|
-|	IntelMausi	|	1.0.8	|	2022-08-06	|	官方编译	|
-|	Lilu	|	1.6.2	|	2022-08-06	|	官方编译	|
-|	NVMeFix	|	1.1.0	|	2022-08-06	|	官方编译	|
-|	RestrictEvents	|	1.0.8	|	2022-08-06	|	官方编译	|
-|	Voodoo PS/2 Controller	|	2.2.9	|	2022-08-06	|	官方编译	|
-|	VoodooI2C	|	2.7	|	2022-08-06	|	官方编译	|
-|	WhateverGreen	|	1.6.1	|	2022-08-06	|	官方编译	|
+|	AppleALC	|	1.7.6	|	2022-09-09	|	官方编译	|
+|	Voodoo PS/2 Controller	|	2.3.1	|	2022-09-09	|	官方编译	|
 
 
 更多版本的更新日志详见 [Changelog_zh.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog_zh.md).
@@ -64,7 +54,7 @@
 <details>  
 <summary><strong>OC引导版本</strong></summary>
 </br>
-OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3
+OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4
 </details>
 <details>  
 <summary><strong>测试过/支持的系统版本</strong></summary>

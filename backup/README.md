@@ -24,35 +24,25 @@ English (Current)
 - [x] Automatically generate update info and update ReadMe
 
 ## Download
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.3.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.8.3.0)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.4.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.8.4.0)
 
-## ChangeLog: V0.8.3.0
+## ChangeLog: V0.8.4.0
 
-### Publish date : 2022.08.06
+### Publish date : 2022.09.09
 
 #### Add Features :
 
-1. Update kexts and OC boot version to  0.8.3
+1. Update kexts and OC boot version to  0.8.4
 
 #### Files Changed :
 
-1. All the EFI folder to adapt OC 0.8.3
+1. All the EFI folder to adapt OC 0.8.4
 2. Update kexts with official Release:
 
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AppleALC	|	1.7.4	|	2022-08-06	|	Official Release	|
-|	BrightnessKeys	|	1.0.3	|	2022-08-06	|	Official Release	|
-|	ECEnabler	|	1.0.3	|	2022-08-06	|	Official Release	|
-|	IntelBluetoothFirmware	|	2.2.0	|	2022-08-06	|	Official Release	|
-|	IntelBluetoothInjector	|	2.2.0	|	2022-08-06	|	Official Release	|
-|	IntelMausi	|	1.0.8	|	2022-08-06	|	Official Release	|
-|	Lilu	|	1.6.2	|	2022-08-06	|	Official Release	|
-|	NVMeFix	|	1.1.0	|	2022-08-06	|	Official Release	|
-|	RestrictEvents	|	1.0.8	|	2022-08-06	|	Official Release	|
-|	Voodoo PS/2 Controller	|	2.2.9	|	2022-08-06	|	Official Release	|
-|	VoodooI2C	|	2.7	|	2022-08-06	|	Official Release	|
-|	WhateverGreen	|	1.6.1	|	2022-08-06	|	Official Release	|
+|	AppleALC	|	1.7.6	|	2022-09-09	|	Official Release	|
+|	Voodoo PS/2 Controller	|	2.3.1	|	2022-09-09	|	Official Release	|
 
 
 For more information, see the [Changelog.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog.md).
@@ -62,7 +52,7 @@ For more information, see the [Changelog.md](https://github.com/Lovely-XPP/Dell-
 <details>  
 <summary><strong>Booter</strong></summary>
 </br>
-OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3
+OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4
 </details>
 
 <details>  

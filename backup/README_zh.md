@@ -1,5 +1,9 @@
 # 戴尔 Latitude E7480 macOS 11 ~ 13(Beta) (OpenCore引导)
 
+## 简介
+
+> 提示: 由于我购入了一台MacBookPro, 所以我不能手动更新这个仓库。因此，我写了一个自动化更新脚本来更新这个仓库。如果你遇到了一些错误或问题，欢迎开一个issue，我会尽可能地解决。感谢大家一直以来的支持。
+
 <div style="align: center">
 <img src="https://raw.githubusercontent.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/macOS-13/demo/system_info.png">
 </div>
@@ -8,7 +12,9 @@
 <img src="https://raw.githubusercontent.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/main/demo/OC_info.png">
 </div>
 
+
 ## 语言 / Lanuage
+
 简体中文(当前语言)
 
 [English](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/README.md)
@@ -20,25 +26,36 @@
 
 
 ## 下载
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.3.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.8.3.0)
 
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.2.1-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.8.2.1)
+## 更新日志: V0.8.3.0
 
-## 更新日志：V0.8.2.1
-
-### 发布时间 ： 2021.07.22
+### 发布时间 : 2022.08.06
 
 #### 添加功能 :
 
-1. 雷电3支持（不完全支持）
+1. 更新OC版本至0.8.3并更新了驱动
 
-Tip: Type-C 口有两个控制器：雷电3控制器和USB控制器，在此更新之前，USB控制器已经完全支持（包括热插拔），但是没有雷电3支持。本次更新仅修复了雷电3的识别，但并不能实现热插拔。如果你需要使用雷电3，请注意一下2点：
+#### 文件变化 :
 
-- 在启动电脑之前请插入雷电3设备（如果已经启动请关机插入后再开机）
-- **不支持**热插拔
+1. 更新整个EFI文件夹以适配 OC 0.8.3
+2. 更新驱动:
 
-#### 文件变化:
+| 驱动名称          | 版本号                       | 更新时间       | 更新方式              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AppleALC	|	1.7.4	|	2022-08-06	|	官方编译	|
+|	BrightnessKeys	|	1.0.3	|	2022-08-06	|	官方编译	|
+|	ECEnabler	|	1.0.3	|	2022-08-06	|	官方编译	|
+|	IntelBluetoothFirmware	|	2.2.0	|	2022-08-06	|	官方编译	|
+|	IntelBluetoothInjector	|	2.2.0	|	2022-08-06	|	官方编译	|
+|	IntelMausi	|	1.0.8	|	2022-08-06	|	官方编译	|
+|	Lilu	|	1.6.2	|	2022-08-06	|	官方编译	|
+|	NVMeFix	|	1.1.0	|	2022-08-06	|	官方编译	|
+|	RestrictEvents	|	1.0.8	|	2022-08-06	|	官方编译	|
+|	Voodoo PS/2 Controller	|	2.2.9	|	2022-08-06	|	官方编译	|
+|	VoodooI2C	|	2.7	|	2022-08-06	|	官方编译	|
+|	WhateverGreen	|	1.6.1	|	2022-08-06	|	官方编译	|
 
-1. 注入雷电3控制器信息
 
 更多版本的更新日志详见 [Changelog_zh.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog_zh.md).
 
@@ -47,7 +64,7 @@ Tip: Type-C 口有两个控制器：雷电3控制器和USB控制器，在此更�
 <details>  
 <summary><strong>OC引导版本</strong></summary>
 </br>
-OpenCore  0.8.0 / 0.8.1 / 0.8.2
+OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3
 </details>
 <details>  
 <summary><strong>测试过/支持的系统版本</strong></summary>
@@ -163,6 +180,57 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2
 
 </details>
 
+
+
+## 推荐 Bios 设置
+
+打开以下项目：
+
+1. `System Configuration` -> `Integrated NIC` -> `Enabled`
+
+   但是不要勾选:
+
+   - [ ] `Enable UEFI NetWork`
+
+2. `System Configuration` -> `SATA Operation` -> `AHCI`
+
+3. `System Configuration` -> `Thunderbolt Adapter Configuration` -> 打开所有项目并选择 
+
+   `Security level - No security`
+
+
+
+关闭以下项目：
+
+1. `Secure Boot` -> `Secure Boot Enable` -> `Disabled`
+2. `Intel Software Guard Extension` -> `Intel SGX Enable` -> `Disabled`
+
+
+
+## 核显输出4K显示器方法说明
+
+这个部分引用自 [Lorys89-DELL_LATITUDE_7280](https://github.com/Lorys89/DELL_LATITUDE_7280).
+
+1. 打开`config.plist`，在`DeviceProperties`, `PciRoot(0x0)/Pci(0x2,0x0)`中删除 `framebuffer-fbmem` 和 `framebuffer-stolenmem`项
+
+
+2. 重启电脑，显示 opencore 引导界面后，选择 `modGRUBShell.efi`
+
+
+3. 将 DVMT PRE 设置为 64 MB
+
+``setup_var 0x795 0x2``
+
+![DMT-PRE](https://raw.githubusercontent.com/Lorys89/DELL_LATITUDE_7280/main/Screenshot/DVMT-PRE.png)
+
+
+4. 将 DVMT Total GFX Mem 设置为最大值
+
+``setup_var 0x796 0x3``
+
+![DMT-PRE](https://raw.githubusercontent.com/Lorys89/DELL_LATITUDE_7280/main/Screenshot/DVMT-TOT.png)
+
+
 ## 雷电3使用说明
 
 Type-C 口有两个控制器：雷电3控制器和USB控制器。USB控制器已经完全支持（包括热插拔），而雷电3接口仅能在开机时候进行识别，但并不能实现热插拔。如果你需要使用雷电3，请注意一下2点：
@@ -194,5 +262,6 @@ Type-C 口有两个控制器：雷电3控制器和USB控制器。USB控制器已
 * [hackintosh-stuff](https://github.com/hackintosh-stuff) 给出了相应声卡（ALC256）对应外置麦克风的解决方案在 [combojack](https://github.com/hackintosh-stuff/ComboJack)
 * [blankmac](https://github.com/blankmac) 给出了触摸板支持多手势的驱动在 [AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
 * [0xFireWolf](https://github.com/0xFireWolf) 提供了原生化SD读卡器的驱动在 [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) 和 [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend)
+* [Lorys89](https://github.com/Lorys89) 提供了 DVMT 修改方法以实现4K外接显示器输出在[Lorys89-DELL_LATITUDE_7280](https://github.com/Lorys89/DELL_LATITUDE_7280).
 * 所有为这个EFI和黑苹果做出贡献的成员
 

@@ -1,5 +1,26 @@
 # Changelog / 更新日志
 
+## V0.8.4.0
+
+### Publish date : 2022.09.09
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  0.8.4
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 0.8.4
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AppleALC	|	1.7.6	|	2022-09-09	|	Official Release	|
+|	Voodoo PS/2 Controller	|	2.3.1	|	2022-09-09	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V0.8.3.0
 
 ### Publish date : 2022.08.06

@@ -1,5 +1,36 @@
 # Changelog / 更新日志
 
+## V0.8.3.0
+
+### Publish date : 2022.08.06
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  0.8.3
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 0.8.3
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AppleALC	|	1.7.4	|	2022-08-06	|	Official Release	|
+|	BrightnessKeys	|	1.0.3	|	2022-08-06	|	Official Release	|
+|	ECEnabler	|	1.0.3	|	2022-08-06	|	Official Release	|
+|	IntelBluetoothFirmware	|	2.2.0	|	2022-08-06	|	Official Release	|
+|	IntelBluetoothInjector	|	2.2.0	|	2022-08-06	|	Official Release	|
+|	IntelMausi	|	1.0.8	|	2022-08-06	|	Official Release	|
+|	Lilu	|	1.6.2	|	2022-08-06	|	Official Release	|
+|	NVMeFix	|	1.1.0	|	2022-08-06	|	Official Release	|
+|	RestrictEvents	|	1.0.8	|	2022-08-06	|	Official Release	|
+|	Voodoo PS/2 Controller	|	2.2.9	|	2022-08-06	|	Official Release	|
+|	VoodooI2C	|	2.7	|	2022-08-06	|	Official Release	|
+|	WhateverGreen	|	1.6.1	|	2022-08-06	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V0.8.2.1
 
 ### Publish date ： 2021.07.22

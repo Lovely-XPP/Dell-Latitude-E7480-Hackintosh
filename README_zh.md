@@ -25,7 +25,7 @@
 - [x] 添加自动化脚本自动更新README和Changelog说明文件
 
 
-## Download
+## 下载
 [![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.4.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.8.4.0)
 
 ## 更新日志: V0.8.4.0

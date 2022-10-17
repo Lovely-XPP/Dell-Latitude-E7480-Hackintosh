@@ -12,7 +12,7 @@ from plistlib import *
 
 class UpdateRepo:
     def __init__(self) -> None:
-        self.ver = "V1.04"
+        self.ver = "V1.05"
         self.mode = 0
         self.root = os.path.abspath(sys.path[0])
         self.kext = ""
@@ -114,13 +114,13 @@ class UpdateRepo:
             print("> Update OpenCorePkg and Main Kexts")
             print("")
             return
-        if progress < 3:
-            print(self.Colors("- Download Database", fcolor='green'))
-            print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
-            print("> Update Release Info")
-            print("")
-            return
         if self.mode == 1:
+            if progress < 3:
+                print(self.Colors("- Download Database", fcolor='green'))
+                print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
+                print("> Update Release Info")
+                print("")
+                return
             if progress < 4:
                 print(self.Colors("- Download Database", fcolor='green'))
                 print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
@@ -146,7 +146,7 @@ class UpdateRepo:
             return
         print(self.Colors("- Download Database", fcolor='green'))
         print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
-        print(self.Colors("- Update Release Info", fcolor='green'))
+        print(self.Colors(": Update Release Info, Skipped", fcolor='yellow'))
         print(self.Colors(": Write README & Changelog, Skipped", fcolor='yellow'))
         print(self.Colors(": Compress EFI Folder, Skipped", fcolor='yellow'))
         print(self.Colors("- All Done", fcolor='green'))
@@ -321,28 +321,26 @@ class UpdateRepo:
             "\n\n#### Add Features :\n\n1. Update kexts and OC boot version to  " + \
             self.oc_ver + "\n\n#### Files Changed :\n\n1. All the EFI folder to adapt OC " + \
             self.oc_ver + "\n2. Update kexts with official Release:\n\n" + self.update_kext
-        if self.mode == 1:
-            self.changelog = changelog[0] + "更新日志\n\n## " + new + "\n\n-----------------------------------------------------" + changelog[1]
-            self.release_info = "# V" + self.oc_ver + ".0\n\n## Publish date : " + now + \
-                "\n\n### Add Features :\n\n1. Update kexts and OC boot version to  " + \
-                self.oc_ver + "\n\n### Files Changed :\n\n1. All the EFI folder to adapt OC " + \
-                self.oc_ver + "\n2. Update kexts with official Release:\n\n" + \
-                self.update_kext + "\n\n-----------------------------------------------------\n\n"
+        self.changelog = changelog[0] + "更新日志\n\n## " + new + "\n\n-----------------------------------------------------" + changelog[1]
+        self.release_info = "# V" + self.oc_ver + ".0\n\n## Publish date : " + now + \
+            "\n\n### Add Features :\n\n1. Update kexts and OC boot version to  " + \
+            self.oc_ver + "\n\n### Files Changed :\n\n1. All the EFI folder to adapt OC " + \
+            self.oc_ver + "\n2. Update kexts with official Release:\n\n" + \
+            self.update_kext + "\n\n-----------------------------------------------------\n\n"
 
         readme = os.path.abspath(os.path.join(root, 'README.md'))
         with open(readme, 'r') as file:
             readme = file.read()
             file.close()
-        if self.mode == 1:
-            readme = readme.split("OpenCore  ")
-            pre_ver = readme[1].split('\n', 1)
-            readme = readme[0] + "OpenCore  " + pre_ver[0] + " / " + self.oc_ver + "\n" + pre_ver[1]
-            readme = readme.split("## Download")
-            tmp = readme[1].split("releases/tag/", 1)
-            tmp = tmp[1].split("\n", 1)
-            tmp = tmp[1]
-            download = "[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v" + self.oc_ver +  ".0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v" + self.oc_ver + ".0)"
-            readme = readme[0] + "## Download\n" + download + "\n" + tmp
+        readme = readme.split("OpenCore  ")
+        pre_ver = readme[1].split('\n', 1)
+        readme = readme[0] + "OpenCore  " + pre_ver[0] + " / " + self.oc_ver + "\n" + pre_ver[1]
+        readme = readme.split("## Download")
+        tmp = readme[1].split("releases/tag/", 1)
+        tmp = tmp[1].split("\n", 1)
+        tmp = tmp[1]
+        download = "[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v" + self.oc_ver +  ".0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v" + self.oc_ver + ".0)"
+        readme = readme[0] + "## Download\n" + download + "\n" + tmp
         readme = readme.split("## ChangeLog")
         tmp = readme[1].split("For more information")
         tmp = "For more information" + tmp[1]
@@ -354,7 +352,6 @@ class UpdateRepo:
         readme = readme[0] + "<summary><strong>Kexts Version</strong></summary>\n</br>\n\n" + self.kext + tmp
 
         self.readme = readme
-        
 
         changelog = os.path.abspath(os.path.join(root, 'Changelog_zh.md'))
         with open(changelog, 'r') as file:
@@ -365,12 +362,11 @@ class UpdateRepo:
             "\n\n#### 添加功能 :\n\n1. 更新OC版本至" + self.oc_ver + "并更新了驱动" + \
             "\n\n#### 文件变化 :\n\n1. 更新整个EFI文件夹以适配 OC " + \
             self.oc_ver + "\n2. 更新驱动:\n\n" + self.update_kext_zh
-        if self.mode == 1:
-            self.changelog_zh = changelog[0] + "更新日志\n\n## " + new + "\n\n-----------------------------------------------------" + changelog[1]
-            self.release_info = self.release_info + "# V" + self.oc_ver + ".0\n\n## 发布时间 : " + now + \
-                "\n\n### 添加功能 :\n\n1. 更新OC版本至" + self.oc_ver + "并更新了驱动" + \
-                "\n\n### 文件变化 :\n\n1. 更新整个EFI文件夹以适配 OC " + \
-                self.oc_ver + "\n2. 更新驱动:\n\n" + self.update_kext_zh
+        self.changelog_zh = changelog[0] + "更新日志\n\n## " + new + "\n\n-----------------------------------------------------" + changelog[1]
+        self.release_info = self.release_info + "# V" + self.oc_ver + ".0\n\n## 发布时间 : " + now + \
+            "\n\n### 添加功能 :\n\n1. 更新OC版本至" + self.oc_ver + "并更新了驱动" + \
+            "\n\n### 文件变化 :\n\n1. 更新整个EFI文件夹以适配 OC " + \
+            self.oc_ver + "\n2. 更新驱动:\n\n" + self.update_kext_zh
         
         readme = os.path.abspath(os.path.join(root, 'README_zh.md'))
         with open(readme, 'r') as file:
@@ -842,6 +838,7 @@ class UpdateRepo:
             print(self.Colors("All Kexts are up-to-date", fcolor='green'))
             print("")
             input("Press [Enter] to continue...")
+            return
                 
         for i in update_kexts:
             if i not in err:
@@ -920,10 +917,10 @@ class UpdateRepo:
         self.update_OpenCore()
         progress += 1
         self.main_interface(progress)
-        self.generate_changelog_readme()
-        progress += 1
-        self.main_interface(progress)
         if self.mode == 1:
+            self.generate_changelog_readme()
+            progress += 1
+            self.main_interface(progress)
             self.write_files()
             progress += 1
             self.main_interface(progress)

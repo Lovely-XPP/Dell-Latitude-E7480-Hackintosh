@@ -708,7 +708,7 @@ class UpdateRepo:
 
         # check plist
         ocvalidate_path = os.path.abspath(os.path.join(tmp_path, 'Utilities/ocvalidate/ocvalidate'))
-        os.popen('chmod +x ' + ocvalidate_path)
+        os.system('chmod +x ' + ocvalidate_path)
         for file in os.listdir(os.path.abspath(os.path.join(root, 'EFI/OC/'))):
             if file.split(".")[-1] == "plist":
                 print(self.Colors("[Info] Found config file: " + file, fcolor='green'))

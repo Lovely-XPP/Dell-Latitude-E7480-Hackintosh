@@ -603,13 +603,13 @@ class UpdateRepo:
         print(self.Colors("- Update OpenCorePkg Done", fcolor='green'))
         print("> Update Kexts Package")
         print("")
-        progress1 = progress[0] + 1
+        progress1 = progress[0]
         progress2 = progress[1]
         ratio = float(progress1*4 + progress2 - 4)/self.install/4
         sym_nums = 60
         sym_progress = int(sym_nums*ratio)
         space = sym_nums - sym_progress
-        print("[" + str(progress1-1) +"/" + str(self.install) + "]  " + str(round(ratio*100,2)) + " %  [" + "="*sym_progress + " "*space + "]")
+        print("[" + str(progress1) +"/" + str(self.install) + "]  " + str(round(ratio*100,2)) + " %  [" + "="*sym_progress + " "*space + "]")
         print("")
         print("Updating Kext Package: " + self.Colors(kext, fcolor='yellow') + "\n" + "These kext(s) will be update: ")
         for k in self.local[kext]['kexts']:

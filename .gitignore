@@ -4,4 +4,5 @@ utilities/*.json
 utilities/*.txt
 utilities/cache/*
 utilities/update_kexts/*
+utilities/update_kexts_backup/*
 EFI.zip

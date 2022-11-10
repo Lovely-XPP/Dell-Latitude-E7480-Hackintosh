@@ -348,7 +348,7 @@ class UpdateRepo:
 
         readme = readme.split("<summary><strong>Kexts Version</strong></summary>")
         tmp = readme[1].split("## Status")
-        tmp = "\n</details>\n\n" + tmp[1]
+        tmp = "\n</details>\n\n## Status\n" + tmp[1]
         readme = readme[0] + "<summary><strong>Kexts Version</strong></summary>\n</br>\n\n" + self.kext + tmp
 
         self.readme = readme
@@ -381,16 +381,15 @@ class UpdateRepo:
             tmp = tmp[1].split("\n", 1)
             tmp = tmp[1]
             download = "[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v" + self.oc_ver +  ".0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/" +  "v" + self.oc_ver + ".0)"
-            readme = readme[0] + "## Download\n" + download + "\n" + tmp
+            readme = readme[0] + "## 下载\n" + download + "\n" + tmp
         readme = readme.split("## 更新日志")
         tmp = readme[1].split("更多版本的更新日志")
         tmp = "更多版本的更新日志" + tmp[1]
         readme = readme[0] + "## 更新日志: " + new + "\n\n" + tmp
 
-        readme = readme.split(
-            "<summary><strong>驱动版本</strong></summary>")
+        readme = readme.split("<summary><strong>驱动版本</strong></summary>")
         tmp = readme[1].split("## 工作状态")
-        tmp = "\n</details>\n\n" + tmp[1]
+        tmp = "\n</details>\n\n## 工作状态" + tmp[1]
         readme = readme[0] + \
             "<summary><strong>驱动版本</strong></summary>\n</br>\n\n" + self.kext + tmp
 

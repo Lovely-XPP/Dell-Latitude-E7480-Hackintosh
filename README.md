@@ -24,31 +24,27 @@ English (Current)
 - [x] Automatically generate update info and update ReadMe
 
 ## Download
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.5.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.8.5.0)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.6.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.8.6.0)
 
-## ChangeLog: V0.8.5.0
+## ChangeLog: V0.8.6.0
 
-### Publish date : 2022.10.07
+### Publish date : 2022.11.10
 
 #### Add Features :
 
-1. Update kexts and OC boot version to  0.8.5
+1. Update kexts and OC boot version to  0.8.6
 
 #### Files Changed :
 
-1. All the EFI folder to adapt OC 0.8.5
+1. All the EFI folder to adapt OC 0.8.6
 2. Update kexts with official Release:
 
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	BlueToolFixup	|	2.6.5	|	2022-10-07	|	Official Release	|
-|	BrcmBluetoothInjector	|	2.6.5	|	2022-10-07	|	Official Release	|
-|	BrcmFirmwareData	|	2.6.5	|	2022-10-07	|	Official Release	|
-|	BrcmPatchRAM3	|	2.6.5	|	2022-10-07	|	Official Release	|
-|	FeatureUnlock	|	1.1.0	|	2022-10-07	|	Official Release	|
-|	Lilu	|	1.6.3	|	2022-10-07	|	Official Release	|
-|	Voodoo PS/2 Controller	|	2.3.2	|	2022-10-07	|	Official Release	|
-|	WhateverGreen	|	1.6.2	|	2022-10-07	|	Official Release	|
+|	AppleALC	|	1.7.7	|	2022-11-10	|	Official Release	|
+|	FeatureUnlock	|	1.1.1	|	2022-11-10	|	Official Release	|
+|	RestrictEvents	|	1.1.0	|	2022-11-10	|	Official Release	|
+|	WhateverGreen	|	1.6.2	|	2022-11-10	|	Official Release	|
 
 
 For more information, see the [Changelog.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog.md).
@@ -58,7 +54,7 @@ For more information, see the [Changelog.md](https://github.com/Lovely-XPP/Dell-
 <details>  
 <summary><strong>Booter</strong></summary>
 </br>
-OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5
+OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6
 </details>
 
 <details>  
@@ -104,42 +100,43 @@ Tips:
 
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AirportBrcmFixup	|	2.1.7	|	2022-10-07	|	Official Release	|
-|	AirportItlwm	|	2.2.0	|	2022-09-25	|	Compile on Local Machine	|
-|	AlpsHID	|	1.3	|	2022-09-25	|	Official Release	|
-|	AppleALC	|	1.7.6	|	2022-10-07	|	Official Release	|
-|	BlueToolFixup	|	2.6.5	|	2022-10-07	|	Official Release	|
-|	BrcmBluetoothInjector	|	2.6.5	|	2022-10-07	|	Official Release	|
-|	BrcmFirmwareData	|	2.6.5	|	2022-10-07	|	Official Release	|
-|	BrcmPatchRAM3	|	2.6.5	|	2022-10-07	|	Official Release	|
-|	BrightnessKeys	|	1.0.3	|	2022-10-07	|	Official Release	|
-|	CpuTscSync	|	1.1.0	|	2022-10-07	|	Official Release	|
-|	ECEnabler	|	1.0.3	|	2022-10-07	|	Official Release	|
-|	FeatureUnlock	|	1.1.0	|	2022-10-07	|	Official Release	|
-|	HibernationFixup	|	1.4.7	|	2022-10-07	|	Official Release	|
-|	IntelBluetoothFirmware	|	2.3.0	|	2022-10-07	|	Official Release	|
-|	IntelBluetoothInjector	|	2.3.0	|	2022-10-07	|	Official Release	|
-|	IntelMausi	|	1.0.8	|	2022-10-07	|	Official Release	|
-|	Lilu	|	1.6.3	|	2022-10-07	|	Official Release	|
-|	NVMeFix	|	1.1.1	|	2022-10-07	|	Official Release	|
-|	RealtekCardReader	|	0.9.7	|	2022-09-25	|	Official Release	|
-|	RestrictEvents	|	1.0.9	|	2022-10-07	|	Official Release	|
-|	SMCBatteryManager	|	1.3.1	|	2022-10-07	|	Official Release	|
-|	SMCDellSensors	|	1.3.1	|	2022-10-07	|	Official Release	|
-|	SMCLightSensor	|	1.3.1	|	2022-10-07	|	Official Release	|
-|	SMCProcessor	|	1.3.1	|	2022-10-07	|	Official Release	|
-|	SMCSuperIO	|	1.3.1	|	2022-10-07	|	Official Release	|
-|	USBMap	|	1.0	|	2022-09-25	|	USB Ports Inject	|
-|	VerbStub	|	1.0.4	|	2022-09-25	|	Official Release	|
-|	VirtualSMC	|	1.3.1	|	2022-10-07	|	Official Release	|
-|	Voodoo PS/2 Controller	|	2.3.2	|	2022-10-07	|	Official Release	|
-|	VoodooI2CHID	|	1	|	2022-09-25	|	Official Release	|
-|	WhateverGreen	|	1.6.2	|	2022-10-07	|	Official Release	|
-|	RealtekCardReaderFriend	|	1.0.2	|	2022-09-25	|	Official Release	|
-|	VoodooI2C	|	2.7	|	2022-10-07	|	Official Release	|
+|	AirportBrcmFixup	|	2.1.7	|	2022-11-10	|	Official Release	|
+|	AirportItlwm	|	2.2.0	|	2022-11-07	|	Official Release	|
+|	AlpsHID	|	1.3	|	2022-11-07	|	Official Release	|
+|	AppleALC	|	1.7.7	|	2022-11-10	|	Official Release	|
+|	BlueToolFixup	|	2.6.5	|	2022-11-10	|	Official Release	|
+|	BrcmBluetoothInjector	|	2.6.5	|	2022-11-10	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.5	|	2022-11-10	|	Official Release	|
+|	BrcmPatchRAM3	|	2.6.5	|	2022-11-10	|	Official Release	|
+|	BrightnessKeys	|	1.0.3	|	2022-11-10	|	Official Release	|
+|	CpuTscSync	|	1.1.0	|	2022-11-10	|	Official Release	|
+|	ECEnabler	|	1.0.3	|	2022-11-10	|	Official Release	|
+|	FeatureUnlock	|	1.1.1	|	2022-11-10	|	Official Release	|
+|	HibernationFixup	|	1.4.7	|	2022-11-10	|	Official Release	|
+|	IntelBluetoothFirmware	|	2.3.0	|	2022-11-10	|	Official Release	|
+|	IntelBluetoothInjector	|	2.3.0	|	2022-11-10	|	Official Release	|
+|	IntelMausi	|	1.0.8	|	2022-11-10	|	Official Release	|
+|	Lilu	|	1.6.3	|	2022-11-10	|	Official Release	|
+|	NVMeFix	|	1.1.1	|	2022-11-10	|	Official Release	|
+|	RealtekCardReader	|	0.9.7	|	2022-11-07	|	Official Release	|
+|	RestrictEvents	|	1.1.0	|	2022-11-10	|	Official Release	|
+|	SMCBatteryManager	|	1.3.1	|	2022-11-10	|	Official Release	|
+|	SMCDellSensors	|	1.3.1	|	2022-11-10	|	Official Release	|
+|	SMCLightSensor	|	1.3.1	|	2022-11-10	|	Official Release	|
+|	SMCProcessor	|	1.3.1	|	2022-11-10	|	Official Release	|
+|	SMCSuperIO	|	1.3.1	|	2022-11-10	|	Official Release	|
+|	USBMap	|	1.0	|	2022-11-07	|	USB Ports Inject	|
+|	VerbStub	|	1.0.4	|	2022-11-07	|	Official Release	|
+|	VirtualSMC	|	1.3.1	|	2022-11-10	|	Official Release	|
+|	Voodoo PS/2 Controller	|	2.3.2	|	2022-11-10	|	Official Release	|
+|	VoodooI2CHID	|	1	|	2022-11-07	|	Official Release	|
+|	WhateverGreen	|	1.6.2	|	2022-11-10	|	Official Release	|
+|	RealtekCardReaderFriend	|	1.0.2	|	2022-11-07	|	Official Release	|
+|	VoodooI2C	|	2.7	|	2022-11-10	|	Official Release	|
 
 </details>
 
+## Status
 
 
 <details>  

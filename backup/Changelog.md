@@ -1,5 +1,32 @@
 # Changelog / 更新日志
 
+## V0.8.5.0
+
+### Publish date : 2022.10.07
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  0.8.5
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 0.8.5
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	BlueToolFixup	|	2.6.5	|	2022-10-07	|	Official Release	|
+|	BrcmBluetoothInjector	|	2.6.5	|	2022-10-07	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.5	|	2022-10-07	|	Official Release	|
+|	BrcmPatchRAM3	|	2.6.5	|	2022-10-07	|	Official Release	|
+|	FeatureUnlock	|	1.1.0	|	2022-10-07	|	Official Release	|
+|	Lilu	|	1.6.3	|	2022-10-07	|	Official Release	|
+|	Voodoo PS/2 Controller	|	2.3.2	|	2022-10-07	|	Official Release	|
+|	WhateverGreen	|	1.6.2	|	2022-10-07	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V0.8.4.0
 
 ### Publish date : 2022.09.09

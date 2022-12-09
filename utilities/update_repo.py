@@ -12,7 +12,7 @@ from plistlib import *
 
 class UpdateRepo:
     def __init__(self) -> None:
-        self.ver = "V1.05"
+        self.ver = "V1.06"
         self.mode = 0
         self.root = os.path.abspath(sys.path[0])
         self.kext = ""
@@ -899,6 +899,10 @@ class UpdateRepo:
         if len(update_kexts) + len(err) == 0:
             print(self.Colors("All Kexts are up-to-date", fcolor='green'))
             print("")
+            print(self.Colors("Writing Update Information...", fcolor="green"))
+            self.write_info()
+            print(self.Colors("Write Done", fcolor="green"))
+            print("")
             input("Press [Enter] to continue...")
             return
         
@@ -931,6 +935,10 @@ class UpdateRepo:
                 else:
                     print(self.Colors("   " + i, fcolor='yellow'))
             print("")
+        print(self.Colors("Writing Update Information...", fcolor="green"))
+        self.write_info()
+        print(self.Colors("Write Done", fcolor="green"))
+        print("")
         input("Press [Enter] to continue...")
     
     
@@ -950,6 +958,8 @@ class UpdateRepo:
         header = self.oc_ver0
         header = header.replace('.', '-')
         header_len = len(header) + 1
+        kext_data_origin = []
+        config_data_origin = []
         for root, dirs, files in os.walk(kext_info_path):
             for file in files:
                 if file[0:header_len] == header:
@@ -966,7 +976,7 @@ class UpdateRepo:
                         config_data_origin = f.readlines()
                         f.close()
                 
-        filename = header + 'txt'
+        filename = header + '.txt'
         kext_filename = os.path.join(kext_info_path, filename)
         config_filename = os.path.join(config_info_path, filename)
 
@@ -997,7 +1007,7 @@ class UpdateRepo:
             for item in config_data:
                 f.write(item + "\n")
             f.close()
-        if len(update_config) > 0:
+        if len(config_data) > 0:
             update_config = "```\n"
             for item in config_data:
                 update_config = update_config + item + "\n"
@@ -1050,7 +1060,6 @@ class UpdateRepo:
         progress += 1
         self.main_interface(progress)
         self.update_OpenCore()
-        self.write_info()
         progress += 1
         self.main_interface(progress)
         if self.mode == 1:

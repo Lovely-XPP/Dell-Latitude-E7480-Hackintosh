@@ -17,6 +17,7 @@ class UpdateRepo:
         self.root = os.path.abspath(sys.path[0])
         self.kext = ""
         self.update_kext = ""
+        self.update_config = ""
         self.kext_zh = ""
         self.update_kext_zh = ""
         self.changelog = ""
@@ -32,6 +33,8 @@ class UpdateRepo:
         self.remote = {}
         self.local = {}
         self.install = 0
+        self.config_info = []
+        self.update_kext_info = []
 
         # get MacOS Version
         kernel = platform.system()
@@ -160,17 +163,21 @@ class UpdateRepo:
         kext_time = []
         kext_type = []
         kext_type_zh = []
-        first_time = 0
-        multiple = 0
-        for kext in os.listdir(os.path.join(root, 'update_kexts')):
-            if kext == ".DS_Store":
-                continue
-            if kext[:len("AirportItlwm")] == "AirportItlwm":
-                if first_time == 1:
-                    multiple = multiple + 1
-                    continue
-                first_time = 1
-            domain = os.path.abspath(os.path.join(self.root, 'update_kexts'))
+        header = self.oc_ver0
+        header = header.replace('.', '-')
+        header_len = len(header) + 1
+        info_path = os.path.abspath(os.path.join(self.root, "info"))
+        kext_info_path = os.path.join(info_path, "kext")
+        for root, dirs, files in os.walk(kext_info_path):
+            for file in files:
+                if file[0:header_len] == header:
+                    source_file = os.path.join(root, file)
+                    with open(source_file, 'r') as f:
+                        update_kext_info = f.readlines()
+                        f.close()
+        for kext in update_kext_info:
+            kext = kext.strip()
+            domain = os.path.abspath(os.path.join(self.root, 'EFI/OC/Kexts'))
             kext_full = os.path.join(domain, kext)
             plist = os.path.join(kext_full, 'Contents/Info.plist')
             k_time = os.stat(plist).st_mtime
@@ -192,7 +199,7 @@ class UpdateRepo:
                 kext_type.append('Official Release')
                 kext_type_zh.append('官方编译')
 
-        all_kexts = len(kext_name) - multiple
+        all_kexts = len(kext_name)
         for i in range(all_kexts):
             for j in range(all_kexts-i-1):
                 if kext_name[j] > kext_name[j+1]:
@@ -326,7 +333,10 @@ class UpdateRepo:
             "\n\n### Add Features :\n\n1. Update kexts and OC boot version to  " + \
             self.oc_ver + "\n\n### Files Changed :\n\n1. All the EFI folder to adapt OC " + \
             self.oc_ver + "\n2. Update kexts with official Release:\n\n" + \
-            self.update_kext + "\n\n-----------------------------------------------------\n\n"
+            self.update_kext 
+        if len(self.update_config) > 0:
+            new = new + "\n\n" + "Config Change:\n" + self.update_config 
+        new = new + "\n\n-----------------------------------------------------\n\n"
 
         readme = os.path.abspath(os.path.join(root, 'README.md'))
         with open(readme, 'r') as file:
@@ -367,6 +377,8 @@ class UpdateRepo:
             "\n\n### 添加功能 :\n\n1. 更新OC版本至" + self.oc_ver + "并更新了驱动" + \
             "\n\n### 文件变化 :\n\n1. 更新整个EFI文件夹以适配 OC " + \
             self.oc_ver + "\n2. 更新驱动:\n\n" + self.update_kext_zh
+        if len(self.update_config) > 0:
+            new = new + "\n\n" + "配置文件变化:\n" + self.update_config 
         
         readme = os.path.abspath(os.path.join(root, 'README_zh.md'))
         with open(readme, 'r') as file:
@@ -595,7 +607,7 @@ class UpdateRepo:
                     # check delete entry
                     for key3 in keys:
                         if key3 not in keys_up:
-                            info = "[Config: Delete Entry] " + \
+                            info = "[Delete Entry] " + \
                                 str(key) + "->" + str(key2) + \
                                 "->" + str(key3) + ":  "
                             info = info + str(src_plist[key][key2][key3])
@@ -603,7 +615,7 @@ class UpdateRepo:
                     for key3 in keys_up:
                         # if add entry, keep the default key-value
                         if key3 not in keys:
-                            info = "[Config: Add Entry] " + \
+                            info = "[Add Entry] " + \
                                 str(key) + "->" + str(key2) + \
                                 "->" + str(key3) + ":  "
                             info = info + str(up_plist[key][key2][key3])
@@ -611,13 +623,12 @@ class UpdateRepo:
                             continue
                         # if change entry type, keep the default key-value
                         if type(up_plist[key][key2][key3]) != type(src_plist[key][key2][key3]):
-                            info = "[Config: Change Entry] " + \
+                            info = "[Change Entry] " + \
                                 str(key) + "->" + str(key2) + \
                                 "->" + str(key3) + ":  "
                             info = info + \
                                 str(src_plist[key][key2][key3]) + \
                                 " -> " + str(up_plist[key][key2][key3])
-                            info = self.Colors(info, fcolor="yellow")
                             update_info.append(info)
                             continue
                         up_plist[key][key2][key3] = src_plist[key][key2][key3]
@@ -625,12 +636,11 @@ class UpdateRepo:
                 # other type
                 # if change entry type, keep the default key-value
                 if type(up_plist[key][key2]) != type(src_plist[key][key2]):
-                    info = "[Config: Change Entry] " + \
+                    info = "[Change Entry] " + \
                         str(key) + "->" + str(key2) + ":  "
                     info = info + \
                         str(src_plist[key][key2]) + \
                         " -> " + str(up_plist[key][key2])
-                    info = self.Colors(info, fcolor="yellow")
                     update_info.append(info)
                     continue
                 up_plist[key][key2] = src_plist[key][key2]
@@ -645,7 +655,13 @@ class UpdateRepo:
 
         # display config update info
         for info in update_info:
+            info_header = self.Colors("[Config Update] ", fcolor="cyan")
+            info = info_header + info
             print(info)
+        
+        # save info for release txt
+        self.config_info = update_info
+
         
 
     def update_oc_interface(self, kext, progress):
@@ -808,9 +824,6 @@ class UpdateRepo:
 
         # update kexts
         update_kexts = []
-        update_path = os.path.abspath(os.path.join(root, 'utilities/update_kexts/'))
-        if not os.path.exists(update_path):
-            os.mkdir(update_path)
         tmp_path = os.path.abspath(os.path.join(self.root, 'cache/'))
         if not os.path.exists(tmp_path):
             os.mkdir(tmp_path)
@@ -863,8 +876,6 @@ class UpdateRepo:
                     update_sha = hashlib.md5(open(update_plist, 'r').read().encode('utf8')).hexdigest()
                     update = update.replace(' ', '\ ')
                     if source_sha != update_sha:
-                        update_path = update_path.replace(' ', '\ ')
-                        os.system('cp -rf ' + update + ' ' + update_path)
                         update_kexts.append(kext)
                     source = source.replace(' ', '\ ')
                     os.system('cp -rf ' + update + ' ' + source)
@@ -890,7 +901,9 @@ class UpdateRepo:
             print("")
             input("Press [Enter] to continue...")
             return
-                
+        
+        # save info for release txt
+        self.update_kext_info = update_kexts
         for i in update_kexts:
             if i not in err:
                 if first_time == 0:
@@ -920,6 +933,77 @@ class UpdateRepo:
             print("")
         input("Press [Enter] to continue...")
     
+    
+    def write_info(self):
+        # mkdir info folders
+        info_path = os.path.abspath(os.path.join(self.root, "info"))
+        kext_info_path = os.path.join(info_path, "kext")
+        config_info_path = os.path.join(info_path, "config")
+        if not os.path.exists(info_path):
+            os.mkdir(info_path)
+        if not os.path.exists(kext_info_path):
+            os.mkdir(kext_info_path)
+        if not os.path.exists(config_info_path):
+            os.mkdir(config_info_path)
+        
+        # generate filename & read data
+        header = self.oc_ver0
+        header = header.replace('.', '-')
+        header_len = len(header) + 1
+        for root, dirs, files in os.walk(kext_info_path):
+            for file in files:
+                if file[0:header_len] == header:
+                    source_file = os.path.join(root, filename)
+                    with open(source_file, 'r') as f:
+                        kext_data_origin = f.readlines()
+                        f.close()
+
+        for root, dirs, files in os.walk(config_info_path):
+            for file in files:
+                if file[0:header_len] == header:
+                    source_file = os.path.join(root, filename)
+                    with open(source_file, 'r') as f:
+                        config_data_origin = f.readlines()
+                        f.close()
+                
+        filename = header + 'txt'
+        kext_filename = os.path.join(kext_info_path, filename)
+        config_filename = os.path.join(config_info_path, filename)
+
+        # save info
+        kext_data = []
+        config_data = []
+        for item in kext_data_origin:
+            item = item.strip()
+            if item == '' or item == '\n':
+                continue
+            kext_data.append(item)
+        for item in config_data_origin:
+            item = item.strip()
+            if item == '' or item == '\n':
+                continue
+            config_data.append(item)
+        kext_data = kext_data + self.update_kext_info
+        config_data = config_data + self.config_info
+        kext_data = list(set(kext_data))
+        kext_data.sort()
+
+        # save info
+        with open(kext_filename, 'w') as f:
+            for item in kext_data:
+                f.write(item + "\n")
+            f.close()
+        with open(config_filename, 'w') as f:
+            for item in config_data:
+                f.write(item + "\n")
+            f.close()
+        if len(update_config) > 0:
+            update_config = "```\n"
+            for item in config_data:
+                update_config = update_config + item + "\n"
+            update_config = update_config + '```'
+            self.update_config = update_config
+
 
     def write_files(self):
         files = {}

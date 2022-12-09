@@ -3,6 +3,5 @@ utilities/*.plist
 utilities/*.json
 utilities/*.txt
 utilities/cache/*
-utilities/update_kexts/*
-utilities/update_kexts_backup/*
+utilities/info/*
 EFI.zip

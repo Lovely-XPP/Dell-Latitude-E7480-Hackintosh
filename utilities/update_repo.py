@@ -1050,6 +1050,7 @@ class UpdateRepo:
         progress += 1
         self.main_interface(progress)
         self.update_OpenCore()
+        self.write_info()
         progress += 1
         self.main_interface(progress)
         if self.mode == 1:

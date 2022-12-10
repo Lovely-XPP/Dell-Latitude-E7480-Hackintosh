@@ -25,6 +25,19 @@
 - [x] 添加自动化脚本自动更新README和Changelog说明文件
 
 
+
+## 提示
+
+1. 如果遇到雷电设备不支持热插拔，请尝试 ***勾选*** `UEFI->Drivers->TbTPowerForce.efi`.
+2. 如果使用USB安装macOS卡代码，请尝试 ***勾选*** `UEFI->Quirks->ReleaseUsbOwnership`，感谢@krzysinek (#22).
+3. 对于苹果 macOS 12 Monterey, DW1820A网卡兼容性不那么好，主要是蓝牙驱动，导致隔空投送、接力等服务无法使用，于是换了张BCM9460Z4的网卡，目前无任何不兼容的问题！
+4. Monterey 12.3 （需要博通网卡）和 iPad OS 15.4 开始支持通用控制，亲测可用！
+5. 强烈建议在进入系统以后使用 [USBMap](https://github.com/corpnewt/USBMap) 工具进行USB定制！
+6. 如果你进行了硬件更改（比如网卡更换），同样也建议你使用 [USBMap](https://github.com/corpnewt/USBMap) 工具重新进行USB定制！
+7. 进入系统后，建议重新生成对应机型序列号（需要经过官网查询无效方可使用）！
+8. 不要开启查找我的Mac功能！
+
+
 ## 下载
 [![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.7.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.8.7.0)
 
@@ -91,13 +104,7 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6 / 0.8.7
 | 触摸板           | ALPS 触摸板                              |
 | SD读卡器         | 瑞昱 RTS525A 读卡器        |
 
-使用小贴士: 
-* 对于苹果 macOS 12 Monterey, DW1820A网卡兼容性不那么好，主要是蓝牙驱动，导致隔空投送、接力等服务无法使用，于是换了张BCM9460Z4的网卡，目前无任何不兼容的问题！
-* Monterey 12.3 （需要博通网卡）和 iPad OS 15.4 开始支持通用控制，亲测可用！
-* 强烈建议在进入系统以后使用 [USBMap](https://github.com/corpnewt/USBMap) 工具进行USB定制！
-* 如果你进行了硬件更改（比如网卡更换），同样也建议你使用 [USBMap](https://github.com/corpnewt/USBMap) 工具重新进行USB定制！
-* 进入系统后，建议重新生成对应机型序列号（需要经过官网查询无效方可使用）！
-* 不要开启查找我的Mac功能！
+
 </details>
 
 <details>  

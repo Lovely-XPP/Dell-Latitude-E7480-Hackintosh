@@ -28,7 +28,7 @@
 
 ## 提示
 
-1. 如果遇到雷电设备不支持热插拔，请尝试 ***勾选*** `UEFI->Drivers->TbTPowerForce.efi`.
+1. 如果遇到雷电设备不支持热插拔（经过@krzysinek测试，***macOS Ventura 13以下请勾选***），请尝试 ***勾选*** `UEFI->Drivers->TbTPowerForce.efi`.
 2. 如果使用USB安装macOS卡代码，请尝试 ***勾选*** `UEFI->Quirks->ReleaseUsbOwnership`，感谢@krzysinek (#22).
 3. 对于苹果 macOS 12 Monterey, DW1820A网卡兼容性不那么好，主要是蓝牙驱动，导致隔空投送、接力等服务无法使用，于是换了张BCM9460Z4的网卡，目前无任何不兼容的问题！
 4. Monterey 12.3 （需要博通网卡）和 iPad OS 15.4 开始支持通用控制，亲测可用！

@@ -409,7 +409,7 @@ class UpdateRepo:
     
     
     def download_database(self):
-        r = requests.get(self.url)
+        r = requests.get(self.url, verify = False)
         path = os.path.abspath(os.path.join(self.root, "database.json"))
         with open(path, 'wb') as f:
             f.write(r.content)
@@ -711,7 +711,7 @@ class UpdateRepo:
         print(self.Colors("[Info] Downloading OpenCorePkg...", fcolor='green'))
         headers = {"Auth": "{abcd}", "accept": "*/*",
                    "accept-encoding": "gzip;deflate;br"}
-        response = requests.request("GET", oc['link'], headers=headers)
+        response = requests.request("GET", oc['link'], headers=headers, verify=False)
         with open(tmp, "wb") as f:
             f.write(response.content)
         print(self.Colors("[Info] Download Done", fcolor='green'))
@@ -843,7 +843,7 @@ class UpdateRepo:
                 tmp = os.path.abspath(os.path.join(tmp_path, kext + '.zip'))
                 headers = {"Auth": "{abcd}", "accept": "*/*",
                            "accept-encoding": "gzip;deflate;br"}
-                response = requests.request("GET", self.remote[kext]['link'], headers=headers)
+                response = requests.request("GET", self.remote[kext]['link'], headers=headers, verify=False)
                 with open(tmp, "wb") as f:
                     f.write(response.content)
                 progress[1] = progress[1] + 1

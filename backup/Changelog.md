@@ -1,5 +1,33 @@
 # Changelog / 更新日志
 
+## V0.8.7.0
+
+### Publish date : 2022.12.08
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  0.8.7
+1. Downgrade `AlpsHID.kext` for stable use, thanks @RJJvW (#21) and @H3xidecimal (#18)
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 0.8.7
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AlpsHID	|	1.0.0d1	|	2022-11-21	|	Compile on Local Machine	|
+|	AppleALC	|	1.7.8	|	2022-12-08	|	Official Release	|
+|	FeatureUnlock	|	1.1.2	|	2022-12-08	|	Official Release	|
+|	HibernationFixup	|	1.4.8	|	2022-12-08	|	Official Release	|
+|	IntelBluetoothFirmware	|	2.3.0	|	2022-12-08	|	Official Release	|
+|	IntelBluetoothInjector	|	2.3.0	|	2022-12-08	|	Official Release	|
+|	Voodoo PS/2 Controller	|	2.3.3	|	2022-12-08	|	Official Release	|
+|	WhateverGreen	|	1.6.3	|	2022-12-08	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V0.8.6.0
 
 ### Publish date : 2022.11.10

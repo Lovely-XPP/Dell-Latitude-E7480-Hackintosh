@@ -157,7 +157,7 @@ class UpdateRepo:
 
 
     def update_kexts(self) -> None:
-        root = self.root
+        root = os.path.abspath(os.path.join(self.root, '..'))
         kext_name = []
         kext_version = []
         kext_time = []
@@ -165,19 +165,20 @@ class UpdateRepo:
         kext_type_zh = []
         header = self.oc_ver0
         header = header.replace('.', '-')
-        header_len = len(header) + 1
+        header_len = len(header)
         info_path = os.path.abspath(os.path.join(self.root, "info"))
         kext_info_path = os.path.join(info_path, "kext")
-        for root, dirs, files in os.walk(kext_info_path):
+        for roots, dirs, files in os.walk(kext_info_path):
             for file in files:
                 if file[0:header_len] == header:
-                    source_file = os.path.join(root, file)
+                    source_file = os.path.join(roots, file)
                     with open(source_file, 'r') as f:
                         update_kext_info = f.readlines()
                         f.close()
         for kext in update_kext_info:
             kext = kext.strip()
-            domain = os.path.abspath(os.path.join(self.root, 'EFI/OC/Kexts'))
+            kext = kext + ".kext"
+            domain = os.path.abspath(os.path.join(root, 'EFI/OC/Kexts'))
             kext_full = os.path.join(domain, kext)
             plist = os.path.join(kext_full, 'Contents/Info.plist')
             k_time = os.stat(plist).st_mtime
@@ -232,11 +233,6 @@ class UpdateRepo:
         for i in range(len(kext_name)):
             stri = '|\t' + kext_name[i] + '\t|\t' + kext_version[i] + '\t|\t' + kext_time[i] + '\t|\t' + kext_type_zh[i] + '\t|\n'
             self.update_kext_zh = self.update_kext_zh + stri
-        
-        update_path = os.path.abspath(os.path.join(self.root, 'update_kexts/'))
-        if self.mode == 1:
-            shutil.rmtree(update_path)
-            os.mkdir(update_path)
 
 
     def kexts(self) -> None:
@@ -907,7 +903,8 @@ class UpdateRepo:
             return
         
         # save info for release txt
-        self.update_kext_info = update_kexts
+        update_every_kexts = []
+        update_kexts_success = update_kexts
         for i in update_kexts:
             if i not in err:
                 if first_time == 0:
@@ -926,6 +923,7 @@ class UpdateRepo:
         if len(err) > 0:
             first_time = 0
             for i in err:
+                update_kexts_success.pop(i)
                 if first_time == 0:
                     print(self.Colors(
                         "These Kext Package(s) Update Unsuccessfully:", fcolor='red'))
@@ -935,6 +933,13 @@ class UpdateRepo:
                 else:
                     print(self.Colors("   " + i, fcolor='yellow'))
             print("")
+        # save kext data
+        for kext in update_kexts_success:
+            for k in self.local[kext]['kexts']:
+                k = k.split(".")
+                k = k[0].strip()
+                update_every_kexts.append(k)
+        self.update_kext_info = update_every_kexts
         print(self.Colors("Writing Update Information...", fcolor="green"))
         self.write_info()
         print(self.Colors("Write Done", fcolor="green"))
@@ -957,7 +962,8 @@ class UpdateRepo:
         # generate filename & read data
         header = self.oc_ver0
         header = header.replace('.', '-')
-        header_len = len(header) + 1
+        header_len = len(header)
+        filename = header + '.txt'
         kext_data_origin = []
         config_data_origin = []
         for root, dirs, files in os.walk(kext_info_path):
@@ -976,7 +982,6 @@ class UpdateRepo:
                         config_data_origin = f.readlines()
                         f.close()
                 
-        filename = header + '.txt'
         kext_filename = os.path.join(kext_info_path, filename)
         config_filename = os.path.join(config_info_path, filename)
 

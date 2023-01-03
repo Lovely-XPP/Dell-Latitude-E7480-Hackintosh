@@ -5,8 +5,9 @@
 > 提示: 由于我购入了一台MacBookPro, 所以我不能手动更新这个仓库。因此，我写了一个自动化更新脚本来更新这个仓库。如果你遇到了一些错误或问题，欢迎开一个issue，我会尽可能地解决。感谢大家一直以来的支持。
 
 <div style="align: center">
-<img src="https://raw.githubusercontent.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/macOS-13/demo/system_info.png">
+<img src="https://raw.githubusercontent.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/main/demo/system_info.png">
 </div>
+
 
 <div style="align: center">
 <img src="https://raw.githubusercontent.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/main/demo/OC_info.png">
@@ -25,28 +26,46 @@
 - [x] 添加自动化脚本自动更新README和Changelog说明文件
 
 
+
+## 提示
+
+1. 如果遇到雷电设备不支持热插拔（经过@krzysinek测试，***macOS Ventura 13以下请勾选***），请尝试 ***勾选*** `UEFI->Drivers->TbTPowerForce.efi`.
+2. 如果使用USB安装macOS卡代码，请尝试 ***勾选*** `UEFI->Quirks->ReleaseUsbOwnership`，感谢@krzysinek (#22).
+3. 对于苹果 macOS 12 Monterey, DW1820A网卡兼容性不那么好，主要是蓝牙驱动，导致隔空投送、接力等服务无法使用，于是换了张BCM9460Z4的网卡，目前无任何不兼容的问题！
+4. Monterey 12.3 （需要博通网卡）和 iPad OS 15.4 开始支持通用控制，亲测可用！
+5. 强烈建议在进入系统以后使用 [USBMap](https://github.com/corpnewt/USBMap) 工具进行USB定制！
+6. 如果你进行了硬件更改（比如网卡更换），同样也建议你使用 [USBMap](https://github.com/corpnewt/USBMap) 工具重新进行USB定制！
+7. 进入系统后，建议重新生成对应机型序列号（需要经过官网查询无效方可使用）！
+8. 不要开启查找我的Mac功能！
+
+
 ## 下载
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.6.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.8.6.0)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.7.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.8.7.0)
 
-## 更新日志: V0.8.6.0
+## 更新日志: V0.8.7.0
 
-### 发布时间 : 2022.11.10
+### 发布时间 : 2022.12.08
 
 #### 添加功能 :
 
-1. 更新OC版本至0.8.6并更新了驱动
+1. 更新OC版本至0.8.7并更新了驱动
+1. 降级`AlpsHID.kext`以有更稳定的触摸板体验，感谢@RJJvW (#21) 和 @H3xidecimal (#18)
 
 #### 文件变化 :
 
-1. 更新整个EFI文件夹以适配 OC 0.8.6
+1. 更新整个EFI文件夹以适配 OC 0.8.7
 2. 更新驱动:
 
 | 驱动名称          | 版本号                       | 更新时间       | 更新方式              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AppleALC	|	1.7.7	|	2022-11-10	|	官方编译	|
-|	FeatureUnlock	|	1.1.1	|	2022-11-10	|	官方编译	|
-|	RestrictEvents	|	1.1.0	|	2022-11-10	|	官方编译	|
-|	WhateverGreen	|	1.6.2	|	2022-11-10	|	官方编译	|
+|	AlpsHID	|	1.0.0d1	|	2022-11-21	|	本地编译	|
+|	AppleALC	|	1.7.8	|	2022-12-08	|	官方编译	|
+|	FeatureUnlock	|	1.1.2	|	2022-12-08	|	官方编译	|
+|	HibernationFixup	|	1.4.8	|	2022-12-08	|	官方编译	|
+|	IntelBluetoothFirmware	|	2.3.0	|	2022-12-08	|	官方编译	|
+|	IntelBluetoothInjector	|	2.3.0	|	2022-12-08	|	官方编译	|
+|	Voodoo PS/2 Controller	|	2.3.3	|	2022-12-08	|	官方编译	|
+|	WhateverGreen	|	1.6.3	|	2022-12-08	|	官方编译	|
 
 
 更多版本的更新日志详见 [Changelog_zh.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog_zh.md).
@@ -56,7 +75,7 @@
 <details>  
 <summary><strong>OC引导版本</strong></summary>
 </br>
-OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6
+OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6 / 0.8.7
 </details>
 <details>  
 <summary><strong>测试过/支持的系统版本</strong></summary>
@@ -86,13 +105,7 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6
 | 触摸板           | ALPS 触摸板                              |
 | SD读卡器         | 瑞昱 RTS525A 读卡器        |
 
-使用小贴士: 
-* 对于苹果 macOS 12 Monterey, DW1820A网卡兼容性不那么好，主要是蓝牙驱动，导致隔空投送、接力等服务无法使用，于是换了张BCM9460Z4的网卡，目前无任何不兼容的问题！
-* Monterey 12.3 （需要博通网卡）和 iPad OS 15.4 开始支持通用控制，亲测可用！
-* 强烈建议在进入系统以后使用 [USBMap](https://github.com/corpnewt/USBMap) 工具进行USB定制！
-* 如果你进行了硬件更改（比如网卡更换），同样也建议你使用 [USBMap](https://github.com/corpnewt/USBMap) 工具重新进行USB定制！
-* 进入系统后，建议重新生成对应机型序列号（需要经过官网查询无效方可使用）！
-* 不要开启查找我的Mac功能！
+
 </details>
 
 <details>  
@@ -101,39 +114,39 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6
 
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AirportBrcmFixup	|	2.1.7	|	2022-11-10	|	Official Release	|
+|	AirportBrcmFixup	|	2.1.7	|	2022-12-08	|	Official Release	|
 |	AirportItlwm	|	2.2.0	|	2022-11-07	|	Official Release	|
-|	AlpsHID	|	1.3	|	2022-11-07	|	Official Release	|
-|	AppleALC	|	1.7.7	|	2022-11-10	|	Official Release	|
-|	BlueToolFixup	|	2.6.5	|	2022-11-10	|	Official Release	|
-|	BrcmBluetoothInjector	|	2.6.5	|	2022-11-10	|	Official Release	|
-|	BrcmFirmwareData	|	2.6.5	|	2022-11-10	|	Official Release	|
-|	BrcmPatchRAM3	|	2.6.5	|	2022-11-10	|	Official Release	|
-|	BrightnessKeys	|	1.0.3	|	2022-11-10	|	Official Release	|
-|	CpuTscSync	|	1.1.0	|	2022-11-10	|	Official Release	|
-|	ECEnabler	|	1.0.3	|	2022-11-10	|	Official Release	|
-|	FeatureUnlock	|	1.1.1	|	2022-11-10	|	Official Release	|
-|	HibernationFixup	|	1.4.7	|	2022-11-10	|	Official Release	|
-|	IntelBluetoothFirmware	|	2.3.0	|	2022-11-10	|	Official Release	|
-|	IntelBluetoothInjector	|	2.3.0	|	2022-11-10	|	Official Release	|
-|	IntelMausi	|	1.0.8	|	2022-11-10	|	Official Release	|
-|	Lilu	|	1.6.3	|	2022-11-10	|	Official Release	|
-|	NVMeFix	|	1.1.1	|	2022-11-10	|	Official Release	|
+|	AlpsHID	|	1.0.0d1	|	2021-12-05	|	Official Release	|
+|	AppleALC	|	1.7.8	|	2022-12-08	|	Official Release	|
+|	BlueToolFixup	|	2.6.5	|	2022-12-08	|	Official Release	|
+|	BrcmBluetoothInjector	|	2.6.5	|	2022-12-08	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.5	|	2022-12-08	|	Official Release	|
+|	BrcmPatchRAM3	|	2.6.5	|	2022-12-08	|	Official Release	|
+|	BrightnessKeys	|	1.0.3	|	2022-12-08	|	Official Release	|
+|	CpuTscSync	|	1.1.0	|	2022-12-08	|	Official Release	|
+|	ECEnabler	|	1.0.3	|	2022-12-08	|	Official Release	|
+|	FeatureUnlock	|	1.1.2	|	2022-12-08	|	Official Release	|
+|	HibernationFixup	|	1.4.8	|	2022-12-08	|	Official Release	|
+|	IntelBluetoothFirmware	|	2.3.0	|	2022-12-08	|	Official Release	|
+|	IntelBluetoothInjector	|	2.3.0	|	2022-12-08	|	Official Release	|
+|	IntelMausi	|	1.0.8	|	2022-12-08	|	Official Release	|
+|	Lilu	|	1.6.3	|	2022-12-08	|	Official Release	|
+|	NVMeFix	|	1.1.1	|	2022-12-08	|	Official Release	|
 |	RealtekCardReader	|	0.9.7	|	2022-11-07	|	Official Release	|
-|	RestrictEvents	|	1.1.0	|	2022-11-10	|	Official Release	|
-|	SMCBatteryManager	|	1.3.1	|	2022-11-10	|	Official Release	|
-|	SMCDellSensors	|	1.3.1	|	2022-11-10	|	Official Release	|
-|	SMCLightSensor	|	1.3.1	|	2022-11-10	|	Official Release	|
-|	SMCProcessor	|	1.3.1	|	2022-11-10	|	Official Release	|
-|	SMCSuperIO	|	1.3.1	|	2022-11-10	|	Official Release	|
+|	RestrictEvents	|	1.1.0	|	2022-12-08	|	Official Release	|
+|	SMCBatteryManager	|	1.3.1	|	2022-12-08	|	Official Release	|
+|	SMCDellSensors	|	1.3.1	|	2022-12-08	|	Official Release	|
+|	SMCLightSensor	|	1.3.1	|	2022-12-08	|	Official Release	|
+|	SMCProcessor	|	1.3.1	|	2022-12-08	|	Official Release	|
+|	SMCSuperIO	|	1.3.1	|	2022-12-08	|	Official Release	|
 |	USBMap	|	1.0	|	2022-11-07	|	USB Ports Inject	|
 |	VerbStub	|	1.0.4	|	2022-11-07	|	Official Release	|
-|	VirtualSMC	|	1.3.1	|	2022-11-10	|	Official Release	|
-|	Voodoo PS/2 Controller	|	2.3.2	|	2022-11-10	|	Official Release	|
+|	VirtualSMC	|	1.3.1	|	2022-12-08	|	Official Release	|
+|	Voodoo PS/2 Controller	|	2.3.3	|	2022-12-08	|	Official Release	|
 |	VoodooI2CHID	|	1	|	2022-11-07	|	Official Release	|
-|	WhateverGreen	|	1.6.2	|	2022-11-10	|	Official Release	|
+|	WhateverGreen	|	1.6.3	|	2022-12-08	|	Official Release	|
 |	RealtekCardReaderFriend	|	1.0.2	|	2022-11-07	|	Official Release	|
-|	VoodooI2C	|	2.7	|	2022-11-10	|	Official Release	|
+|	VoodooI2C	|	2.7	|	2022-12-08	|	Official Release	|
 
 </details>
 

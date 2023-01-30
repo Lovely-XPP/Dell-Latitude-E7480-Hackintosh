@@ -1,4 +1,4 @@
-# 戴尔 Latitude E7480 macOS 11 ~ 13(Beta) (OpenCore引导)
+# 戴尔 Latitude E7480 黑苹果 (OpenCore引导)
 
 ## 简介
 

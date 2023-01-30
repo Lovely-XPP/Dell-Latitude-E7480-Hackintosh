@@ -1,4 +1,4 @@
-# Dell Latitude E7480 macOS 11 ~ 13(beta) (OpenCore)
+# Dell Latitude E7480 Hackintosh (OpenCore)
 
 ## Introduce
 

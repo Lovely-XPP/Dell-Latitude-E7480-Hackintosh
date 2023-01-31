@@ -1,7 +1,6 @@
 .DS_Store
 utilities/*.plist
 utilities/*.json
-utilities/*.txt
 utilities/cache/*
 utilities/info/*
 EFI.zip

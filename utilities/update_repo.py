@@ -12,7 +12,7 @@ from plistlib import *
 
 class UpdateRepo:
     def __init__(self) -> None:
-        self.ver = "V1.06"
+        self.ver = "V1.07"
         self.mode = 0
         self.root = os.path.abspath(sys.path[0])
         self.kext = ""
@@ -139,12 +139,31 @@ class UpdateRepo:
                 print(self.Colors("> Compress EFI Folder"))
                 print("")
                 return
+            if progress < 6:
+                print(self.Colors("- Download Database", fcolor='green'))
+                print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
+                print(self.Colors("- Update Release Info", fcolor='green'))
+                print(self.Colors("- Write README & Changelog", fcolor='green'))
+                print(self.Colors("- Compress EFI Folder", fcolor='green'))
+                print(self.Colors("> Push & Release"))
+                print("")
+                return
             print(self.Colors("- Download Database", fcolor='green'))
             print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
             print(self.Colors("- Update Release Info", fcolor='green'))
             print(self.Colors("- Write README & Changelog", fcolor='green'))
             print(self.Colors("- Compress EFI Folder", fcolor='green'))
+            print(self.Colors("- Push & Release", fcolor='green'))
             print(self.Colors("- All Done", fcolor='green'))
+            print("")
+            return
+        if progress < 4:
+            print(self.Colors("- Download Database", fcolor='green'))
+            print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
+            print(self.Colors(": Update Release Info, Skipped", fcolor='yellow'))
+            print(self.Colors(": Write README & Changelog, Skipped", fcolor='yellow'))
+            print(self.Colors(": Compress EFI Folder, Skipped", fcolor='yellow'))
+            print(self.Colors("> Push"))
             print("")
             return
         print(self.Colors("- Download Database", fcolor='green'))
@@ -152,6 +171,7 @@ class UpdateRepo:
         print(self.Colors(": Update Release Info, Skipped", fcolor='yellow'))
         print(self.Colors(": Write README & Changelog, Skipped", fcolor='yellow'))
         print(self.Colors(": Compress EFI Folder, Skipped", fcolor='yellow'))
+        print(self.Colors("- Push", fcolor='green'))
         print(self.Colors("- All Done", fcolor='green'))
         print("")
 
@@ -1053,6 +1073,25 @@ class UpdateRepo:
                 source_file = os.path.join(fpath, filename)
                 zip.write(os.path.join(path, filename), source_file)
 
+    def git_push(self):
+        repo_path = os.path.abspath(os.path.join(self.root, '..'))
+        commit_message = "Daily Update"
+        os.system("cd " + repo_path + " && git add ." + " && git commit -m '" + commit_message + "' ")
+        os.system("cd " + repo_path + " && git push")
+        print("")
+        input("Press [Enter] to continue...")
+
+    def git_release(self):
+        repo_path = os.path.abspath(os.path.join(self.root, '..'))
+        tag = "v" + self.oc_ver + ".0"
+        release_message = "OC " + self.oc_ver
+        commit_message = "Update to" + release_message
+        os.system("cd " + repo_path + " && git add ." + " && git commit -m '" + commit_message + "' ")
+        os.system("cd " + repo_path + " && git push")
+        os.system("cd " + repo_path + " && git tag -a " + tag + " -m " + release_message)
+        os.system("cd " + repo_path + " && git push origin " + tag)
+        input("Press [Enter] to continue...")
+            
 
     def main(self):
         progress = 0
@@ -1075,6 +1114,15 @@ class UpdateRepo:
             progress += 1
             self.main_interface(progress)
             self.compress_EFI()
+            progress += 1
+            self.main_interface(progress)
+            self.git_release()
+        else:
+            progress += 1
+            self.main_interface(progress)
+            push = input(self.Colors("Comfirm to Push (1 to confirm else cancel): ", fcolor="yellow"))
+            if str(push) == "1":
+                self.git_push()
         progress += 1
         self.main_interface(progress)
         
@@ -1083,4 +1131,4 @@ if __name__ == "__main__":
     uprepo = UpdateRepo()
 
     # run script
-    uprepo.main()
+    uprepo.git_push()

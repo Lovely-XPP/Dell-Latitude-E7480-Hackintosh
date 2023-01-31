@@ -1131,4 +1131,4 @@ if __name__ == "__main__":
     uprepo = UpdateRepo()
 
     # run script
-    uprepo.git_push()
+    uprepo.main()

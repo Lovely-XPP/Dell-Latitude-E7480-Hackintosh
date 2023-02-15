@@ -23,8 +23,7 @@ English (Current)
 ## To Do
 - [x] Automatically update OpenCorePkg and Kexts by a script
 - [x] Automatically generate update info and update ReadMe
-
-
+- [x] Automatically update repo weekly by CI
 
 ## Note
 

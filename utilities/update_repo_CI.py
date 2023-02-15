@@ -138,15 +138,6 @@ class UpdateRepo:
                 print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
                 print(self.Colors("- Update Release Info", fcolor='green'))
                 print(self.Colors("- Write README & Changelog", fcolor='green'))
-                print(self.Colors("> Compress EFI Folder"))
-                print("")
-                return
-            if progress < 6:
-                print(self.Colors("- Download Database", fcolor='green'))
-                print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
-                print(self.Colors("- Update Release Info", fcolor='green'))
-                print(self.Colors("- Write README & Changelog", fcolor='green'))
-                print(self.Colors("- Compress EFI Folder", fcolor='green'))
                 print(self.Colors("> Push & Release"))
                 print("")
                 return
@@ -154,7 +145,6 @@ class UpdateRepo:
             print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
             print(self.Colors("- Update Release Info", fcolor='green'))
             print(self.Colors("- Write README & Changelog", fcolor='green'))
-            print(self.Colors("- Compress EFI Folder", fcolor='green'))
             print(self.Colors("- Push & Release", fcolor='green'))
             print(self.Colors("- All Done", fcolor='green'))
             print("")
@@ -164,7 +154,6 @@ class UpdateRepo:
             print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
             print(self.Colors(": Update Release Info, Skipped", fcolor='yellow'))
             print(self.Colors(": Write README & Changelog, Skipped", fcolor='yellow'))
-            print(self.Colors(": Compress EFI Folder, Skipped", fcolor='yellow'))
             print(self.Colors("> Push"))
             print("")
             return
@@ -172,7 +161,6 @@ class UpdateRepo:
         print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
         print(self.Colors(": Update Release Info, Skipped", fcolor='yellow'))
         print(self.Colors(": Write README & Changelog, Skipped", fcolor='yellow'))
-        print(self.Colors(": Compress EFI Folder, Skipped", fcolor='yellow'))
         print(self.Colors("- Push", fcolor='green'))
         print(self.Colors("- All Done", fcolor='green'))
         print("")
@@ -838,8 +826,6 @@ class UpdateRepo:
         shutil.rmtree(tmp_path)
         print(self.Colors("[Info] Clean Done", fcolor='green'))
 
-        input("Press [Enter] to continue...")
-
         # update kexts
         update_kexts = []
         tmp_path = os.path.abspath(os.path.join(self.root, 'cache/'))
@@ -921,7 +907,6 @@ class UpdateRepo:
             self.write_info()
             print(self.Colors("Write Done", fcolor="green"))
             print("")
-            input("Press [Enter] to continue...")
             return
         
         # save info for release txt
@@ -966,7 +951,6 @@ class UpdateRepo:
         self.write_info()
         print(self.Colors("Write Done", fcolor="green"))
         print("")
-        input("Press [Enter] to continue...")
     
     
     def write_info(self):
@@ -1063,17 +1047,6 @@ class UpdateRepo:
         with open(release_info_path, 'w') as f:
             f.write(self.release_info)
             f.close()
-        
-
-    def compress_EFI(self):
-        root = os.path.abspath(os.path.join(self.root, ".."))
-        dist = os.path.abspath(os.path.join(root, "EFI.zip"))
-        zip = zipfile.ZipFile(dist, "w", zipfile.ZIP_DEFLATED)
-        for path, dirnames, filenames in os.walk(os.path.join(root, 'EFI')):
-            fpath = path.replace(root, '')
-            for filename in filenames:
-                source_file = os.path.join(fpath, filename)
-                zip.write(os.path.join(path, filename), source_file)
 
 
     def git_push(self):
@@ -1082,7 +1055,6 @@ class UpdateRepo:
         os.system("cd " + repo_path + " && git add ." + " && git commit -m '" + commit_message + "' ")
         os.system("cd " + repo_path + " && git push")
         print("")
-        input("Press [Enter] to continue...")
 
 
     def git_release(self):
@@ -1094,7 +1066,6 @@ class UpdateRepo:
         os.system("cd " + repo_path + " && git push")
         os.system("cd " + repo_path + " && git tag -a " + tag + " -m '" + release_message + "'")
         os.system("cd " + repo_path + " && git push origin " + tag)
-        input("Press [Enter] to continue...")
             
 
     def main(self):
@@ -1115,9 +1086,6 @@ class UpdateRepo:
             progress += 1
             self.main_interface(progress)
             self.write_files()
-            progress += 1
-            self.main_interface(progress)
-            self.compress_EFI()
             progress += 1
             self.main_interface(progress)
             self.git_release()

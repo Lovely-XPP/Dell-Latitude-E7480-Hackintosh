@@ -1,5 +1,29 @@
 # Changelog / 更新日志
 
+## V0.8.8.0
+
+### Publish date : 2023.01.03
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  0.8.8
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 0.8.8
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AppleALC	|	1.7.9	|	2023-01-03	|	Official Release	|
+|	FeatureUnlock	|	1.1.3	|	2023-01-03	|	Official Release	|
+|	Lilu	|	1.6.4	|	2023-01-03	|	Official Release	|
+|	Voodoo PS/2 Controller	|	2.3.4	|	2023-01-03	|	Official Release	|
+|	WhateverGreen	|	1.6.4	|	2023-01-03	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V0.8.7.0
 
 ### Publish date : 2022.12.08

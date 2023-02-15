@@ -9,6 +9,8 @@ import requests
 import hashlib
 from plistlib import *
 
+import warnings
+warnings.filterwarnings("ignore")
 
 class UpdateRepo:
     def __init__(self) -> None:
@@ -1085,10 +1087,10 @@ class UpdateRepo:
         repo_path = os.path.abspath(os.path.join(self.root, '..'))
         tag = "v" + self.oc_ver + ".0"
         release_message = "OC " + self.oc_ver
-        commit_message = "Update to" + release_message
+        commit_message = "Update to " + release_message
         os.system("cd " + repo_path + " && git add ." + " && git commit -m '" + commit_message + "' ")
         os.system("cd " + repo_path + " && git push")
-        os.system("cd " + repo_path + " && git tag -a " + tag + " -m " + release_message)
+        os.system("cd " + repo_path + " && git tag -a " + tag + " -m '" + release_message + "'")
         os.system("cd " + repo_path + " && git push origin " + tag)
         input("Press [Enter] to continue...")
             

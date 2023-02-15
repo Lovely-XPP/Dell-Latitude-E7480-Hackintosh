@@ -1,0 +1,63 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Update
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  schedule:
+    - cron: "0 4 * * 0"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "release"
+  Update_Push:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    outputs:
+      status: ${{ steps.update.outputs.status }}
+      tag_name: ${{steps.update.outputs.tag}}
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@master
+
+      - name: echo
+        run: cd ${{ github.workspace }} && ls
+
+      - name: run update script
+        id: update
+        run: python3 ${{ github.workspace }}/utilities/update_repo_CI.py
+        
+  Release:
+      # The type of runner that the job will run on
+      runs-on: ubuntu-latest
+      needs: Update_Push
+      if: ${{needs.Update_Push.outputs.status == 'release'}}
+
+      # Steps represent a sequence of tasks that will be executed as part of the job
+      steps:
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        - uses: actions/checkout@master
+
+        - name: Archive Release
+          uses: thedoctor0/zip-release@0.7.1
+          with:
+            type: 'zip'
+            filename: 'EFI.zip'
+            exclusions: '*.git* *.md /backup/*  /demo/* /utilities/* .editorconfig'
+
+        - name: echo
+          run: cd ${{ github.workspace }}&& ls
+
+        - name: Release
+          uses: softprops/action-gh-release@v1
+          if: ${{needs.Update_Push.outputs.status == 'release'}}
+          with:
+            tag_name: ${{needs.Update_Push.outputs.tag_name}}
+            body_path: ${{ github.workspace }}/utilities/Release_info.txt
+            files: ${{ github.workspace }}/EFI.zip

@@ -4,7 +4,6 @@ import sys
 import shutil, copy
 import zipfile
 import time
-import platform
 import requests
 import hashlib
 from plistlib import *
@@ -14,7 +13,7 @@ warnings.filterwarnings("ignore")
 
 class UpdateRepo:
     def __init__(self) -> None:
-        self.ver = "V1.07"
+        self.ver = "V1.08-CI"
         self.mode = 0
         self.root = os.path.abspath(sys.path[0])
         self.kext = ""
@@ -37,17 +36,6 @@ class UpdateRepo:
         self.install = 0
         self.config_info = []
         self.update_kext_info = []
-
-        # get MacOS Version
-        kernel = platform.system()
-        if kernel != "Darwin":
-            print("The script is only supported for MacOS !")
-            exit()
-        t = os.popen('sw_vers').read()
-        t = t.split('BuildVersion:')
-        t = t[1]
-        t = t.strip()
-        self.system_ver = t
 
 
     def Colors(self, text, fcolor=None, bcolor=None, style=None):
@@ -106,65 +94,6 @@ class UpdateRepo:
         print("#"*size)
         print("")
 
-    
-    def main_interface(self, progress):
-        os.system("clear")
-        self.title()
-        if progress < 1:
-            print("> Download Database")
-            print("")
-            return
-        if progress < 2:
-            print(self.Colors("- Download Database", fcolor='green'))
-            print("> Update OpenCorePkg and Main Kexts")
-            print("")
-            return
-        if self.mode == 1:
-            if progress < 3:
-                print(self.Colors("- Download Database", fcolor='green'))
-                print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
-                print("> Update Release Info")
-                print("")
-                return
-            if progress < 4:
-                print(self.Colors("- Download Database", fcolor='green'))
-                print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
-                print(self.Colors("- Update Release Info", fcolor='green'))
-                print(self.Colors("> Write README & Changelog"))
-                print("")
-                return
-            if progress < 5:
-                print(self.Colors("- Download Database", fcolor='green'))
-                print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
-                print(self.Colors("- Update Release Info", fcolor='green'))
-                print(self.Colors("- Write README & Changelog", fcolor='green'))
-                print(self.Colors("> Push & Release"))
-                print("")
-                return
-            print(self.Colors("- Download Database", fcolor='green'))
-            print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
-            print(self.Colors("- Update Release Info", fcolor='green'))
-            print(self.Colors("- Write README & Changelog", fcolor='green'))
-            print(self.Colors("- Push & Release", fcolor='green'))
-            print(self.Colors("- All Done", fcolor='green'))
-            print("")
-            return
-        if progress < 4:
-            print(self.Colors("- Download Database", fcolor='green'))
-            print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
-            print(self.Colors(": Update Release Info, Skipped", fcolor='yellow'))
-            print(self.Colors(": Write README & Changelog, Skipped", fcolor='yellow'))
-            print(self.Colors("> Push"))
-            print("")
-            return
-        print(self.Colors("- Download Database", fcolor='green'))
-        print(self.Colors("- Update OpenCorePkg and Main Kexts", fcolor='green'))
-        print(self.Colors(": Update Release Info, Skipped", fcolor='yellow'))
-        print(self.Colors(": Write README & Changelog, Skipped", fcolor='yellow'))
-        print(self.Colors("- Push", fcolor='green'))
-        print(self.Colors("- All Done", fcolor='green'))
-        print("")
-
 
     def update_kexts(self) -> None:
         root = os.path.abspath(os.path.join(self.root, '..'))
@@ -202,13 +131,8 @@ class UpdateRepo:
                 kext_type.append('USB Ports Inject')
                 kext_type_zh.append('USB 端口注入')
                 continue
-            build_version = plist['BuildMachineOSBuild']
-            if build_version[0:4] == self.system_ver[0:4]:
-                kext_type.append('Compile on Local Machine')
-                kext_type_zh.append('本地编译')
-            else:
-                kext_type.append('Official Release')
-                kext_type_zh.append('官方编译')
+            kext_type.append('Official Release')
+            kext_type_zh.append('官方编译')
 
         all_kexts = len(kext_name)
         for i in range(all_kexts):
@@ -276,13 +200,8 @@ class UpdateRepo:
                 kext_type.append('USB Ports Inject')
                 kext_type_zh.append('USB 端口注入')
                 continue
-            build_version = plist['BuildMachineOSBuild']
-            if build_version[0:4] == self.system_ver[0:4]:
-                kext_type.append('Compile on Local Machine')
-                kext_type_zh.append('本地编译')
-            else:
-                kext_type.append('Official Release')
-                kext_type_zh.append('官方编译')
+            kext_type.append('Official Release')
+            kext_type_zh.append('官方编译')
 
         all_kexts = len(kext_name) - multiple
         for i in range(all_kexts):
@@ -668,40 +587,6 @@ class UpdateRepo:
         # save info for release txt
         self.config_info = update_info
 
-        
-
-    def update_oc_interface(self, kext, progress):
-        os.system('clear')
-        self.title()
-        print(self.Colors("- Update OpenCorePkg Done", fcolor='green'))
-        print("> Update Kexts Package")
-        print("")
-        progress1 = progress[0]
-        progress2 = progress[1]
-        ratio = float(progress1*4 + progress2 - 4)/self.install/4
-        sym_nums = 60
-        sym_progress = int(sym_nums*ratio)
-        space = sym_nums - sym_progress
-        print("[" + str(progress1) +"/" + str(self.install) + "]  " + str(round(ratio*100,2)) + " %  [" + "="*sym_progress + " "*space + "]")
-        print("")
-        print("Updating Kext Package: " + self.Colors(kext, fcolor='yellow') + "\n" + "These kext(s) will be update: ")
-        for k in self.local[kext]['kexts']:
-            print(self.Colors("\t" + k, fcolor='yellow'))
-        print("")
-        if progress2 >= 0:
-            print(self.Colors("[Info] Downloading Kext Package: " + kext, fcolor='green'))
-        if progress2 >= 1:
-            print(self.Colors("[Info] Download Kext Package: " + kext + " Done", fcolor='green'))
-            print(self.Colors("[Info] Extracting Kext Package: " + kext, fcolor='green'))
-        if progress2 >= 2:
-            print(self.Colors("[Info] Extract Kext Package: " + kext + " Done", fcolor='green'))
-            print(self.Colors("[Info] Updating Kext Package: " + kext, fcolor='green'))
-        if progress2 >= 3:
-            print(self.Colors("[Info] Update Kext Package: " + kext + " Done", fcolor='green'))
-            print(self.Colors("[Info] Cleaning Cache: " + kext, fcolor='green'))
-        if progress2 >= 4:
-            print(self.Colors("[Info] Clean Cache: " + kext + " Done", fcolor='green'))
-
     
     def update_OpenCore(self):
         self.get_remote_data()
@@ -760,8 +645,7 @@ class UpdateRepo:
         print(self.Colors("[Info] Update Drivers Done", fcolor='green'))
 
         # Tools update
-        print(self.Colors(
-            "[Info] Updating OpenCorePkg Tools...", fcolor='green'))
+        print(self.Colors("[Info] Updating OpenCorePkg Tools...", fcolor='green'))
         tools = []
         oc_tools_source = os.path.abspath(os.path.join(root, 'EFI/OC/Tools/'))
         oc_tools_update = os.path.abspath(os.path.join(tmp_path, 'X64/EFI/OC/Tools/'))
@@ -780,7 +664,8 @@ class UpdateRepo:
         print(self.Colors("[Info] Update Tools Done", fcolor='green'))
 
         # check plist
-        ocvalidate_path = os.path.abspath(os.path.join(tmp_path, 'Utilities/ocvalidate/ocvalidate'))
+        ocvalidate_path = os.path.abspath(os.path.join(
+            tmp_path, 'Utilities/ocvalidate/ocvalidate.linux'))
         os.system('chmod +x ' + ocvalidate_path)
         for file in os.listdir(os.path.abspath(os.path.join(root, 'EFI/OC/'))):
             if file.split(".")[-1] == "plist":
@@ -839,9 +724,7 @@ class UpdateRepo:
         for kext in self.local.keys():
             if kext == self.bootloader:
                 continue
-            progress[0] = progress[0] + 1
-            progress[1] = 0
-            self.update_oc_interface(kext, progress)
+            print(self.Colors("[Info] Update Kexts Package: " + kext, 'green'))
 
             try:
                 tmp = os.path.abspath(os.path.join(tmp_path, kext + '.zip'))
@@ -853,8 +736,8 @@ class UpdateRepo:
                 progress[1] = progress[1] + 1
             except:
                 err.append(kext)
+                print(self.Colors("[Error] Kexts Package: " + kext + "\t\tx", 'red'))
                 continue
-            self.update_oc_interface(kext, progress)
 
             try:
                 tmp_path0 = os.path.abspath(os.path.join(tmp_path,  kext + '/'))
@@ -865,8 +748,8 @@ class UpdateRepo:
                 progress[1] = progress[1] + 1
             except:
                 err.append(kext)
+                print(self.Colors("[Error] Kexts Package: " + kext + "\t\tx", 'red'))
                 continue
-            self.update_oc_interface(kext, progress)
 
             try:
                 for k in self.local[kext]['kexts']:
@@ -887,6 +770,7 @@ class UpdateRepo:
                 progress[1] = progress[1] + 1
             except :
                 err.append(kext)
+                print(self.Colors("[Error] Kexts Package: " + kext + "\t\tx", 'red'))
                 continue
 
             try:
@@ -894,33 +778,32 @@ class UpdateRepo:
                 progress[1] = progress[1] + 1
             except:
                 err.append(kext)
+                print(self.Colors("[Error] Kexts Package: " + kext + "\t\tx", 'red'))
                 continue
-            self.update_oc_interface(kext, progress)
+            print(self.Colors("[Info] Kexts Package: " + kext + "\t\t√", 'green'))
 
-        os.system('clear')
-        self.title()
-        first_time = 0
         if len(update_kexts) + len(err) == 0:
-            print(self.Colors("All Kexts are up-to-date", fcolor='green'))
+            print(self.Colors("[Info] All Kexts are up-to-date.", fcolor='green'))
             print("")
-            print(self.Colors("Writing Update Information...", fcolor="green"))
+            print(self.Colors("[Info] Writing Update Information...", fcolor="green"))
             self.write_info()
-            print(self.Colors("Write Done", fcolor="green"))
+            print(self.Colors("[Info] Write Done", fcolor="green"))
             print("")
             return
         
         # save info for release txt
         update_every_kexts = []
         update_kexts_success = update_kexts
+        first_time = 0
         for i in update_kexts:
             if i not in err:
                 if first_time == 0:
                     if len(err) > 0:
                         print(self.Colors(
-                            "These Kext Package(s) Update Successfully:", fcolor='magenta'))
+                            "[Info] These Kext Package(s) Update Successfully:", fcolor='magenta'))
                     else:
                         print(self.Colors(
-                            "All Kext Packages Update Successfully:", fcolor='magenta'))
+                            "[Info] All Kext Packages Update Successfully:", fcolor='magenta'))
                     first_time = 1
                 if len(i) < 11:
                     print(self.Colors("   " + i, fcolor='blue'))
@@ -933,7 +816,7 @@ class UpdateRepo:
                 update_kexts_success.pop(i)
                 if first_time == 0:
                     print(self.Colors(
-                        "These Kext Package(s) Update Unsuccessfully:", fcolor='red'))
+                        "[Error] These Kext Package(s) Update Unsuccessfully:", fcolor='red'))
                     first_time = 1
                 if len(i) < 11:
                     print(self.Colors("   " + i, fcolor='yellow'))
@@ -947,9 +830,9 @@ class UpdateRepo:
                 k = k[0].strip()
                 update_every_kexts.append(k)
         self.update_kext_info = update_every_kexts
-        print(self.Colors("Writing Update Information...", fcolor="green"))
+        print(self.Colors("[Info] Writing Update Information...", fcolor="green"))
         self.write_info()
-        print(self.Colors("Write Done", fcolor="green"))
+        print(self.Colors("[Info] Write Done", fcolor="green"))
         print("")
     
     
@@ -1050,14 +933,19 @@ class UpdateRepo:
 
 
     def git_push(self):
+        os.system("git config --global user.email '617550202@qq.com'")
+        os.system("git config --global user.name 'Lovely-XPP'")
         repo_path = os.path.abspath(os.path.join(self.root, '..'))
-        commit_message = "Daily Update"
+        commit_message = "Automatically Weekly Update by CI"
         os.system("cd " + repo_path + " && git add ." + " && git commit -m '" + commit_message + "' ")
         os.system("cd " + repo_path + " && git push")
-        print("")
+        os.system("echo \"status=push\" >> $GITHUB_OUTPUT")
+        os.system("echo \"tag=None\" >> $GITHUB_OUTPUT")
 
 
     def git_release(self):
+        os.system("git config --global user.email '617550202@qq.com'")
+        os.system("git config --global user.name 'Lovely-XPP'")
         repo_path = os.path.abspath(os.path.join(self.root, '..'))
         tag = "v" + self.oc_ver + ".0"
         release_message = "OC " + self.oc_ver
@@ -1066,37 +954,39 @@ class UpdateRepo:
         os.system("cd " + repo_path + " && git push")
         os.system("cd " + repo_path + " && git tag -a " + tag + " -m '" + release_message + "'")
         os.system("cd " + repo_path + " && git push origin " + tag)
+        os.system("echo \"status=release\" >> $GITHUB_OUTPUT")
+        os.system("echo \"tag=" + tag + "\" >> $GITHUB_OUTPUT")
             
 
     def main(self):
-        progress = 0
-        self.main_interface(progress)
+        self.title()
+        print(self.Colors("[Info] Download Database...", fcolor='green'))
         try:
             self.download_database()
         except:
             print(self.Colors("NetWork Error !", fcolor="red"))
             exit()
-        progress += 1
-        self.main_interface(progress)
+        print(self.Colors("[Info] Download Database Done.", fcolor='green'))
+        print(self.Colors("[Info] Update OpenCorePkg and Main Kexts...", fcolor='green'))
         self.update_OpenCore()
-        progress += 1
-        self.main_interface(progress)
+        print(self.Colors("[Info] Update OpenCorePkg and Main Kexts Done.", fcolor='green'))
         if self.mode == 1:
+            print(self.Colors("[Info] Update Release Info...", fcolor='green'))
             self.generate_changelog_readme()
-            progress += 1
-            self.main_interface(progress)
+            print(self.Colors("[Info] Update Release Info Done.", fcolor='green'))
+            print(self.Colors("[Info] Write README & Changelog...", fcolor='green'))
             self.write_files()
-            progress += 1
-            self.main_interface(progress)
+            print(self.Colors("[Info] Write README & Changelog Done.", fcolor='green'))
+            print(self.Colors("[Info] Push...", fcolor='green'))
             self.git_release()
+            print(self.Colors("[Info] Push Done.", fcolor='green'))
         else:
-            progress += 1
-            self.main_interface(progress)
-            push = input(self.Colors("Comfirm to Push (1 to confirm else cancel): ", fcolor="yellow"))
-            if str(push) == "1":
-                self.git_push()
-        progress += 1
-        self.main_interface(progress)
+            print(self.Colors("[Info] Update Release Info, Skipped", fcolor='yellow'))
+            print(self.Colors("[Info] Write README & Changelog, Skipped", fcolor='yellow'))
+            print(self.Colors("[Info] Push...", fcolor='green'))
+            self.git_push()
+            print(self.Colors("[Info] Push Done", fcolor='green'))
+        print(self.Colors("[Info] All Done.", fcolor='green'))
         
 
 if __name__ == "__main__":

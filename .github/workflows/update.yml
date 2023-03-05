@@ -26,9 +26,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@master
 
-      - name: echo
-        run: cd ${{ github.workspace }} && ls
-
       - name: run update script
         id: update
         run: python3 ${{ github.workspace }}/utilities/update_repo_CI.py
@@ -50,9 +47,6 @@ jobs:
             type: 'zip'
             filename: 'EFI.zip'
             exclusions: '*.git* *.md /backup/*  /demo/* /utilities/* .editorconfig'
-
-        - name: echo
-          run: cd ${{ github.workspace }}&& ls
 
         - name: Release
           uses: softprops/action-gh-release@v1

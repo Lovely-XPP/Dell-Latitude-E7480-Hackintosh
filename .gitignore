@@ -2,5 +2,4 @@
 utilities/*.plist
 utilities/*.json
 utilities/cache/*
-utilities/info/*
 EFI.zip

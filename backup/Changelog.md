@@ -1,5 +1,33 @@
 # Changelog / 更新日志
 
+## V0.8.9.0
+
+### Publish date : 2023.02.15
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  0.8.9
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 0.8.9
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AppleALC	|	1.8.0	|	2023-02-15	|	Official Release	|
+|	BlueToolFixup	|	2.6.5	|	2023-02-15	|	Official Release	|
+|	BrcmBluetoothInjector	|	2.6.5	|	2023-02-15	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.5	|	2023-02-15	|	Official Release	|
+|	BrcmPatchRAM3	|	2.6.5	|	2023-02-15	|	Official Release	|
+|	FeatureUnlock	|	1.1.4	|	2023-02-15	|	Official Release	|
+|	HibernationFixup	|	1.4.9	|	2023-02-15	|	Official Release	|
+|	VoodooI2C	|	2.7.1	|	2023-02-15	|	Official Release	|
+|	WhateverGreen	|	1.6.5	|	2023-02-15	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V0.8.8.0
 
 ### Publish date : 2023.01.03

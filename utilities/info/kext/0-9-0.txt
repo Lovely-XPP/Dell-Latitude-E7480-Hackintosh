@@ -1,1 +1,5 @@
 AirportBrcmFixup
+FeatureUnlock
+IntelBTPatcher
+IntelBluetoothFirmware
+IntelBluetoothInjector

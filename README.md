@@ -27,14 +27,12 @@ English (Current)
 
 ## Note
 
-1. If you meet hot-plug issue with thunderbolt devices（Tested by @krzysinek，***below macOS Ventura 13 need to Enable***）, try ***Enable*** `UEFI->Drivers->TbTPowerForce.efi `.
-2. If crashed in installing macOS from USB, try ***Enable*** `UEFI->Quirks->ReleaseUsbOwnership`, thanks @krzysinek (#22).
-3. For macOS 12 Monterey, DW1820 do not work well (can not use Airdrop, Handoff and Sidercar). Therefore I change it to BCM94360Z4 and it works well!
-4. Monterey 12.3 and iPad OS 15.4 start to support Universal Control (also need BoardCom wireless card), works for me.
-5. Strongly recommand you to re-create USBMap.kext for your own laptop with this [tool](https://github.com/corpnewt/USBMap).
-6. If you change your hardware (like wireless), re-create the USBMap.kext as well.
-7. It is strong recommanded that re-generate a serial number for your own laptop (needed to be check invaluable in apple.com) !
-8. Do not turn on `Find my mac`!
+1. For macOS 12 Monterey, DW1820 do not work well (can not use Airdrop, Handoff and Sidercar). Therefore I change it to BCM94360Z4 and it works well!
+2. Monterey 12.3 and iPad OS 15.4 start to support Universal Control (also need BoardCom wireless card), works for me.
+3. Strongly recommand you to re-create USBMap.kext for your own laptop with this [tool](https://github.com/corpnewt/USBMap).
+4. If you change your hardware (like wireless), re-create the USBMap.kext as well.
+5. It is strong recommanded that re-generate a serial number for your own laptop (needed to be check invaluable in apple.com) !
+6. Do not turn on `Find my mac`!
 
 
 

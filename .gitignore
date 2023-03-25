@@ -3,3 +3,4 @@ utilities/*.plist
 utilities/*.json
 utilities/cache/*
 EFI.zip
+EFI/OC/oldConfig.plist

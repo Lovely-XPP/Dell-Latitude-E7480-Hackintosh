@@ -1575,7 +1575,7 @@
                     <key>csr-active-config</key>
                     <data>dwAAAA==</data>
                     <key>prev-lang:kbd</key>
-                    <string>zh-Hans:252</string>
+                    <string></string>
                     <key>run-efi-updater</key>
                     <string>No</string>
                 </dict>

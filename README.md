@@ -211,6 +211,7 @@ Disable:
 
 1. `Secure Boot` -> `Secure Boot Enable` -> `Disabled`
 2. `Intel Software Guard Extension` -> `Intel SGX Enable` -> `Disabled`
+3. `General ` -> `Advanced Boot Options` -> `Enable Legacy Option ROMs` -> `Disabled`  (thanks @fdotcico)
 
 
 

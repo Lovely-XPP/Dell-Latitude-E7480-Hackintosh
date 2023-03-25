@@ -203,6 +203,7 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6 / 0.8.7 / 0.8.8 
 
 1. `Secure Boot` -> `Secure Boot Enable` -> `Disabled`
 2. `Intel Software Guard Extension` -> `Intel SGX Enable` -> `Disabled`
+3. `General ` -> `Advanced Boot Options` -> `Enable Legacy Option ROMs` -> `Disabled`  (感谢 @fdotcico)
 
 
 

@@ -170,15 +170,13 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6 / 0.8.7 / 0.8.8 
 - [x] 键盘、触摸屏(触摸屏支持手势)、触摸板（触摸板支持多手势）
 - [x] 隔空投送、接力、随航、隔空播放、通用控制（这些功能仅适用于博通网卡，且隔空播放仅限macOS 12，通用控制仅限macOS 12.3及以上）
 - [x] SD读卡器
+- [x] 雷电3热拔插
 
 </details>
 
 <details>  
 <summary><strong>不可用功能</strong></summary>
 </br>
-
-- [ ] 雷电3热拔插
-
 </details>
 
 
@@ -232,12 +230,6 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6 / 0.8.7 / 0.8.8 
 ![DMT-PRE](https://raw.githubusercontent.com/Lorys89/DELL_LATITUDE_7280/main/Screenshot/DVMT-TOT.png)
 
 
-## 雷电3使用说明
-
-Type-C 口有两个控制器：雷电3控制器和USB控制器。USB控制器已经完全支持（包括热插拔），而雷电3接口仅能在开机时候进行识别，但并不能实现热插拔。如果你需要使用雷电3，请注意一下2点：
-
-- 在启动电脑之前请插入雷电3设备（如果已经启动请关机插入后再开机）
-- **不支持**热插拔
 
 ## 对于 Intel 无线网卡
 
@@ -264,5 +256,6 @@ Type-C 口有两个控制器：雷电3控制器和USB控制器。USB控制器已
 * [blankmac](https://github.com/blankmac) 给出了触摸板支持多手势的驱动在 [AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
 * [0xFireWolf](https://github.com/0xFireWolf) 提供了原生化SD读卡器的驱动在 [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) 和 [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend)
 * [Lorys89](https://github.com/Lorys89) 提供了 DVMT 修改方法以实现4K外接显示器输出在[Lorys89-DELL_LATITUDE_7280](https://github.com/Lorys89/DELL_LATITUDE_7280).
+* https://osxlatitude.com/forums/topic/17444-latitude-7480-kaby-lake-opencore-and-clover-packs-for-big-sur-monterey-and-ventura-beta/
 * 所有为这个EFI和黑苹果做出贡献的成员
 

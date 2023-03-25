@@ -178,15 +178,13 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6 / 0.8.7 / 0.8.8 
 - [x] Keyboard and Trackpad (support Multitouch gestures)
 - [x] Airdrop , Handoff , Sidecar, Airplay and Universal Control (These features are only for Broadcom wireless card, besides, Airplay is only support for macOS 12 and Universal Control need macOS 12.3)
 - [x] SD Card Reader
+- [x] Thunderbolt 3 hot-plug
 
 </details>
 
 <details>  
 <summary><strong>What's not working</strong></summary>
 </br>
-
-- [ ] Thunderbolt 3 hot-plug
-
 </details>
 
 
@@ -244,14 +242,6 @@ This part is credited from [Lorys89-DELL_LATITUDE_7280](https://github.com/Lorys
 
 
 
-## Thunderbolt 3 Usage
-
-Type-C port has 2 controllers: Thunderbolt 3 controller and USB controller. USB controller is fully supported (including hot-plug), but Thunderbolt only works when you plug in the device before start up and it does not support hot-plug, because it regonize the thunderbolt device as PCI device. If you want to use Thunderbolt, here is the points:
-
-- Plug in the Thunderbolt device before start up
-- Hot-plug **NOT** Supported
-
-
 ## For Intel Wireless and Bluetooth
 
 Now, I add a config for Intel wireless card kexts. The method to use it is as below
@@ -277,4 +267,5 @@ Follow this step:
 * [0xFireWolf](https://github.com/0xFireWolf) for SD card reader support in [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) and [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend).
 * [blankmac](https://github.com/blankmac) for trackpad with multitouch gestures in [AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
 * [Lorys89](https://github.com/Lorys89) for providing DVMT fixed up method for 4K Monitor output in [Lorys89-DELL_LATITUDE_7280](https://github.com/Lorys89/DELL_LATITUDE_7280).
+* https://osxlatitude.com/forums/topic/17444-latitude-7480-kaby-lake-opencore-and-clover-packs-for-big-sur-monterey-and-ventura-beta/
 * All contributors for this EFI.

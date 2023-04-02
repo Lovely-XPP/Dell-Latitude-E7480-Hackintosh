@@ -1,0 +1,1 @@
+[Add Entry] UEFI->Output->GopBurstMode:  False

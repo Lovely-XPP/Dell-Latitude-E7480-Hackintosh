@@ -1,8 +1,14 @@
 AirportBrcmFixup
+AppleALC
+BlueToolFixup
+BrcmBluetoothInjector
+BrcmFirmwareData
+BrcmPatchRAM3
 BrightnessKeys
 FeatureUnlock
 IntelBTPatcher
 IntelBluetoothFirmware
 IntelBluetoothInjector
 RestrictEvents
+VoodooPS2Controller
 WhateverGreen

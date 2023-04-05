@@ -27,50 +27,43 @@ English (Current)
 
 ## Note
 
-1. If you meet hot-plug issue with thunderbolt devices（Tested by @krzysinek，***below macOS Ventura 13 need to Enable***）, try ***Enable*** `UEFI->Drivers->TbTPowerForce.efi `.
-2. If crashed in installing macOS from USB, try ***Enable*** `UEFI->Quirks->ReleaseUsbOwnership`, thanks @krzysinek (#22).
-3. For macOS 12 Monterey, DW1820 do not work well (can not use Airdrop, Handoff and Sidercar). Therefore I change it to BCM94360Z4 and it works well!
-4. Monterey 12.3 and iPad OS 15.4 start to support Universal Control (also need BoardCom wireless card), works for me.
-5. Strongly recommand you to re-create USBMap.kext for your own laptop with this [tool](https://github.com/corpnewt/USBMap).
-6. If you change your hardware (like wireless), re-create the USBMap.kext as well.
-7. It is strong recommanded that re-generate a serial number for your own laptop (needed to be check invaluable in apple.com) !
-8. Do not turn on `Find my mac`!
+1. For macOS 12 Monterey, DW1820 do not work well (can not use Airdrop, Handoff and Sidercar). Therefore I change it to BCM94360Z4 and it works well!
+2. Monterey 12.3 and iPad OS 15.4 start to support Universal Control (also need BoardCom wireless card), works for me.
+3. Strongly recommand you to re-create USBMap.kext for your own laptop with this [tool](https://github.com/corpnewt/USBMap).
+4. If you change your hardware (like wireless), re-create the USBMap.kext as well.
+5. It is strong recommanded that re-generate a serial number for your own laptop (needed to be check invaluable in apple.com) !
+6. Do not turn on `Find my mac`!
 
 
 
 ## Download
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.8.9.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.8.9.0)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v0.9.0.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v0.9.0.0)
 
-## ChangeLog: V0.8.9.0
+## ChangeLog: V0.9.0.0
 
-### Publish date : 2023.02.15
+### Publish date : 2023.03.07
 
 #### Add Features :
 
-1. Update kexts and OC boot version to  0.8.9
+1. Update kexts and OC boot version to  0.9.0
 
 #### Files Changed :
 
-1. All the EFI folder to adapt OC 0.8.9
+1. All the EFI folder to adapt OC 0.9.0
 2. Update kexts with official Release:
 
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AppleALC	|	1.8.0	|	2023-02-15	|	Official Release	|
-|	BlueToolFixup	|	2.6.5	|	2023-02-15	|	Official Release	|
-|	BrcmBluetoothInjector	|	2.6.5	|	2023-02-15	|	Official Release	|
-|	BrcmFirmwareData	|	2.6.5	|	2023-02-15	|	Official Release	|
-|	BrcmPatchRAM3	|	2.6.5	|	2023-02-15	|	Official Release	|
-|	FeatureUnlock	|	1.1.4	|	2023-02-15	|	Official Release	|
-|	HibernationFixup	|	1.4.9	|	2023-02-15	|	Official Release	|
-|	VoodooI2C	|	2.7.1	|	2023-02-15	|	Official Release	|
-|	WhateverGreen	|	1.6.5	|	2023-02-15	|	Official Release	|
+|	AppleALC	|	1.8.1	|	2023-03-07	|	Official Release	|
+|	Lilu	|	1.6.5	|	2023-03-07	|	Official Release	|
+|	SMCBatteryManager	|	1.3.2	|	2023-03-07	|	Official Release	|
+|	SMCDellSensors	|	1.3.2	|	2023-03-07	|	Official Release	|
+|	SMCLightSensor	|	1.3.2	|	2023-03-07	|	Official Release	|
+|	SMCProcessor	|	1.3.2	|	2023-03-07	|	Official Release	|
+|	SMCSuperIO	|	1.3.2	|	2023-03-07	|	Official Release	|
+|	VirtualSMC	|	1.3.2	|	2023-03-07	|	Official Release	|
+|	Voodoo PS/2 Controller	|	2.3.5	|	2023-03-07	|	Official Release	|
 
-
-Config Change:
-```
-[Add Entry] UEFI->Quirks->ResizeUsePciRbIo:  False
-```
 
 -----------------------------------------------------
 
@@ -83,7 +76,7 @@ For more information, see the [Changelog.md](https://github.com/Lovely-XPP/Dell-
 <details>  
 <summary><strong>Booter</strong></summary>
 </br>
-OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6 / 0.8.7 / 0.8.8 / 0.8.9
+OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6 / 0.8.7 / 0.8.8 / 0.8.9 / 0.9.0
 </details>
 
 <details>  
@@ -121,43 +114,44 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6 / 0.8.7 / 0.8.8 
 
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AirportBrcmFixup	|	2.1.7	|	2023-02-15	|	Official Release	|
-|	AirportItlwm	|	2.2.0	|	2022-12-30	|	Official Release	|
-|	AlpsHID	|	1.0.0d1	|	2022-12-30	|	Official Release	|
-|	AppleALC	|	1.8.0	|	2023-02-15	|	Official Release	|
-|	BlueToolFixup	|	2.6.5	|	2023-02-15	|	Official Release	|
-|	BrcmBluetoothInjector	|	2.6.5	|	2023-02-15	|	Official Release	|
-|	BrcmFirmwareData	|	2.6.5	|	2023-02-15	|	Official Release	|
-|	BrcmPatchRAM3	|	2.6.5	|	2023-02-15	|	Official Release	|
-|	BrightnessKeys	|	1.0.3	|	2023-02-15	|	Official Release	|
-|	CpuTscSync	|	1.1.0	|	2023-02-15	|	Official Release	|
-|	ECEnabler	|	1.0.3	|	2023-02-15	|	Official Release	|
-|	FeatureUnlock	|	1.1.4	|	2023-02-15	|	Official Release	|
-|	HibernationFixup	|	1.4.9	|	2023-02-15	|	Official Release	|
-|	IntelBluetoothFirmware	|	2.3.0	|	2023-02-15	|	Official Release	|
-|	IntelBluetoothInjector	|	2.3.0	|	2023-02-15	|	Official Release	|
-|	IntelMausi	|	1.0.8	|	2023-02-15	|	Official Release	|
-|	Lilu	|	1.6.4	|	2023-02-15	|	Official Release	|
-|	NVMeFix	|	1.1.1	|	2023-02-15	|	Official Release	|
-|	RealtekCardReader	|	0.9.7	|	2022-12-30	|	Official Release	|
-|	RestrictEvents	|	1.1.0	|	2023-02-15	|	Official Release	|
-|	SMCBatteryManager	|	1.3.1	|	2023-02-15	|	Official Release	|
-|	SMCDellSensors	|	1.3.1	|	2023-02-15	|	Official Release	|
-|	SMCLightSensor	|	1.3.1	|	2023-02-15	|	Official Release	|
-|	SMCProcessor	|	1.3.1	|	2023-02-15	|	Official Release	|
-|	SMCSuperIO	|	1.3.1	|	2023-02-15	|	Official Release	|
-|	USBMap	|	1.0	|	2022-12-30	|	USB Ports Inject	|
-|	VerbStub	|	1.0.4	|	2022-12-30	|	Official Release	|
-|	VirtualSMC	|	1.3.1	|	2023-02-15	|	Official Release	|
-|	Voodoo PS/2 Controller	|	2.3.4	|	2023-02-15	|	Official Release	|
-|	VoodooI2CHID	|	1	|	2022-12-30	|	Official Release	|
-|	WhateverGreen	|	1.6.5	|	2023-02-15	|	Official Release	|
-|	RealtekCardReaderFriend	|	1.0.2	|	2022-12-30	|	Official Release	|
-|	VoodooI2C	|	2.7.1	|	2023-02-15	|	Official Release	|
+|	AirportItlwm	|	2.2.0	|	2023-03-07	|	Official Release	|
+|	AlpsHID	|	1.0.0d1	|	2023-03-07	|	Official Release	|
+|	AppleALC	|	1.8.1	|	2023-03-07	|	Official Release	|
+|	BlueToolFixup	|	2.6.5	|	2023-03-07	|	Official Release	|
+|	BrcmBluetoothInjector	|	2.6.5	|	2023-03-07	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.5	|	2023-03-07	|	Official Release	|
+|	BrcmPatchRAM3	|	2.6.5	|	2023-03-07	|	Official Release	|
+|	BrightnessKeys	|	1.0.3	|	2023-03-07	|	Official Release	|
+|	CpuTscSync	|	1.1.0	|	2023-03-07	|	Official Release	|
+|	ECEnabler	|	1.0.3	|	2023-03-07	|	Official Release	|
+|	FeatureUnlock	|	1.1.4	|	2023-03-07	|	Official Release	|
+|	HibernationFixup	|	1.4.9	|	2023-03-07	|	Official Release	|
+|	IntelBluetoothFirmware	|	2.3.0	|	2023-03-07	|	Official Release	|
+|	IntelBluetoothInjector	|	2.3.0	|	2023-03-07	|	Official Release	|
+|	IntelMausi	|	1.0.8	|	2023-03-07	|	Official Release	|
+|	Lilu	|	1.6.5	|	2023-03-07	|	Official Release	|
+|	NVMeFix	|	1.1.1	|	2023-03-07	|	Official Release	|
+|	RealtekCardReader	|	0.9.7	|	2023-03-07	|	Official Release	|
+|	RealtekCardReaderFriend	|	1.0.2	|	2023-03-07	|	Official Release	|
+|	RestrictEvents	|	1.1.0	|	2023-03-07	|	Official Release	|
+|	SMCBatteryManager	|	1.3.2	|	2023-03-07	|	Official Release	|
+|	SMCDellSensors	|	1.3.2	|	2023-03-07	|	Official Release	|
+|	SMCLightSensor	|	1.3.2	|	2023-03-07	|	Official Release	|
+|	SMCProcessor	|	1.3.2	|	2023-03-07	|	Official Release	|
+|	SMCSuperIO	|	1.3.2	|	2023-03-07	|	Official Release	|
+|	USBMap	|	1.0	|	2023-03-07	|	USB Ports Inject	|
+|	VerbStub	|	1.0.4	|	2023-03-07	|	Official Release	|
+|	VirtualSMC	|	1.3.2	|	2023-03-07	|	Official Release	|
+|	Voodoo PS/2 Controller	|	2.3.5	|	2023-03-07	|	Official Release	|
+|	VoodooI2CHID	|	1	|	2023-03-07	|	Official Release	|
+|	WhateverGreen	|	1.6.5	|	2023-03-07	|	Official Release	|
+|	VoodooI2C	|	2.8	|	2023-03-07	|	Official Release	|
+|	AirportBrcmFixup	|	2.1.7	|	2023-03-07	|	Official Release	|
 
 </details>
 
 ## Status
+
 
 
 
@@ -184,15 +178,13 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6 / 0.8.7 / 0.8.8 
 - [x] Keyboard and Trackpad (support Multitouch gestures)
 - [x] Airdrop , Handoff , Sidecar, Airplay and Universal Control (These features are only for Broadcom wireless card, besides, Airplay is only support for macOS 12 and Universal Control need macOS 12.3)
 - [x] SD Card Reader
+- [x] Thunderbolt 3 hot-plug
 
 </details>
 
 <details>  
 <summary><strong>What's not working</strong></summary>
 </br>
-
-- [ ] Thunderbolt 3 hot-plug
-
 </details>
 
 
@@ -219,6 +211,7 @@ Disable:
 
 1. `Secure Boot` -> `Secure Boot Enable` -> `Disabled`
 2. `Intel Software Guard Extension` -> `Intel SGX Enable` -> `Disabled`
+3. `General ` -> `Advanced Boot Options` -> `Enable Legacy Option ROMs` -> `Disabled`  (thanks @fdotcico)
 
 
 
@@ -250,14 +243,6 @@ This part is credited from [Lorys89-DELL_LATITUDE_7280](https://github.com/Lorys
 
 
 
-## Thunderbolt 3 Usage
-
-Type-C port has 2 controllers: Thunderbolt 3 controller and USB controller. USB controller is fully supported (including hot-plug), but Thunderbolt only works when you plug in the device before start up and it does not support hot-plug, because it regonize the thunderbolt device as PCI device. If you want to use Thunderbolt, here is the points:
-
-- Plug in the Thunderbolt device before start up
-- Hot-plug **NOT** Supported
-
-
 ## For Intel Wireless and Bluetooth
 
 Now, I add a config for Intel wireless card kexts. The method to use it is as below
@@ -283,4 +268,5 @@ Follow this step:
 * [0xFireWolf](https://github.com/0xFireWolf) for SD card reader support in [RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader) and [RealtekCardReaderFriend](https://github.com/0xFireWolf/RealtekCardReaderFriend).
 * [blankmac](https://github.com/blankmac) for trackpad with multitouch gestures in [AlpsT4USB](https://github.com/blankmac/AlpsT4USB).
 * [Lorys89](https://github.com/Lorys89) for providing DVMT fixed up method for 4K Monitor output in [Lorys89-DELL_LATITUDE_7280](https://github.com/Lorys89/DELL_LATITUDE_7280).
+* https://osxlatitude.com/forums/topic/17444-latitude-7480-kaby-lake-opencore-and-clover-packs-for-big-sur-monterey-and-ventura-beta/
 * All contributors for this EFI.

@@ -1,5 +1,8 @@
 AirportBrcmFixup
+BrightnessKeys
 FeatureUnlock
 IntelBTPatcher
 IntelBluetoothFirmware
 IntelBluetoothInjector
+RestrictEvents
+WhateverGreen

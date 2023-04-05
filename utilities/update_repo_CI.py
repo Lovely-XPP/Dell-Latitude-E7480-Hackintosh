@@ -928,7 +928,7 @@ class UpdateRepo:
                     f.close()
         release_info_path = os.path.abspath(os.path.join(self.root, 'Release_info.txt'))
         if os.path.exists(release_info_path):
-            os.rmdir(release_info_path)
+            os.remove(release_info_path)
         with open(release_info_path, 'w') as f:
             f.write(self.release_info)
             f.close()

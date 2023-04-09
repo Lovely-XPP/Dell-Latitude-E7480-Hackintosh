@@ -1,0 +1,1 @@
+[Add Entry] Kernel->Quirks->DisableIoMapperMapping:  False

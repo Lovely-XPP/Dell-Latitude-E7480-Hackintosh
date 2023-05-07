@@ -1,1 +1,2 @@
 [Add Entry] Kernel->Quirks->DisableIoMapperMapping:  False
+[Add Entry] UEFI->Output->InitialMode:  Auto

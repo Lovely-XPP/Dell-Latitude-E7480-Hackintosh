@@ -1,1 +1,7 @@
 AppleALC
+BlueToolFixup
+BrcmBluetoothInjector
+BrcmFirmwareData
+BrcmPatchRAM3
+Lilu
+RestrictEvents

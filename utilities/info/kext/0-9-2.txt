@@ -1,0 +1,8 @@
+AppleALC
+CpuTscSync
+ECEnabler
+HibernationFixup
+IntelBTPatcher
+IntelBluetoothFirmware
+IntelBluetoothInjector
+NVMeFix

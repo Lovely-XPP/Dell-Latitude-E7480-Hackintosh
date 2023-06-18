@@ -1,5 +1,31 @@
 # Changelog / 更新日志
 
+## V0.9.2.0
+
+### Publish date : 2023.05.14
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  0.9.2
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 0.9.2
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AppleALC	|	1.8.3	|	2023-05-14	|	Official Release	|
+|	BlueToolFixup	|	2.6.7	|	2023-05-14	|	Official Release	|
+|	BrcmBluetoothInjector	|	2.6.7	|	2023-05-14	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.7	|	2023-05-14	|	Official Release	|
+|	BrcmPatchRAM3	|	2.6.7	|	2023-05-14	|	Official Release	|
+|	Lilu	|	1.6.6	|	2023-05-14	|	Official Release	|
+|	RestrictEvents	|	1.1.2	|	2023-05-14	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V0.9.1.0
 
 ### Publish date : 2023.04.05

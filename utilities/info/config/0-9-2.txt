@@ -1,1 +1,2 @@
 [Add Entry] UEFI->ProtocolOverrides->PciIo:  False
+[Add Entry] UEFI->Output->ConsoleFont:  

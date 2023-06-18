@@ -1,5 +1,46 @@
 # Changelog / 更新日志
 
+## V0.9.3.0
+
+### Publish date : 2023.06.18
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  0.9.3
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 0.9.3
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AppleALC	|	1.8.4	|	2023-06-18	|	Official Release	|
+|	BlueToolFixup	|	2.6.8	|	2023-06-18	|	Official Release	|
+|	BrcmBluetoothInjector	|	2.6.8	|	2023-06-18	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.8	|	2023-06-18	|	Official Release	|
+|	BrcmPatchRAM3	|	2.6.8	|	2023-06-18	|	Official Release	|
+|	CpuTscSync	|	1.1.1	|	2023-06-18	|	Official Release	|
+|	ECEnabler	|	1.0.5	|	2023-06-18	|	Official Release	|
+|	FeatureUnlock	|	1.1.6	|	2023-06-18	|	Official Release	|
+|	HibernationFixup	|	1.5.0	|	2023-06-18	|	Official Release	|
+|	IntelBTPatcher	|	2.3.0	|	2023-06-18	|	Official Release	|
+|	IntelBluetoothFirmware	|	2.3.0	|	2023-06-18	|	Official Release	|
+|	IntelBluetoothInjector	|	2.3.0	|	2023-06-18	|	Official Release	|
+|	Lilu	|	1.6.7	|	2023-06-18	|	Official Release	|
+|	NVMeFix	|	1.1.1	|	2023-06-18	|	Official Release	|
+|	RestrictEvents	|	1.1.3	|	2023-06-18	|	Official Release	|
+|	SMCBatteryManager	|	1.3.3	|	2023-06-18	|	Official Release	|
+|	SMCDellSensors	|	1.3.3	|	2023-06-18	|	Official Release	|
+|	SMCLightSensor	|	1.3.3	|	2023-06-18	|	Official Release	|
+|	SMCProcessor	|	1.3.3	|	2023-06-18	|	Official Release	|
+|	SMCSuperIO	|	1.3.3	|	2023-06-18	|	Official Release	|
+|	VirtualSMC	|	1.3.3	|	2023-06-18	|	Official Release	|
+|	WhateverGreen	|	1.6.6	|	2023-06-18	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V0.9.2.0
 
 ### Publish date : 2023.05.14

@@ -1,1 +1,2 @@
+AppleALC
 VoodooI2C

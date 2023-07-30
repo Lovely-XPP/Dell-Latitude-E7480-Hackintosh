@@ -1,2 +1,5 @@
 AppleALC
+IntelBTPatcher
+IntelBluetoothFirmware
+IntelBluetoothInjector
 VoodooI2C

@@ -1,5 +1,36 @@
 # Changelog / 更新日志
 
+## V0.9.4.0
+
+### Publish date : 2023.08.20
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  0.9.4
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 0.9.4
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AppleALC	|	1.8.5	|	2023-08-20	|	Official Release	|
+|	BlueToolFixup	|	2.6.9	|	2023-08-20	|	Official Release	|
+|	BrcmBluetoothInjector	|	2.6.9	|	2023-08-20	|	Official Release	|
+|	BrcmFirmwareData	|	2.6.9	|	2023-08-20	|	Official Release	|
+|	BrcmPatchRAM3	|	2.6.9	|	2023-08-20	|	Official Release	|
+|	IntelBTPatcher	|	2.4.0	|	2023-08-20	|	Official Release	|
+|	IntelBluetoothFirmware	|	2.4.0	|	2023-08-20	|	Official Release	|
+|	IntelBluetoothInjector	|	2.4.0	|	2023-08-20	|	Official Release	|
+|	Lilu	|	1.6.8	|	2023-08-20	|	Official Release	|
+|	NVMeFix	|	1.1.2	|	2023-08-20	|	Official Release	|
+|	VoodooI2C	|	2.8	|	2023-08-20	|	Official Release	|
+|	WhateverGreen	|	1.6.7	|	2023-08-20	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V0.9.3.0
 
 ### Publish date : 2023.06.18

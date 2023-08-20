@@ -1,5 +1,12 @@
 AppleALC
+BlueToolFixup
+BrcmBluetoothInjector
+BrcmFirmwareData
+BrcmPatchRAM3
 IntelBTPatcher
 IntelBluetoothFirmware
 IntelBluetoothInjector
+Lilu
+NVMeFix
 VoodooI2C
+WhateverGreen

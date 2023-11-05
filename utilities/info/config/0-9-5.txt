@@ -1,0 +1,1 @@
+[Add Entry] Booter->Quirks->FixupAppleEfiImages:  False

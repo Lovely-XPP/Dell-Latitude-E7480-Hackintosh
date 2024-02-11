@@ -1,0 +1,4 @@
+AppleALC
+IntelBTPatcher
+IntelBluetoothFirmware
+IntelBluetoothInjector

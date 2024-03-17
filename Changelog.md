@@ -1,5 +1,27 @@
 # Changelog / 更新日志
 
+## V0.9.9.0
+
+### Publish date : 2024.03.17
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  0.9.9
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 0.9.9
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	IntelBTPatcher	|	2.5.0	|	2024-03-17	|	Official Release	|
+|	IntelBluetoothFirmware	|	2.5.0	|	2024-03-17	|	Official Release	|
+|	IntelBluetoothInjector	|	2.5.0	|	2024-03-17	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V0.9.8.0
 
 ### Publish date : 2024.02.11

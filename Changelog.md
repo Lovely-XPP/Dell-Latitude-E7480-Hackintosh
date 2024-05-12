@@ -1,5 +1,27 @@
 # Changelog / 更新日志
 
+## V1.0.0.0
+
+### Publish date : 2024.05.12
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  1.0.0
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 1.0.0
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AppleALC	|	1.9.1	|	2024-05-12	|	Official Release	|
+|	HibernationFixup	|	1.5.1	|	2024-05-12	|	Official Release	|
+|	IntelMausi	|	1.0.8	|	2024-05-12	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V0.9.9.0
 
 ### Publish date : 2024.03.17

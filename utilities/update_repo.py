@@ -945,7 +945,6 @@ class UpdateRepo:
         if len(err) > 0:
             first_time = 0
             for i in err:
-                update_kexts_success.pop(i)
                 if first_time == 0:
                     print(self.Colors(
                         "These Kext Package(s) Update Unsuccessfully:", fcolor='red'))

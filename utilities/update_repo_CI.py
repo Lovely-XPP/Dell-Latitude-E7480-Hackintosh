@@ -391,7 +391,7 @@ class UpdateRepo:
             info = info_all[k]
             if i == self.bootloader:
                 oc_ver = info['version']
-                while oc_ver != self.oc_ver or oc_ver != self.oc_ver0:
+                while oc_ver == self.oc_ver and oc_ver != self.oc_ver0:
                     info = info_all[k]
                     oc_ver = info['version']
                     k += 1

@@ -1,5 +1,24 @@
 # Changelog / 更新日志
 
+## V1.0.2.0
+
+### Publish date : 2024.08.18
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  1.0.2
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 1.0.2
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+
+
+-----------------------------------------------------
+
 ## V1.0.1.0
 
 ### Publish date : 2024.08.12

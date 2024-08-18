@@ -1,32 +1,30 @@
-# V1.0.1.0
+# V1.0.2.0
 
-## Publish date : 2024.08.12
+## Publish date : 2024.08.18
 
 ### Add Features :
 
-1. Update kexts and OC boot version to  1.0.1
+1. Update kexts and OC boot version to  1.0.2
 
 ### Files Changed :
 
-1. All the EFI folder to adapt OC 1.0.1
+1. All the EFI folder to adapt OC 1.0.2
 2. Update kexts with official Release:
 
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AppleALC	|	1.9.1	|	2024-08-12	|	Official Release	|
-# V1.0.1.0
+# V1.0.2.0
 
-## 发布时间 : 2024.08.12
+## 发布时间 : 2024.08.18
 
 ### 添加功能 :
 
-1. 更新OC版本至1.0.1并更新了驱动
+1. 更新OC版本至1.0.2并更新了驱动
 
 ### 文件变化 :
 
-1. 更新整个EFI文件夹以适配 OC 1.0.1
+1. 更新整个EFI文件夹以适配 OC 1.0.2
 2. 更新驱动:
 
 | 驱动名称          | 版本号                       | 更新时间       | 更新方式              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AppleALC	|	1.9.1	|	2024-08-12	|	官方编译	|

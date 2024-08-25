@@ -1,0 +1,13 @@
+AppleALC
+ECEnabler
+FeatureUnlock
+HibernationFixup
+Lilu
+RestrictEvents
+SMCBatteryManager
+SMCDellSensors
+SMCLightSensor
+SMCProcessor
+SMCSuperIO
+VirtualSMC
+WhateverGreen

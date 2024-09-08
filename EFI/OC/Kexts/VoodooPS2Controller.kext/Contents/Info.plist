@@ -137,7 +137,7 @@
 		</dict>
 	</dict>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.11</string>
+	<string>10.10</string>
 	<key>OSBundleCompatibleVersion</key>
 	<string>2.3.6</string>
 	<key>OSBundleLibraries</key>

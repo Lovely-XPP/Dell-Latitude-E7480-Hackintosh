@@ -596,7 +596,7 @@
 		</dict>
 	</dict>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.11</string>
+	<string>10.10</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>as.acidanthera.voodoo.driver.PS2Controller</key>

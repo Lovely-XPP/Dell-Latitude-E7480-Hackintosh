@@ -516,15 +516,20 @@ class UpdateRepo:
                             add = list(set(add))
                             if len(add) > 0:
                                 for key3 in add:
-                                    info = "[Config: Add Entry] " + \
-                                        str(key) + "->" + str(key2) + \
-                                        "->" + str(key3) + ":  "
+                                    info = "[Config: Add Entry] " + str(key) + "->" + str(key2) + "->" + str(key3) + ":  "
                                     info = info + str(example[key3])
                                     update_info.append(info)
                             continue
                         up_plist[key][key2] = src_plist[key][key2]
                     except IndexError:
-                        up_plist[key][key2] = src_plist[key][key2]
+                        # try copy entry data if src plist entry existed
+                        try: 
+                            up_plist[key][key2] = src_plist[key][key2]
+                        # add new config entry
+                        except:
+                            src_plist[key][key2] = up_plist[key][key2]
+                            info = "[Config: Add Entry] " + str(key) + "->" + str(key2) + ": " + str(up_plist[key][key2])
+                            update_info.append(info)
                 # dict copy
                 if isinstance(up_plist[key][key2], dict):
                     keys = src_plist[key][key2].keys()
@@ -532,28 +537,20 @@ class UpdateRepo:
                     # check delete entry
                     for key3 in keys:
                         if key3 not in keys_up:
-                            info = "[Delete Entry] " + \
-                                str(key) + "->" + str(key2) + \
-                                "->" + str(key3) + ":  "
+                            info = "[Delete Entry] " + str(key) + "->" + str(key2) + "->" + str(key3) + ":  "
                             info = info + str(src_plist[key][key2][key3])
                             update_info.append(info)
                     for key3 in keys_up:
                         # if add entry, keep the default key-value
                         if key3 not in keys:
-                            info = "[Add Entry] " + \
-                                str(key) + "->" + str(key2) + \
-                                "->" + str(key3) + ":  "
+                            info = "[Add Entry] " + str(key) + "->" + str(key2) + "->" + str(key3) + ":  "
                             info = info + str(up_plist[key][key2][key3])
                             update_info.append(info)
                             continue
                         # if change entry type, keep the default key-value
                         if type(up_plist[key][key2][key3]) != type(src_plist[key][key2][key3]):
-                            info = "[Change Entry] " + \
-                                str(key) + "->" + str(key2) + \
-                                "->" + str(key3) + ":  "
-                            info = info + \
-                                str(src_plist[key][key2][key3]) + \
-                                " -> " + str(up_plist[key][key2][key3])
+                            info = "[Change Entry] " + str(key) + "->" + str(key2) + "->" + str(key3) + ":  "
+                            info = info + str(src_plist[key][key2][key3]) + " -> " + str(up_plist[key][key2][key3])
                             update_info.append(info)
                             continue
                         up_plist[key][key2][key3] = src_plist[key][key2][key3]
@@ -561,11 +558,8 @@ class UpdateRepo:
                 # other type
                 # if change entry type, keep the default key-value
                 if type(up_plist[key][key2]) != type(src_plist[key][key2]):
-                    info = "[Change Entry] " + \
-                        str(key) + "->" + str(key2) + ":  "
-                    info = info + \
-                        str(src_plist[key][key2]) + \
-                        " -> " + str(up_plist[key][key2])
+                    info = "[Change Entry] "+ str(key) + "->" + str(key2) + ":  "
+                    info = info+ str(src_plist[key][key2])+ " -> " + str(up_plist[key][key2])
                     update_info.append(info)
                     continue
                 up_plist[key][key2] = src_plist[key][key2]
@@ -672,8 +666,8 @@ class UpdateRepo:
                 print(self.Colors("[Info] Found config file: " + file, fcolor='green'))
                 print(self.Colors("[Info] Checking config file: " + file, fcolor='green'))
                 plist_path = os.path.abspath(os.path.join(root, 'EFI/OC/'+ file))
-                ocvalidate_path_sys = ocvalidate_path.replace(' ', '\ ')
-                plist_path_sys = plist_path.replace(' ', '\ ')
+                ocvalidate_path_sys = ocvalidate_path.replace(' ', r'\ ')
+                plist_path_sys = plist_path.replace(' ', r'\ ')
                 v = os.popen(ocvalidate_path_sys + ' ' + plist_path_sys).read()
                 if "No issues found" in v:
                     print(self.Colors("[Info] **** " + file + " check Done, No issues Found! ****", fcolor='green'))
@@ -683,8 +677,7 @@ class UpdateRepo:
                     save_config = os.path.abspath(os.path.join(sys.path[0], "cache/OpenCorePkg/config.plist"))
                     self.update_oc_config(update_config, source_config, save_config)
                     shutil.copy(save_config, source_config)
-                    v2 = os.popen(ocvalidate_path_sys + ' ' +
-                                save_config.replace(' ', '\ ')).read()
+                    v2 = os.popen(ocvalidate_path_sys + ' ' + save_config.replace(' ', r'\ ')).read()
                     if "No issues found" in v2:
                         print(self.Colors(
                             "[Info] **** " + file + " update automatically and check Done, No issues Found! ****", fcolor='green'))
@@ -761,10 +754,10 @@ class UpdateRepo:
                         update = os.path.abspath(os.path.join(tmp_path0, "Kexts/" + k))
                     update_plist = os.path.join(update, "Contents/Info.plist")
                     update_sha = hashlib.md5(open(update_plist, 'r').read().encode('utf8')).hexdigest()
-                    update = update.replace(' ', '\ ')
+                    update = update.replace(' ', r'\ ')
                     if source_sha != update_sha:
                         update_kexts.append(kext)
-                    source = source.replace(' ', '\ ')
+                    source = source.replace(' ', r'\ ')
                     os.system('cp -rf ' + update + ' ' + source)
                    
                 progress[1] = progress[1] + 1

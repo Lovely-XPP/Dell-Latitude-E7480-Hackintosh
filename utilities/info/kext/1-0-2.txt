@@ -10,5 +10,6 @@ SMCLightSensor
 SMCProcessor
 SMCSuperIO
 VirtualSMC
+VoodooI2C
 VoodooPS2Controller
 WhateverGreen

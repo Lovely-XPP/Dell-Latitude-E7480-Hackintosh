@@ -334,7 +334,7 @@ class UpdateRepo:
     
     
     def download_database(self):
-        r = requests.get(self.url, verify = False)
+        r = requests.get(self.url)
         path = os.path.abspath(os.path.join(self.root, "database.json"))
         with open(path, 'wb') as f:
             f.write(r.content)
@@ -596,7 +596,7 @@ class UpdateRepo:
         print(self.Colors("[Info] Downloading OpenCorePkg...", fcolor='green'))
         headers = {"Auth": "{abcd}", "accept": "*/*",
                    "accept-encoding": "gzip;deflate;br"}
-        response = requests.request("GET", oc['link'], headers=headers, verify=False)
+        response = requests.request("GET", oc['link'], headers=headers)
         with open(tmp, "wb") as f:
             f.write(response.content)
         print(self.Colors("[Info] Download Done", fcolor='green'))
@@ -723,7 +723,7 @@ class UpdateRepo:
                 tmp = os.path.abspath(os.path.join(tmp_path, kext + '.zip'))
                 headers = {"Auth": "{abcd}", "accept": "*/*",
                            "accept-encoding": "gzip;deflate;br"}
-                response = requests.request("GET", self.remote[kext]['link'], headers=headers, verify=False)
+                response = requests.request("GET", self.remote[kext]['link'], headers=headers)
                 with open(tmp, "wb") as f:
                     f.write(response.content)
                 progress[1] = progress[1] + 1
@@ -806,7 +806,6 @@ class UpdateRepo:
         if len(err) > 0:
             first_time = 0
             for i in err:
-                update_kexts_success.pop(i)
                 if first_time == 0:
                     print(self.Colors(
                         "[Error] These Kext Package(s) Update Unsuccessfully:", fcolor='red'))

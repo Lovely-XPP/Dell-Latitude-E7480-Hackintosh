@@ -1,8 +1,16 @@
+AirportBrcmFixup
 AppleALC
+BlueToolFixup
+BrcmBluetoothInjector
+BrcmFirmwareData
+BrcmPatchRAM3
+CpuTscSync
 ECEnabler
 FeatureUnlock
 HibernationFixup
+IntelMausi
 Lilu
+NVMeFix
 RestrictEvents
 SMCBatteryManager
 SMCDellSensors

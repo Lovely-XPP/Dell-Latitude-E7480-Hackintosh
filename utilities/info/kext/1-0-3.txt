@@ -1,0 +1,7 @@
+AppleALC
+SMCBatteryManager
+SMCDellSensors
+SMCLightSensor
+SMCProcessor
+SMCSuperIO
+VirtualSMC

@@ -1,5 +1,47 @@
 # Changelog / 更新日志
 
+## V1.0.3.0
+
+### Publish date : 2025.01.26
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  1.0.3
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 1.0.3
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AirportBrcmFixup	|	2.2.0	|	2025-01-26	|	Official Release	|
+|	AppleALC	|	1.9.4	|	2025-01-26	|	Official Release	|
+|	BlueToolFixup	|	2.7.0	|	2025-01-26	|	Official Release	|
+|	BrcmBluetoothInjector	|	2.7.0	|	2025-01-26	|	Official Release	|
+|	BrcmFirmwareData	|	2.7.0	|	2025-01-26	|	Official Release	|
+|	BrcmPatchRAM3	|	2.7.0	|	2025-01-26	|	Official Release	|
+|	CpuTscSync	|	1.1.2	|	2025-01-26	|	Official Release	|
+|	ECEnabler	|	1.0.6	|	2025-01-26	|	Official Release	|
+|	FeatureUnlock	|	1.1.8	|	2025-01-26	|	Official Release	|
+|	HibernationFixup	|	1.5.3	|	2025-01-26	|	Official Release	|
+|	IntelMausi	|	1.0.9	|	2025-01-26	|	Official Release	|
+|	Lilu	|	1.7.1	|	2025-01-26	|	Official Release	|
+|	NVMeFix	|	1.1.3	|	2025-01-26	|	Official Release	|
+|	RestrictEvents	|	1.1.6	|	2025-01-26	|	Official Release	|
+|	SMCBatteryManager	|	1.3.5	|	2025-01-26	|	Official Release	|
+|	SMCDellSensors	|	1.3.5	|	2025-01-26	|	Official Release	|
+|	SMCLightSensor	|	1.3.5	|	2025-01-26	|	Official Release	|
+|	SMCProcessor	|	1.3.5	|	2025-01-26	|	Official Release	|
+|	SMCSuperIO	|	1.3.5	|	2025-01-26	|	Official Release	|
+|	VirtualSMC	|	1.3.5	|	2025-01-26	|	Official Release	|
+|	Voodoo PS/2 Controller	|	2.3.8	|	2025-01-26	|	Official Release	|
+|	VoodooI2C	|	2.9.1	|	2025-01-26	|	Official Release	|
+|	WhateverGreen	|	1.7.0	|	2025-01-26	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V1.0.2.0
 
 ### Publish date : 2024.08.18

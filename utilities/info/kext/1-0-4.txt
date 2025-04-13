@@ -1,0 +1,11 @@
+BlueToolFixup
+BrcmBluetoothInjector
+BrcmFirmwareData
+BrcmPatchRAM3
+HibernationFixup
+SMCBatteryManager
+SMCDellSensors
+SMCLightSensor
+SMCProcessor
+SMCSuperIO
+VirtualSMC

@@ -1,3 +1,4 @@
+AppleALC
 BlueToolFixup
 BrcmBluetoothInjector
 BrcmFirmwareData

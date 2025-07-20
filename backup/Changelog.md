@@ -1,5 +1,31 @@
 # Changelog / 更新日志
 
+## V1.0.4.0
+
+### Publish date : 2025.03.09
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  1.0.4
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 1.0.4
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AppleALC	|	1.9.5	|	2025-03-09	|	Official Release	|
+|	SMCBatteryManager	|	1.3.6	|	2025-03-09	|	Official Release	|
+|	SMCDellSensors	|	1.3.6	|	2025-03-09	|	Official Release	|
+|	SMCLightSensor	|	1.3.6	|	2025-03-09	|	Official Release	|
+|	SMCProcessor	|	1.3.6	|	2025-03-09	|	Official Release	|
+|	SMCSuperIO	|	1.3.6	|	2025-03-09	|	Official Release	|
+|	VirtualSMC	|	1.3.6	|	2025-03-09	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V1.0.3.0
 
 ### Publish date : 2025.01.26

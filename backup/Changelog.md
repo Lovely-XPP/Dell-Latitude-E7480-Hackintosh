@@ -1,5 +1,43 @@
 # Changelog / 更新日志
 
+## V1.0.5.0
+
+### Publish date : 2025.07.20
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  1.0.5
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 1.0.5
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AirportBrcmFixup	|	2.2.1	|	2025-07-20	|	Official Release	|
+|	AppleALC	|	1.9.6	|	2025-07-20	|	Official Release	|
+|	BlueToolFixup	|	2.7.2	|	2025-07-20	|	Official Release	|
+|	BrcmBluetoothInjector	|	2.7.2	|	2025-07-20	|	Official Release	|
+|	BrcmFirmwareData	|	2.7.2	|	2025-07-20	|	Official Release	|
+|	BrcmPatchRAM3	|	2.7.2	|	2025-07-20	|	Official Release	|
+|	CpuTscSync	|	1.1.3	|	2025-07-20	|	Official Release	|
+|	FeatureUnlock	|	1.1.9	|	2025-07-20	|	Official Release	|
+|	HibernationFixup	|	1.5.5	|	2025-07-20	|	Official Release	|
+|	Lilu	|	1.7.2	|	2025-07-20	|	Official Release	|
+|	NVMeFix	|	1.1.4	|	2025-07-20	|	Official Release	|
+|	RestrictEvents	|	1.1.7	|	2025-07-20	|	Official Release	|
+|	SMCBatteryManager	|	1.3.8	|	2025-07-20	|	Official Release	|
+|	SMCDellSensors	|	1.3.8	|	2025-07-20	|	Official Release	|
+|	SMCLightSensor	|	1.3.8	|	2025-07-20	|	Official Release	|
+|	SMCProcessor	|	1.3.8	|	2025-07-20	|	Official Release	|
+|	SMCSuperIO	|	1.3.8	|	2025-07-20	|	Official Release	|
+|	VirtualSMC	|	1.3.8	|	2025-07-20	|	Official Release	|
+|	WhateverGreen	|	1.7.1	|	2025-07-20	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V1.0.4.0
 
 ### Publish date : 2025.03.09

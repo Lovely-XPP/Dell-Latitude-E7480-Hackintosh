@@ -1,5 +1,8 @@
 # Dell Latitude E7480 Hackintosh (OpenCore)
 
+## TIPS
+If you have trouble using this repo, you may try this one: https://github.com/sxn4y/dell-latitude-7480-opencore-efi. Thanks [sxn4y](https://github.com/sxn4y).
+
 ## Introduce
 
 > Tip: I have bought a MacBookPro, so I can not maintain this repo manully any more. Therefore, I wrote a scrip to update this repo actomatically. If you encount error when using it, please open an issue, I will try my best to fix it. Thanks for your support.

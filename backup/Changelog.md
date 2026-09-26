@@ -1,5 +1,25 @@
 # Changelog / 更新日志
 
+## V1.0.6.0
+
+### Publish date : 2025.11.07
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  1.0.6
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 1.0.6
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AppleALC	|	1.9.7	|	2025-11-07	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V1.0.5.0
 
 ### Publish date : 2025.07.20

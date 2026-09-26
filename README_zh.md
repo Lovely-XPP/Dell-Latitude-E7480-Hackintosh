@@ -1,5 +1,9 @@
 # 戴尔 Latitude E7480 黑苹果 (OpenCore引导)
 
+## 提示
+如果当前仓库不能正常启动，可以尝试这个：https://github.com/sxn4y/dell-latitude-7480-opencore-efi. 感谢 [sxn4y](https://github.com/sxn4y).
+
+
 ## 简介
 
 > 提示: 由于我购入了一台MacBookPro, 所以我不能手动更新这个仓库。因此，我写了一个自动化更新脚本来更新这个仓库。如果你遇到了一些错误或问题，欢迎开一个issue，我会尽可能地解决。感谢大家一直以来的支持。

@@ -1,0 +1,9 @@
+AirportBrcmFixup
+AppleALC
+SMCBatteryManager
+SMCDellSensors
+SMCLightSensor
+SMCProcessor
+SMCSuperIO
+VirtualSMC
+WhateverGreen

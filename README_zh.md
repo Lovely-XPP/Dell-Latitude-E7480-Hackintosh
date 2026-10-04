@@ -41,31 +41,38 @@
 
 
 ## 下载
-[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v1.0.7.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v1.0.7.0)
+[![Download from https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases](https://img.shields.io/badge/Download-v1.0.8.0-blue)](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/releases/tag/v1.0.8.0)
 
-## 更新日志: V1.0.7.0
+## 更新日志: V1.0.8.0
 
-### 发布时间 : 2026.09.26
+### 发布时间 : 2026.10.04
 
 #### 添加功能 :
 
-1. 更新OC版本至1.0.7并更新了驱动
+1. 更新OC版本至1.0.8并更新了驱动
 
 #### 文件变化 :
 
-1. 更新整个EFI文件夹以适配 OC 1.0.7
+1. 更新整个EFI文件夹以适配 OC 1.0.8
 2. 更新驱动:
 
 | 驱动名称          | 版本号                       | 更新时间       | 更新方式              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AppleALC	|	1.9.8	|	2026-09-26	|	官方编译	|
-|	BlueToolFixup	|	2.7.3	|	2026-09-26	|	官方编译	|
-|	BrcmBluetoothInjector	|	2.7.3	|	2026-09-26	|	官方编译	|
-|	BrcmFirmwareData	|	2.7.3	|	2026-09-26	|	官方编译	|
-|	BrcmPatchRAM3	|	2.7.3	|	2026-09-26	|	官方编译	|
-|	Lilu	|	1.7.3	|	2026-09-26	|	官方编译	|
-|	VoodooI2C	|	2.9.1	|	2026-09-26	|	官方编译	|
+|	AirportBrcmFixup	|	2.2.2	|	2026-10-04	|	官方编译	|
+|	AppleALC	|	1.9.9	|	2026-10-04	|	官方编译	|
+|	SMCBatteryManager	|	1.3.9	|	2026-10-04	|	官方编译	|
+|	SMCDellSensors	|	1.3.9	|	2026-10-04	|	官方编译	|
+|	SMCLightSensor	|	1.3.9	|	2026-10-04	|	官方编译	|
+|	SMCProcessor	|	1.3.9	|	2026-10-04	|	官方编译	|
+|	SMCSuperIO	|	1.3.9	|	2026-10-04	|	官方编译	|
+|	VirtualSMC	|	1.3.9	|	2026-10-04	|	官方编译	|
+|	WhateverGreen	|	1.7.2	|	2026-10-04	|	官方编译	|
 
+
+配置文件变化:
+```
+[Config: Add Entry] UEFI->Drivers->HideVerbose:  False
+```
 
 更多版本的更新日志详见 [Changelog_zh.md](https://github.com/Lovely-XPP/Dell-Latitude-E7480-Hackintosh/blob/main/Changelog_zh.md).
 
@@ -74,7 +81,7 @@
 <details>  
 <summary><strong>OC引导版本</strong></summary>
 </br>
-OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6 / 0.8.7 / 0.8.8 / 0.8.9 / 0.9.0 / 0.9.1 / 0.9.2 / 0.9.3 / 0.9.4 / 0.9.5 / 0.9.6 / 0.9.7 / 0.9.8 / 0.9.9 / 1.0.0 / 1.0.1 / 1.0.2 / 1.0.3 / 1.0.4 / 1.0.5 / 1.0.6 / 1.0.7
+OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6 / 0.8.7 / 0.8.8 / 0.8.9 / 0.9.0 / 0.9.1 / 0.9.2 / 0.9.3 / 0.9.4 / 0.9.5 / 0.9.6 / 0.9.7 / 0.9.8 / 0.9.9 / 1.0.0 / 1.0.1 / 1.0.2 / 1.0.3 / 1.0.4 / 1.0.5 / 1.0.6 / 1.0.7 / 1.0.8
 </details>
 <details>  
 <summary><strong>测试过/支持的系统版本</strong></summary>
@@ -113,40 +120,40 @@ OpenCore  0.8.0 / 0.8.1 / 0.8.2 / 0.8.3 / 0.8.4 / 0.8.5 / 0.8.6 / 0.8.7 / 0.8.8 
 
 | Kexts          | Version                        | Updated Time       | Updated Way              |
 |:----------------|:-------------------------------------------|:---------------|:----------------|
-|	AirportBrcmFixup	|	2.2.1	|	2026-09-26	|	Official Release	|
-|	AirportItlwm	|	2.2.0	|	2026-09-26	|	Official Release	|
-|	AlpsHID	|	1.0.0d1	|	2026-09-26	|	Official Release	|
-|	AppleALC	|	1.9.8	|	2026-09-26	|	Official Release	|
-|	BlueToolFixup	|	2.7.3	|	2026-09-26	|	Official Release	|
-|	BrcmBluetoothInjector	|	2.7.3	|	2026-09-26	|	Official Release	|
-|	BrcmFirmwareData	|	2.7.3	|	2026-09-26	|	Official Release	|
-|	BrcmPatchRAM3	|	2.7.3	|	2026-09-26	|	Official Release	|
-|	BrightnessKeys	|	1.0.4	|	2026-09-26	|	Official Release	|
-|	FeatureUnlock	|	1.1.9	|	2026-09-26	|	Official Release	|
-|	HibernationFixup	|	1.5.5	|	2026-09-26	|	Official Release	|
-|	IntelBTPatcher	|	2.5.0	|	2026-09-26	|	Official Release	|
-|	IntelBluetoothFirmware	|	2.5.0	|	2026-09-26	|	Official Release	|
-|	IntelBluetoothInjector	|	2.5.0	|	2026-09-26	|	Official Release	|
-|	IntelMausi	|	1.0.9	|	2026-09-26	|	Official Release	|
-|	Lilu	|	1.7.3	|	2026-09-26	|	Official Release	|
-|	NVMeFix	|	1.1.4	|	2026-09-26	|	Official Release	|
-|	RealtekCardReader	|	0.9.7	|	2026-09-26	|	Official Release	|
-|	RealtekCardReaderFriend	|	1.0.2	|	2026-09-26	|	Official Release	|
-|	RestrictEvents	|	1.1.7	|	2026-09-26	|	Official Release	|
-|	SMCBatteryManager	|	1.3.8	|	2026-09-26	|	Official Release	|
-|	SMCDellSensors	|	1.3.8	|	2026-09-26	|	Official Release	|
-|	SMCLightSensor	|	1.3.8	|	2026-09-26	|	Official Release	|
-|	SMCProcessor	|	1.3.8	|	2026-09-26	|	Official Release	|
-|	SMCSuperIO	|	1.3.8	|	2026-09-26	|	Official Release	|
-|	USBMap	|	1.0	|	2026-09-26	|	USB Ports Inject	|
-|	VerbStub	|	1.0.4	|	2026-09-26	|	Official Release	|
-|	VirtualSMC	|	1.3.8	|	2026-09-26	|	Official Release	|
-|	Voodoo PS/2 Controller	|	2.3.8	|	2026-09-26	|	Official Release	|
-|	VoodooI2C	|	2.9.1	|	2026-09-26	|	Official Release	|
-|	VoodooI2CHID	|	1	|	2026-09-26	|	Official Release	|
-|	WhateverGreen	|	1.7.1	|	2026-09-26	|	Official Release	|
-|	ECEnabler	|	1.0.6	|	2026-09-26	|	Official Release	|
-|	CpuTscSync	|	1.1.3	|	2026-09-26	|	Official Release	|
+|	AirportBrcmFixup	|	2.2.2	|	2026-10-04	|	Official Release	|
+|	AirportItlwm	|	2.2.0	|	2026-10-04	|	Official Release	|
+|	AlpsHID	|	1.0.0d1	|	2026-10-04	|	Official Release	|
+|	AppleALC	|	1.9.9	|	2026-10-04	|	Official Release	|
+|	BlueToolFixup	|	2.7.3	|	2026-10-04	|	Official Release	|
+|	BrcmBluetoothInjector	|	2.7.3	|	2026-10-04	|	Official Release	|
+|	BrcmFirmwareData	|	2.7.3	|	2026-10-04	|	Official Release	|
+|	BrcmPatchRAM3	|	2.7.3	|	2026-10-04	|	Official Release	|
+|	BrightnessKeys	|	1.0.4	|	2026-10-04	|	Official Release	|
+|	FeatureUnlock	|	1.1.9	|	2026-10-04	|	Official Release	|
+|	HibernationFixup	|	1.5.5	|	2026-10-04	|	Official Release	|
+|	IntelBTPatcher	|	2.5.0	|	2026-10-04	|	Official Release	|
+|	IntelBluetoothFirmware	|	2.5.0	|	2026-10-04	|	Official Release	|
+|	IntelBluetoothInjector	|	2.5.0	|	2026-10-04	|	Official Release	|
+|	IntelMausi	|	1.0.9	|	2026-10-04	|	Official Release	|
+|	Lilu	|	1.7.3	|	2026-10-04	|	Official Release	|
+|	NVMeFix	|	1.1.4	|	2026-10-04	|	Official Release	|
+|	RealtekCardReader	|	0.9.7	|	2026-10-04	|	Official Release	|
+|	RealtekCardReaderFriend	|	1.0.2	|	2026-10-04	|	Official Release	|
+|	RestrictEvents	|	1.1.7	|	2026-10-04	|	Official Release	|
+|	SMCBatteryManager	|	1.3.9	|	2026-10-04	|	Official Release	|
+|	SMCDellSensors	|	1.3.9	|	2026-10-04	|	Official Release	|
+|	SMCLightSensor	|	1.3.9	|	2026-10-04	|	Official Release	|
+|	SMCProcessor	|	1.3.9	|	2026-10-04	|	Official Release	|
+|	SMCSuperIO	|	1.3.9	|	2026-10-04	|	Official Release	|
+|	USBMap	|	1.0	|	2026-10-04	|	USB Ports Inject	|
+|	VerbStub	|	1.0.4	|	2026-10-04	|	Official Release	|
+|	VirtualSMC	|	1.3.9	|	2026-10-04	|	Official Release	|
+|	Voodoo PS/2 Controller	|	2.3.8	|	2026-10-04	|	Official Release	|
+|	VoodooI2C	|	2.9.1	|	2026-10-04	|	Official Release	|
+|	VoodooI2CHID	|	1	|	2026-10-04	|	Official Release	|
+|	WhateverGreen	|	1.7.2	|	2026-10-04	|	Official Release	|
+|	ECEnabler	|	1.0.6	|	2026-10-04	|	Official Release	|
+|	CpuTscSync	|	1.1.3	|	2026-10-04	|	Official Release	|
 
 </details>
 

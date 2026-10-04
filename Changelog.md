@@ -1,5 +1,33 @@
 # Changelog / 更新日志
 
+## V1.0.8.0
+
+### Publish date : 2026.10.04
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  1.0.8
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 1.0.8
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AirportBrcmFixup	|	2.2.2	|	2026-10-04	|	Official Release	|
+|	AppleALC	|	1.9.9	|	2026-10-04	|	Official Release	|
+|	SMCBatteryManager	|	1.3.9	|	2026-10-04	|	Official Release	|
+|	SMCDellSensors	|	1.3.9	|	2026-10-04	|	Official Release	|
+|	SMCLightSensor	|	1.3.9	|	2026-10-04	|	Official Release	|
+|	SMCProcessor	|	1.3.9	|	2026-10-04	|	Official Release	|
+|	SMCSuperIO	|	1.3.9	|	2026-10-04	|	Official Release	|
+|	VirtualSMC	|	1.3.9	|	2026-10-04	|	Official Release	|
+|	WhateverGreen	|	1.7.2	|	2026-10-04	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V1.0.7.0
 
 ### Publish date : 2026.09.26

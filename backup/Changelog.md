@@ -1,5 +1,31 @@
 # Changelog / 更新日志
 
+## V1.0.7.0
+
+### Publish date : 2026.09.26
+
+#### Add Features :
+
+1. Update kexts and OC boot version to  1.0.7
+
+#### Files Changed :
+
+1. All the EFI folder to adapt OC 1.0.7
+2. Update kexts with official Release:
+
+| Kexts          | Version                        | Updated Time       | Updated Way              |
+|:----------------|:-------------------------------------------|:---------------|:----------------|
+|	AppleALC	|	1.9.8	|	2026-09-26	|	Official Release	|
+|	BlueToolFixup	|	2.7.3	|	2026-09-26	|	Official Release	|
+|	BrcmBluetoothInjector	|	2.7.3	|	2026-09-26	|	Official Release	|
+|	BrcmFirmwareData	|	2.7.3	|	2026-09-26	|	Official Release	|
+|	BrcmPatchRAM3	|	2.7.3	|	2026-09-26	|	Official Release	|
+|	Lilu	|	1.7.3	|	2026-09-26	|	Official Release	|
+|	VoodooI2C	|	2.9.1	|	2026-09-26	|	Official Release	|
+
+
+-----------------------------------------------------
+
 ## V1.0.6.0
 
 ### Publish date : 2025.11.07
